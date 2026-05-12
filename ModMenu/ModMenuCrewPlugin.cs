@@ -4686,7 +4686,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					((TMP_Text)_titleTextTMP).fontStyle = (FontStyles)1;
 					((TMP_Text)_titleTextTMP).characterSpacing = 3f;
 				}
-				CreateTMPText(val9, "Get your free key and unlock all features.", 14, new Color(0.85f, 0.85f, 0.92f, 1f), new Vector2(20f, -30f), new Vector2(800f, 22f), (TextAlignmentOptions)514);
+				CreateTMPText(val9, "Welcome to ModMenuCrew - Access Terminal.", 14, new Color(0.85f, 0.85f, 0.92f, 1f), new Vector2(20f, -30f), new Vector2(800f, 22f), (TextAlignmentOptions)514);
 				Button val13 = CreateTMPButton(val9, "", UnityAction.op_Implicit((Action)delegate
 				{
 					if ((Object)(object)_panelCanvasGroup != (Object)null)
@@ -4827,7 +4827,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					_stepCircle1 = img;
 					_stepLabel1 = lbl;
 				});
-				obj11("2", "GET KEY", "Receive your key", -40f, arg5: false, delegate(Image img, TextMeshProUGUI lbl)
+				obj11("2", "GET KEY", "Activate mod", -40f, arg5: false, delegate(Image img, TextMeshProUGUI lbl)
 				{
 					_stepCircle2 = img;
 					_stepLabel2 = lbl;
@@ -4895,7 +4895,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					((TMP_Text)val24).fontStyle = (FontStyles)1;
 					((TMP_Text)val24).characterSpacing = 1f;
 				}
-				TextMeshProUGUI val25 = CreateTMPText(loginCardRT, "Login with your Discord account to get\nyour <color=#A78BFA>free key</color> and access the mod.", 13, GuiStyles.Theme.TextMuted, new Vector2(-220f, 60f), new Vector2(540f, 40f), (TextAlignmentOptions)513);
+				TextMeshProUGUI val25 = CreateTMPText(loginCardRT, "Login with your Discord account to access\nthe mod and all features.", 13, GuiStyles.Theme.TextMuted, new Vector2(-220f, 60f), new Vector2(540f, 40f), (TextAlignmentOptions)513);
 				if ((Object)(object)val25 != (Object)null)
 				{
 					((TMP_Text)val25).lineSpacing = 4f;
@@ -5492,7 +5492,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					component42.anchoredPosition = new Vector2(-88f, 0f);
 					component42.sizeDelta = new Vector2(36f, 36f);
 				}
-				TextMeshProUGUI val67 = CreateTMPText(component40, "GET FREE KEY", 16, Color.white, new Vector2(40f, 11f), new Vector2(180f, 22f), (TextAlignmentOptions)513);
+				TextMeshProUGUI val67 = CreateTMPText(component40, "GET KEY", 16, Color.white, new Vector2(40f, 11f), new Vector2(180f, 22f), (TextAlignmentOptions)513);
 				if ((Object)(object)val67 != (Object)null)
 				{
 					((TMP_Text)val67).fontStyle = (FontStyles)1;
@@ -8743,7 +8743,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				}
 				else if (num == 0)
 				{
-					((TMP_Text)_yourKeysEmptyTxt).text = "No keys yet. Click GET FREE KEY below.";
+					((TMP_Text)_yourKeysEmptyTxt).text = "No keys yet. Click GET KEY below.";
 				}
 				else if (count == 0)
 				{
