@@ -1,58 +1,68 @@
 ```csharp
-# Unity/Mono build artifacts
+# Compiled and build artifacts
 *.dll
 *.exe
 *.pdb
-*.mdb
-*.pidb
-*.sln
-*.csproj
-*.user
-*.userprefs
-*.unityproj
-
-# Unity temporary files
-Temp/
-Library/
-Obj/
-Build/
-Logs/
-
-# Unity cache
-/Library/Caches/*
-/Library/Preferences/*
-
-# Unity meta files (if not already tracked)
-*.meta
-
-# Build outputs
-bin/
-obj/
-release/
-debug/
-out/
+*.so
+*.dylib
+*.class
+*.o
+*.obj
+*.out
 
 # Dependencies
-Packages/
-NuGet.Config
-packages.config
+packages/
+lib/
+bin/
+obj/
 
-# Configuration
-*.config
-*.settings
-.vs/
-.idea/
-
-# Log files
+# Logs and temp files
 *.log
-crashlytics-build.properties
-
-# Temporary files
 *.tmp
 *.temp
-*~
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vs/
+.vshistory/
+.vscode/
+.idea/
+*.userprefs
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build outputs
+Debug/
+Release/
+x64/
+x86/
+build/
+dist/
+target/
+
+# Unity/Mono specific
+[IlRt]ntermediates/
+[IlRt]ntermediate/
+*.user
+*.suo
+*.csproj.user
+*.unityproj.user
+*.sln.docstates
+
+# Dotnet
+**/bin/
+**/obj/
+**/[Dd]ebug*/
+**/[Rr]elease*/
+**/[Dd]eploy*/
+**/TestResults/
+*.testlog
+*.trx
 ```
-
-Wait, I need to reconsider this. Looking at the file changes again, these appear to be C# source files for what looks like a Unity mod. However, the current .gitignore content was empty, and following rule #6, since we only have source code files (.cs files) and no build artifacts, dependencies, or temp files in the changes, I should output nothing.
-
-(empty)

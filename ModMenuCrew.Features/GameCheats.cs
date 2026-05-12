@@ -1796,7 +1796,7 @@ public static class GameCheats
 						{
 							RoleTypes roleType = current.Data.RoleType;
 							flag = (int)roleType == 1 || (int)roleType == 5 || (int)roleType == 9 || (int)roleType == 18 || (int)roleType == 7;
-							value = ((object)(RoleTypes)roleType.ToString().ToUpper();
+							value = ((object)(RoleTypes)roleType).ToString().ToUpper();
 						}
 						string value2 = (flag ? "#FF3333" : "#99CCFF");
 						playerName = $"{playerName} <color={value2}>[{value}]</color>";
@@ -9260,7 +9260,7 @@ public static class GameCheats
 				4 => "GUARDIAN ANGEL", 
 				6 => "CREWMATE GHOST", 
 				7 => "IMPOSTOR GHOST", 
-				_ => ((object)(RoleTypes)role2.ToString().ToUpper(), 
+				_ => ((object)(RoleTypes)role2).ToString().ToUpper(), 
 			};
 		}
 		catch
@@ -9294,7 +9294,7 @@ public static class GameCheats
 			4 => "GUARDIAN ANGEL", 
 			6 => "CREWMATE GHOST", 
 			7 => "IMPOSTOR GHOST", 
-			_ => ((object)(RoleTypes)roleType.ToString().ToUpper(), 
+			_ => ((object)(RoleTypes)roleType).ToString().ToUpper(), 
 		};
 	}
 
@@ -13031,9 +13031,9 @@ public static class GameCheats
 		{
 			Texture2D val = new Texture2D(64, 64, (TextureFormat)4, false);
 			Color32 val2 = default(Color32);
-			((Color32)(ref val2))._002Ector((byte)40, (byte)40, (byte)50, (byte)220);
+			_002Ector((byte)40, (byte)40, (byte)50, (byte)220);
 			Color32 val3 = default(Color32);
-			((Color32)(ref val3))._002Ector((byte)180, (byte)60, (byte)180, (byte)220);
+			_002Ector((byte)180, (byte)60, (byte)180, (byte)220);
 			Color32[] array = (Color32[])(object)new Color32[4096];
 			for (int i = 0; i < 64; i++)
 			{
@@ -15626,7 +15626,7 @@ public static class GameCheats
 			if ((Object)(object)item3 != (Object)null && (Object)(object)item3.roomArea != (Object)null && item3.roomArea.OverlapPoint(Vector2.op_Implicit(playerPos)))
 			{
 				val = item3.RoomId;
-				return ((object)(SystemTypes)val.ToString();
+				return ((object)(SystemTypes)val).ToString();
 			}
 		}
 		try
@@ -15645,7 +15645,7 @@ public static class GameCheats
 			if ((Object)obj != (Object)null)
 			{
 				val = DestroyableSingleton<HudManager>.Instance.roomTracker.LastRoom.RoomId;
-				string text = ((object)(SystemTypes)val.ToString();
+				string text = ((object)(SystemTypes)val).ToString();
 				if (!string.IsNullOrEmpty(text) && text != "Invalid")
 				{
 					return text;
@@ -15665,7 +15665,7 @@ public static class GameCheats
 			if (playerPos.x >= item.x - num && playerPos.x <= item.x + num && playerPos.y >= item.y - num2 && playerPos.y <= item.y + num2)
 			{
 				val = item4.Key;
-				return ((object)(SystemTypes)val.ToString();
+				return ((object)(SystemTypes)val).ToString();
 			}
 		}
 		return "CORRIDOR/OUTSIDE";
@@ -15713,7 +15713,7 @@ public static class GameCheats
 				if (!((Object)(object)item == (Object)null))
 				{
 					SystemTypes roomId = item.RoomId;
-					switch (((object)(SystemTypes)roomId.ToString())
+					switch (((object)(SystemTypes)roomId).ToString()
 					{
 					case "Cockpit":
 					case "Armory":
@@ -15734,7 +15734,7 @@ public static class GameCheats
 				}
 			}
 		}
-		return ((object)(MapType)type.ToString();
+		return ((object)(MapType)type).ToString();
 	}
 
 	private static MapBounds GetCurrentMapBounds()
@@ -15822,7 +15822,7 @@ public static class GameCheats
 			if (!((Object)(object)val == (Object)null) && (int)val.RoomId != 0)
 			{
 				roomId = val.RoomId;
-				string value = ((object)(SystemTypes)roomId.ToString();
+				string value = ((object)(SystemTypes)roomId).ToString();
 				Vector3 position = ((Component)val).transform.position;
 				float x = position.x;
 				float y = position.y;
@@ -15872,7 +15872,7 @@ public static class GameCheats
 			if (!((Object)(object)val3 == (Object)null))
 			{
 				roomId = val3.RoomId;
-				string value4 = ((object)(SystemTypes)roomId.ToString();
+				string value4 = ((object)(SystemTypes)roomId).ToString();
 				Vector3 position3 = ((Component)val3).transform.position;
 				if ((Object)(object)val3.roomArea != (Object)null)
 				{

@@ -3291,7 +3291,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				8 => "Noisemaker", 
 				10 => "Tracker", 
 				0 => "Crewmate", 
-				_ => ((object)(RoleTypes)role.ToString(), 
+				_ => ((object)(RoleTypes)role).ToString(), 
 			};
 		}
 

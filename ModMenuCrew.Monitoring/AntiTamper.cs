@@ -128,7 +128,7 @@ public static class AntiTamper
 		try
 		{
 			Scene activeScene = SceneManager.GetActiveScene();
-			string name = ((Scene)(ref activeScene)).name;
+			string name = activeScene.name;
 			if (_lastSceneName != null && name != _lastSceneName)
 			{
 				_lastSceneChangeTime = Time.realtimeSinceStartup;
