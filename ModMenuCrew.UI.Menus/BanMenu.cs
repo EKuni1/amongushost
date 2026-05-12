@@ -2075,7 +2075,7 @@ public class BanMenu
 			_banMenuUiDto.ro = ImpostorForcer.IsAnyOverrideActive;
 			BanMenuUiDto banMenuUiDto = _banMenuUiDto;
 			RoleTypes selectedRoleForHost = ImpostorForcer.SelectedRoleForHost;
-			banMenuUiDto.rs = ((object)(RoleTypes)(ref selectedRoleForHost)).ToString();
+			banMenuUiDto.rs = ((object)(RoleTypes)selectedRoleForHost).ToString();
 			_banMenuUiDto.al = CheatConfig.AutoKickByLevelEnabled.Value;
 			_banMenuUiDto.an = CheatConfig.AutoKickByNameEnabled.Value;
 			_banMenuUiDto.av = CheatConfig.AutoKickMinLevel.Value;

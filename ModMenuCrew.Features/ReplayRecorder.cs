@@ -214,7 +214,7 @@ public class ReplayRecorder : MonoBehaviour
 					{
 						ReplayGameSettings settings = currentReplay.Settings;
 						GameModes gameMode = val2.GameMode;
-						settings.GameMode = ((object)(GameModes)(ref gameMode)).ToString();
+						settings.GameMode = ((object)(GameModes)gameMode).ToString();
 					}
 					catch
 					{

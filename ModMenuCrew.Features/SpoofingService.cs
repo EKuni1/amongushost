@@ -694,7 +694,7 @@ public static class SpoofingService
 			8 => "Switch", 
 			9 => "Xbox", 
 			10 => "PlayStation", 
-			_ => ((object)(Platforms)(ref platform)).ToString(), 
+			_ => ((object)(Platforms)platform).ToString(), 
 		};
 	}
 

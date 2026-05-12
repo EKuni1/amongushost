@@ -1190,7 +1190,7 @@ public class SettingsTab
 			else
 			{
 				value = keybindRadar.Value;
-				obj = ((object)(KeyCode)(ref value)).ToString();
+				obj = ((object)(KeyCode)value).ToString();
 			}
 			if (obj == null)
 			{
@@ -1205,7 +1205,7 @@ public class SettingsTab
 			else
 			{
 				value = keybindFreeCam.Value;
-				obj2 = ((object)(KeyCode)(ref value)).ToString();
+				obj2 = ((object)(KeyCode)value).ToString();
 			}
 			if (obj2 == null)
 			{
@@ -1220,7 +1220,7 @@ public class SettingsTab
 			else
 			{
 				value = keybindNoClip.Value;
-				obj3 = ((object)(KeyCode)(ref value)).ToString();
+				obj3 = ((object)(KeyCode)value).ToString();
 			}
 			if (obj3 == null)
 			{
@@ -1235,7 +1235,7 @@ public class SettingsTab
 			else
 			{
 				value = keybindTracers.Value;
-				obj4 = ((object)(KeyCode)(ref value)).ToString();
+				obj4 = ((object)(KeyCode)value).ToString();
 			}
 			if (obj4 == null)
 			{
@@ -1250,7 +1250,7 @@ public class SettingsTab
 			else
 			{
 				value = keybindSeeGhosts.Value;
-				obj5 = ((object)(KeyCode)(ref value)).ToString();
+				obj5 = ((object)(KeyCode)value).ToString();
 			}
 			if (obj5 == null)
 			{
@@ -1265,7 +1265,7 @@ public class SettingsTab
 			else
 			{
 				value = keybindNoKillCooldown.Value;
-				obj6 = ((object)(KeyCode)(ref value)).ToString();
+				obj6 = ((object)(KeyCode)value).ToString();
 			}
 			if (obj6 == null)
 			{
@@ -1280,7 +1280,7 @@ public class SettingsTab
 			else
 			{
 				value = menuToggleKey.Value;
-				obj7 = ((object)(KeyCode)(ref value)).ToString();
+				obj7 = ((object)(KeyCode)value).ToString();
 			}
 			if (obj7 == null)
 			{
