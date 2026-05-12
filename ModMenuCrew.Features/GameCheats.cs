@@ -34,6 +34,10 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using IEnumeratorGeneric = Il2CppSystem.Collections.Generic.IEnumerator<object>;
+using IDisposableType = Il2CppSystem.IDisposable;
+using ListGeneric = Il2CppSystem.Collections.Generic.List<T>; // Achtung: Bei generischen Listen muss oft der konkrete Typ stehen bleiben oder man nutzt Il2CppSystem.Collections.Generic.List direkt
+using TypeAlias = Il2CppSystem.Type;
 
 namespace ModMenuCrew.Features;
 
