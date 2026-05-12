@@ -28,7 +28,7 @@ public static class ShapeshiftLogPatch
 				else
 				{
 					RoleTypes role2 = role.Role;
-					obj = ((object)(RoleTypes)role2).ToString();
+					obj = role2.ToString();
 				}
 				if (obj == null)
 				{

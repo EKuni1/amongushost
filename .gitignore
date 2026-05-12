@@ -1,52 +1,44 @@
 ```
-# Compiled and build artifacts
-*.pyc
-__pycache__/
-*.o
-*.obj
+# Build artifacts
 *.dll
-*.so
 *.exe
-*.class
+*.pdb
+*.so
+*.dylib
+*.a
+*.lib
+*.obj
+*.o
 *.out
 
 # Dependencies
-.venv/
-venv/
+packages/
+lib/
 node_modules/
-dist/
-build/
-target/
-.gradle/
+bower_components/
 
-# Logs and temp files
+# Logs
 *.log
+logs/
+
+# Temp files
 *.tmp
-*.swp
-*.swo
+*.temp
+*.cache
 
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
+# User-specific files
+.vs/
 .vscode/
 .idea/
-*.iml
-*.ipr
-*.iws
+*.userprefs
 
-# System files
+# Configuration files
+app.config
+web.config
+
+# OS generated files
 .DS_Store
 Thumbs.db
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# Cache
-.mypy_cache/
-.pytest_cache/
+ehthumbs.db
+Icon?
 ```

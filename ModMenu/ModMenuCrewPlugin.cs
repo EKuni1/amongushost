@@ -3291,7 +3291,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				8 => "Noisemaker", 
 				10 => "Tracker", 
 				0 => "Crewmate", 
-				_ => ((object)(RoleTypes)role).ToString(), 
+				_ => role.ToString(), 
 			};
 		}
 
@@ -9263,7 +9263,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			//IL_0005: Unknown result type (might be due to invalid IL or missing references)
 			if (!_tpRoomNames.TryGetValue(room, out var value))
 			{
-				return ((object)(SystemTypes)room).ToString();
+				return room.ToString();
 			}
 			return value;
 		}
@@ -10599,7 +10599,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			{
 				return value;
 			}
-			string? text = ((object)(SystemTypes)location).ToString();
+			string? text = location.ToString();
 			StringBuilder stringBuilder = new StringBuilder(text.Length + 4);
 			string text2 = text;
 			foreach (char c in text2)
@@ -10699,7 +10699,7 @@ public class ModMenuCrewPlugin : BasePlugin
 						if (_cachedRoles == null)
 						{
 							_cachedRoles = ImpostorForcer.GetSupportedRoles();
-							_cachedRoleNames = _cachedRoles.Select((RoleTypes r) => ((object)(RoleTypes)r).ToString()).ToArray();
+							_cachedRoleNames = _cachedRoles.Select((RoleTypes r) => r.ToString()).ToArray();
 						}
 						RoleTypes[] cachedRoles = _cachedRoles;
 						string[] cachedRoleNames = _cachedRoleNames;
