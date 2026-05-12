@@ -489,7 +489,7 @@ public static class GuiStyles
 			//IL_0110: Unknown result type (might be due to invalid IL or missing references)
 			//IL_0112: Unknown result type (might be due to invalid IL or missing references)
 			//IL_0117: Unknown result type (might be due to invalid IL or missing references)
-			string key = $"glowborder_{width}_{height}_{borderWidth}_{((object)(Color)(ref glowColor)).GetHashCode()}";
+			string key = $"glowborder_{width}_{height}_{borderWidth}_{((object)(Color)glowColor).GetHashCode()}";
 			if (_textureCache.TryGetValue(key, out var value) && (Object)(object)value != (Object)null)
 			{
 				return value;
@@ -3110,7 +3110,7 @@ public static class GuiStyles
 		//IL_00f4: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0103: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0105: Unknown result type (might be due to invalid IL or missing references)
-		string key = $"grad_{width}_{height}_{((object)(Color)(ref top)).GetHashCode()}_{((object)(Color)(ref bottom)).GetHashCode()}";
+		string key = $"grad_{width}_{height}_{((object)(Color)top).GetHashCode()}_{((object)(Color)bottom).GetHashCode()}";
 		if (_textureCache.ContainsKey(key) && (Object)(object)_textureCache[key] != (Object)null)
 		{
 			return _textureCache[key];
@@ -3159,7 +3159,7 @@ public static class GuiStyles
 		//IL_022d: Unknown result type (might be due to invalid IL or missing references)
 		//IL_022f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0234: Unknown result type (might be due to invalid IL or missing references)
-		string key = $"frame_{width}_{height}_{((object)(Color)(ref innerTop)).GetHashCode()}_{((object)(Color)(ref innerBottom)).GetHashCode()}_{((object)(Color)(ref border)).GetHashCode()}_{borderThickness}";
+		string key = $"frame_{width}_{height}_{((object)(Color)innerTop).GetHashCode()}_{((object)(Color)innerBottom).GetHashCode()}_{((object)(Color)border).GetHashCode()}_{borderThickness}";
 		if (_textureCache.ContainsKey(key) && (Object)(object)_textureCache[key] != (Object)null)
 		{
 			return _textureCache[key];
@@ -3223,7 +3223,7 @@ public static class GuiStyles
 		//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00be: Unknown result type (might be due to invalid IL or missing references)
-		string key = $"solid_{width}_{height}_{((object)(Color)(ref color)).GetHashCode()}";
+		string key = $"solid_{width}_{height}_{((object)(Color)color).GetHashCode()}";
 		if (_textureCache.ContainsKey(key) && (Object)(object)_textureCache[key] != (Object)null)
 		{
 			return _textureCache[key];
@@ -3291,7 +3291,7 @@ public static class GuiStyles
 			}
 			return _cachedPixelErrorTexture;
 		}
-		string key = $"pixel_{((object)(Color)(ref color)).GetHashCode()}";
+		string key = $"pixel_{((object)(Color)color).GetHashCode()}";
 		if (_textureCache.ContainsKey(key) && (Object)(object)_textureCache[key] != (Object)null)
 		{
 			return _textureCache[key];
@@ -3330,7 +3330,7 @@ public static class GuiStyles
 		//IL_0235: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0291: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0293: Unknown result type (might be due to invalid IL or missing references)
-		string key = $"cyber_{w}_{h}_{((object)(Color)(ref baseCol)).GetHashCode()}";
+		string key = $"cyber_{w}_{h}_{((object)(Color)baseCol).GetHashCode()}";
 		if (_textureCache.ContainsKey(key) && (Object)(object)_textureCache[key] != (Object)null)
 		{
 			return _textureCache[key];
@@ -3501,7 +3501,7 @@ public static class GuiStyles
 		//IL_0135: Unknown result type (might be due to invalid IL or missing references)
 		//IL_013a: Unknown result type (might be due to invalid IL or missing references)
 		//IL_013f: Unknown result type (might be due to invalid IL or missing references)
-		string key = $"glowframe_{width}_{height}_{((object)(Color)(ref bgColor)).GetHashCode()}_{((object)(Color)(ref glowColor)).GetHashCode()}_{thickness}";
+		string key = $"glowframe_{width}_{height}_{((object)(Color)bgColor).GetHashCode()}_{((object)(Color)glowColor).GetHashCode()}_{thickness}";
 		if (_textureCache.ContainsKey(key) && (Object)(object)_textureCache[key] != (Object)null)
 		{
 			return _textureCache[key];
@@ -3549,7 +3549,7 @@ public static class GuiStyles
 		//IL_0128: Unknown result type (might be due to invalid IL or missing references)
 		//IL_012d: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0132: Unknown result type (might be due to invalid IL or missing references)
-		string key = $"glass_cyber_{width}_{height}_{((object)(Color)(ref baseColor)).GetHashCode()}";
+		string key = $"glass_cyber_{width}_{height}_{((object)(Color)baseColor).GetHashCode()}";
 		if (_textureCache.ContainsKey(key) && (Object)(object)_textureCache[key] != (Object)null)
 		{
 			return _textureCache[key];
@@ -3832,7 +3832,7 @@ public static class GuiStyles
 		//IL_00bf: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00d6: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00d8: Unknown result type (might be due to invalid IL or missing references)
-		string key = $"laser_{width}_{height}_{((object)(Color)(ref color)).GetHashCode()}";
+		string key = $"laser_{width}_{height}_{((object)(Color)color).GetHashCode()}";
 		if (_textureCache.ContainsKey(key) && (Object)(object)_textureCache[key] != (Object)null)
 		{
 			return _textureCache[key];
@@ -3913,7 +3913,7 @@ public static class GuiStyles
 		//IL_014c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_014e: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0153: Unknown result type (might be due to invalid IL or missing references)
-		string key = $"radial_{w}_{h}_{((object)(Color)(ref center)).GetHashCode()}_{((object)(Color)(ref edge)).GetHashCode()}";
+		string key = $"radial_{w}_{h}_{((object)(Color)center).GetHashCode()}_{((object)(Color)edge).GetHashCode()}";
 		if (_textureCache.TryGetValue(key, out var value) && (Object)(object)value != (Object)null)
 		{
 			return value;

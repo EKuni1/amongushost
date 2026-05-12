@@ -3269,7 +3269,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			GUILayout.Label("<color=#E6EAEF><b>v6.1.4b</b></color>  <color=#6B7280>·</color>  <color=#949EAD>Among Us Mod Menu • 2026</color>", GuiStyles.LabelStyle, (Il2CppReferenceArray<GUILayoutOption>)null);
 			ConfigEntry<KeyCode> menuToggleKey = CheatConfig.MenuToggleKey;
 			KeyCode val2 = (KeyCode)((menuToggleKey == null) ? 282 : ((int)menuToggleKey.Value));
-			string text6 = ((object)(KeyCode)(ref val2)).ToString();
+			string text6 = ((object)(KeyCode)val2).ToString();
 			GUILayout.Label("<color=#949EAD>crewcore.online  ·  Press <color=#FFD700><b>" + text6 + "</b></color> to toggle</color>", GuiStyles.LabelStyle, (Il2CppReferenceArray<GUILayoutOption>)null);
 			GUILayout.EndVertical();
 			GUILayout.EndHorizontal();
@@ -5720,7 +5720,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				RectTransform component50 = ((Component)val78).GetComponent<RectTransform>();
 				ConfigEntry<KeyCode> menuToggleKey = CheatConfig.MenuToggleKey;
 				KeyCode val79 = (KeyCode)((menuToggleKey == null) ? 282 : ((int)menuToggleKey.Value));
-				string text2 = ((object)(KeyCode)(ref val79)).ToString();
+				string text2 = ((object)(KeyCode)val79).ToString();
 				_toggleKeyTextTMP = CreateTMPText(component50, "Menu Key: <color=#A78BFA>[ " + text2 + " ]</color>", 12, Color.white, Vector2.zero, new Vector2(220f, 30f), (TextAlignmentOptions)514);
 				if ((Object)(object)_toggleKeyTextTMP != (Object)null)
 				{
@@ -8055,7 +8055,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				TextMeshProUGUI obj12 = val26.AddComponent<TextMeshProUGUI>();
 				ConfigEntry<KeyCode> menuToggleKey = CheatConfig.MenuToggleKey;
 				KeyCode val27 = (KeyCode)((menuToggleKey == null) ? 282 : ((int)menuToggleKey.Value));
-				string text4 = ((object)(KeyCode)(ref val27)).ToString();
+				string text4 = ((object)(KeyCode)val27).ToString();
 				((TMP_Text)obj12).text = "<size=14><color=#B0B5BA>Press  <b>[ " + text4 + " ]</b>  to open/close menu</color></size>\n<size=13><color=#00CCE6><u><link=\"https://crewcore.online\">crewcore.online</link></u></color></size>";
 				((TMP_Text)obj12).font = LoadGameFont();
 				((TMP_Text)obj12).fontSize = 14f;

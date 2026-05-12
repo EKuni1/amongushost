@@ -252,7 +252,7 @@ public static class GameEndManager
 			6 => "Crewmate Disconnected", 
 			7 => "Hiders Survived (Timer)", 
 			8 => "Seeker Found All", 
-			_ => ((object)(GameOverReason)(ref reason)).ToString(), 
+			_ => ((object)(GameOverReason)reason).ToString(), 
 		};
 	}
 
