@@ -249,7 +249,7 @@ public class ReplayRecorder : MonoBehaviour
 				if ((Object)(object)role != (Object)null)
 				{
 					RoleTypes role2 = role.Role;
-					roleName = ((object)(RoleTypes)(ref role2)).ToString();
+					roleName = ((object)(RoleTypes)role2.ToString();
 					isImpostorTeam = role.IsImpostor;
 				}
 			}
@@ -481,7 +481,7 @@ public class ReplayRecorder : MonoBehaviour
 						else if ((Object)(object)current.MyPhysics.body != (Object)null)
 						{
 							Vector2 velocity = current.MyPhysics.body.velocity;
-							if (((Vector2)(ref velocity)).magnitude > 0.1f)
+							if ((velocity).magnitude > 0.1f)
 							{
 								animState = AnimState.Run;
 							}

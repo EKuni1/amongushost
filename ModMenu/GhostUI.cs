@@ -474,7 +474,7 @@ public static class GhostUI
 			{
 				return 500f;
 			}
-			return ((Rect)(ref currentWindow.WindowRect)).width;
+			return (currentWindow.WindowRect).width;
 		}
 	}
 
@@ -487,7 +487,7 @@ public static class GhostUI
 			{
 				return 600f;
 			}
-			return ((Rect)(ref currentWindow.WindowRect)).height;
+			return (currentWindow.WindowRect).height;
 		}
 	}
 
@@ -501,7 +501,7 @@ public static class GhostUI
 			{
 				return 300f;
 			}
-			return ((Rect)(ref _currentWindow.WindowRect)).width - CurrentSidebarWidth - 1f;
+			return (_currentWindow.WindowRect).width - CurrentSidebarWidth - 1f;
 		}
 	}
 
@@ -513,7 +513,7 @@ public static class GhostUI
 			{
 				return 574f;
 			}
-			return ((Rect)(ref _currentWindow.WindowRect)).height - 26f;
+			return (_currentWindow.WindowRect).height - 26f;
 		}
 	}
 
@@ -647,12 +647,12 @@ public static class GhostUI
 			{
 				float num = ModMenuCrew.Easing.Easing.EaseOutCubic(resizeHoverT) * 0.15f + resizeActiveT * 0.1f;
 				GUI.color = new Color(accent.r, accent.g, accent.b, num * win.FadeAlpha);
-				GUI.Box(new Rect(((Rect)(ref cachedResizeHandle)).x + 2f, ((Rect)(ref cachedResizeHandle)).y + 2f, ((Rect)(ref cachedResizeHandle)).width - 2f, ((Rect)(ref cachedResizeHandle)).height - 2f), GUIContent.none, _resizeGlowStyle);
+				GUI.Box(new Rect((cachedResizeHandle).x + 2f, (cachedResizeHandle).y + 2f, (cachedResizeHandle).width - 2f, (cachedResizeHandle).height - 2f), GUIContent.none, _resizeGlowStyle);
 			}
 			float num2 = 2f;
 			float num3 = 6f;
-			float num4 = ((Rect)(ref cachedResizeHandle)).x + 6f;
-			float num5 = ((Rect)(ref cachedResizeHandle)).y + 6f;
+			float num4 = (cachedResizeHandle).x + 6f;
+			float num5 = (cachedResizeHandle).y + 6f;
 			float num6 = Mathf.Lerp(0.25f, 0.7f, ModMenuCrew.Easing.Easing.EaseOutCubic(resizeHoverT));
 			num6 = Mathf.Lerp(num6, 0.95f, resizeActiveT);
 			if (resizeActiveT > 0.01f)
@@ -661,7 +661,7 @@ public static class GhostUI
 			}
 			Color val = new Color(0.6f, 0.6f, 0.65f, num6 * win.FadeAlpha);
 			Color val2 = default(Color);
-			((Color)(ref val2))._002Ector(accent.r, accent.g, accent.b, num6 * win.FadeAlpha);
+			(val2)._002Ector(accent.r, accent.g, accent.b, num6 * win.FadeAlpha);
 			GUI.color = Color.Lerp(val, val2, ModMenuCrew.Easing.Easing.SmoothStep(resizeHoverT));
 			GUI.Box(new Rect(num4 + num3 * 2f, num5, num2, num2), GUIContent.none, _resizeDotStyle);
 			GUI.Box(new Rect(num4 + num3, num5 + num3, num2, num2), GUIContent.none, _resizeDotStyle);
@@ -671,10 +671,10 @@ public static class GhostUI
 			GUI.Box(new Rect(num4 + num3 * 2f, num5 + num3 * 2f, num2, num2), GUIContent.none, _resizeDotStyle);
 			if (resizeActiveT > 0.3f)
 			{
-				string text = $"{Mathf.RoundToInt(((Rect)(ref win.WindowRect)).width)}x{Mathf.RoundToInt(((Rect)(ref win.WindowRect)).height)}";
+				string text = $"{Mathf.RoundToInt((win.WindowRect).width)}x{Mathf.RoundToInt((win.WindowRect).height)}";
 				float num7 = 64f;
 				float num8 = 18f;
-				Rect val3 = new Rect(((Rect)(ref cachedResizeHandle)).x - num7 - 4f, ((Rect)(ref cachedResizeHandle)).yMax - num8, num7, num8);
+				Rect val3 = new Rect((cachedResizeHandle).x - num7 - 4f, (cachedResizeHandle).yMax - num8, num7, num8);
 				float num9 = ModMenuCrew.Easing.Easing.EaseOutCubic(Mathf.Clamp01((resizeActiveT - 0.3f) / 0.7f));
 				GUI.color = new Color(0.08f, 0.09f, 0.11f, 0.9f * num9 * win.FadeAlpha);
 				GUI.Box(val3, GUIContent.none, _resizeDimBgStyle);
@@ -693,13 +693,13 @@ public static class GhostUI
 			_lastBucketFrame = frameCount;
 			float menuScale = GuiStyles.Spacing.MenuScale;
 			VMWindowState currentWindow = _currentWindow;
-			float menuW = ((currentWindow != null) ? ((Rect)(ref currentWindow.WindowRect)).width : 500f);
+			float menuW = ((currentWindow != null) ? (currentWindow.WindowRect).width : 500f);
 			VMWindowState currentWindow2 = _currentWindow;
-			GuiStyles.Spacing.UpdateMenuScale(menuW, (currentWindow2 != null) ? ((Rect)(ref currentWindow2.WindowRect)).height : 600f);
+			GuiStyles.Spacing.UpdateMenuScale(menuW, (currentWindow2 != null) ? (currentWindow2.WindowRect).height : 600f);
 			bool flag = Mathf.Abs(GuiStyles.Spacing.MenuScale - menuScale) >= 0.03f;
 			GuiStyles.InvalidateIfMenuScaleChanged();
 			VMWindowState currentWindow3 = _currentWindow;
-			float num = ((currentWindow3 != null) ? ((Rect)(ref currentWindow3.WindowRect)).width : 500f);
+			float num = ((currentWindow3 != null) ? (currentWindow3.WindowRect).width : 500f);
 			float num2 = ((num < 250f) ? 48f : ((num < 400f) ? 80f : ((num < 550f) ? 140f : 200f)));
 			float num3 = num - num2 - 1f;
 			float currentContentHeight = CurrentContentHeight;
@@ -879,11 +879,11 @@ public static class GhostUI
 		}
 		Vector3 mousePosition = Input.mousePosition;
 		Vector2 val = default(Vector2);
-		((Vector2)(ref val))._002Ector(mousePosition.x, (float)Screen.height - mousePosition.y);
+		(val)._002Ector(mousePosition.x, (float)Screen.height - mousePosition.y);
 		foreach (KeyValuePair<string, VMWindowState> windowState in _windowStates)
 		{
 			VMWindowState value = windowState.Value;
-			if (value != null && !(value.FadeAlpha < 0.1f) && !(((Rect)(ref value.WindowRect)).width < 10f) && !(((Rect)(ref value.WindowRect)).height < 10f) && ((Rect)(ref value.WindowRect)).Contains(val))
+			if (value != null && !(value.FadeAlpha < 0.1f) && !((value.WindowRect).width < 10f) && !((value.WindowRect).height < 10f) && (value.WindowRect).Contains(val))
 			{
 				return true;
 			}
@@ -1142,14 +1142,14 @@ public static class GhostUI
 			Rect windowRect = value.WindowRect;
 			float num = Mathf.Clamp(width, value.MinWidth, value.MaxWidth);
 			float num2 = Mathf.Clamp(height, value.MinHeight, value.MaxHeight);
-			value.WindowRect = new Rect(((Rect)(ref windowRect)).x, ((Rect)(ref windowRect)).y, num, num2);
+			value.WindowRect = new Rect((windowRect).x, (windowRect).y, num, num2);
 		}
 		foreach (KeyValuePair<string, VMWindowState> windowState in _windowStates)
 		{
 			Rect windowRect2 = windowState.Value.WindowRect;
 			float num3 = Mathf.Clamp(width, windowState.Value.MinWidth, windowState.Value.MaxWidth);
 			float num4 = Mathf.Clamp(height, windowState.Value.MinHeight, windowState.Value.MaxHeight);
-			windowState.Value.WindowRect = new Rect(((Rect)(ref windowRect2)).x, ((Rect)(ref windowRect2)).y, num3, num4);
+			windowState.Value.WindowRect = new Rect((windowRect2).x, (windowRect2).y, num3, num4);
 		}
 	}
 
@@ -1165,9 +1165,9 @@ public static class GhostUI
 		foreach (KeyValuePair<string, VMWindowState> windowState in _windowStates)
 		{
 			Rect windowRect = windowState.Value.WindowRect;
-			float num3 = Mathf.Max(0f, (num - ((Rect)(ref windowRect)).width) / 2f);
-			float num4 = Mathf.Max(0f, (num2 - ((Rect)(ref windowRect)).height) / 2f);
-			windowState.Value.WindowRect = new Rect(num3, num4, ((Rect)(ref windowRect)).width, ((Rect)(ref windowRect)).height);
+			float num3 = Mathf.Max(0f, (num - (windowRect).width) / 2f);
+			float num4 = Mathf.Max(0f, (num2 - (windowRect).height) / 2f);
+			windowState.Value.WindowRect = new Rect(num3, num4, (windowRect).width, (windowRect).height);
 		}
 	}
 
@@ -1478,7 +1478,7 @@ public static class GhostUI
 			_currentWindow.FadeStartTime = -1f;
 			return;
 		}
-		if (((Rect)(ref _currentWindow.WindowRect)).width == 0f || ((Rect)(ref _currentWindow.WindowRect)).height == 0f)
+		if ((_currentWindow.WindowRect).width == 0f || (_currentWindow.WindowRect).height == 0f)
 		{
 			_currentWindow.WindowRect = new Rect(num5, num6, num7, num8);
 		}
@@ -1493,14 +1493,14 @@ public static class GhostUI
 		}
 		GUI.color = new Color(color.r, color.g, color.b, _currentWindow.FadeAlpha * num10);
 		float num11 = 26f;
-		Rect val = (Rect)(_currentWindow.IsMinimized ? new Rect(((Rect)(ref _currentWindow.WindowRect)).x, ((Rect)(ref _currentWindow.WindowRect)).y, ((Rect)(ref _currentWindow.WindowRect)).width, num11) : _currentWindow.WindowRect);
+		Rect val = (Rect)(_currentWindow.IsMinimized ? new Rect((_currentWindow.WindowRect).x, (_currentWindow.WindowRect).y, (_currentWindow.WindowRect).width, num11) : _currentWindow.WindowRect);
 		if ((int)Event.current.type == 7)
 		{
 			Color accent = GuiStyles.Theme.Accent;
 			Color color2 = GUI.color;
 			GUI.color = new Color(accent.r, accent.g, accent.b, _currentWindow.CachedPulse * _currentWindow.FadeAlpha * 0.6f);
 			float num12 = 2f;
-			GUI.Box(new Rect(((Rect)(ref val)).x - num12, ((Rect)(ref val)).y - num12, ((Rect)(ref val)).width + num12 * 2f, ((Rect)(ref val)).height + num12 * 2f), GUIContent.none, GuiStyles.ShadowStyle);
+			GUI.Box(new Rect((val).x - num12, (val).y - num12, (val).width + num12 * 2f, (val).height + num12 * 2f), GUIContent.none, GuiStyles.ShadowStyle);
 			GUI.color = color2;
 			GUI.Box(val, GUIContent.none, GuiStyles.WindowStyle);
 			if (!_currentWindow.IsMinimized && (int)Event.current.type == 7)
@@ -1509,22 +1509,22 @@ public static class GhostUI
 				GuiStyles.DrawAnimatedScanlines(val);
 			}
 		}
-		_currentWindow.CachedHeaderRect = new Rect(((Rect)(ref _currentWindow.WindowRect)).x, ((Rect)(ref _currentWindow.WindowRect)).y, ((Rect)(ref _currentWindow.WindowRect)).width, num11);
-		_currentWindow.CachedContentRect = new Rect(((Rect)(ref _currentWindow.WindowRect)).x, ((Rect)(ref _currentWindow.WindowRect)).y + num11, ((Rect)(ref _currentWindow.WindowRect)).width, ((Rect)(ref _currentWindow.WindowRect)).height - num11);
-		_currentWindow.CachedResizeHandle = new Rect(((Rect)(ref _currentWindow.WindowRect)).xMax - 24f, ((Rect)(ref _currentWindow.WindowRect)).yMax - 24f, 24f, 24f);
+		_currentWindow.CachedHeaderRect = new Rect((_currentWindow.WindowRect).x, (_currentWindow.WindowRect).y, (_currentWindow.WindowRect).width, num11);
+		_currentWindow.CachedContentRect = new Rect((_currentWindow.WindowRect).x, (_currentWindow.WindowRect).y + num11, (_currentWindow.WindowRect).width, (_currentWindow.WindowRect).height - num11);
+		_currentWindow.CachedResizeHandle = new Rect((_currentWindow.WindowRect).xMax - 24f, (_currentWindow.WindowRect).yMax - 24f, 24f, 24f);
 		CalculateLayoutBuckets();
 		if ((int)Event.current.type == 7)
 		{
 			GUI.Box(_currentWindow.CachedHeaderRect, GUIContent.none, GuiStyles.HeaderBackgroundStyle);
 		}
-		float num13 = Mathf.Max(60f, ((Rect)(ref _currentWindow.WindowRect)).width - 60f);
-		GUI.Label(new Rect(((Rect)(ref _currentWindow.CachedHeaderRect)).x + 10f, ((Rect)(ref _currentWindow.CachedHeaderRect)).y, num13, num11), text2, GuiStyles.TitleLabelStyle);
+		float num13 = Mathf.Max(60f, (_currentWindow.WindowRect).width - 60f);
+		GUI.Label(new Rect((_currentWindow.CachedHeaderRect).x + 10f, (_currentWindow.CachedHeaderRect).y, num13, num11), text2, GuiStyles.TitleLabelStyle);
 		float num14 = 20f;
 		float num15 = 18f;
-		float num16 = ((Rect)(ref _currentWindow.CachedHeaderRect)).y + 4f;
+		float num16 = (_currentWindow.CachedHeaderRect).y + 4f;
 		Rect val2 = default(Rect);
-		((Rect)(ref val2))._002Ector(((Rect)(ref _currentWindow.WindowRect)).xMax - num14 - 8f, num16, num14, num15);
-		if (GUI.Button(new Rect(((Rect)(ref val2)).x - num14 - 4f, num16, num14, num15), _currentWindow.IsMinimized ? "▭" : "—", GuiStyles.TitleBarButtonStyle))
+		(val2)._002Ector((_currentWindow.WindowRect).xMax - num14 - 8f, num16, num14, num15);
+		if (GUI.Button(new Rect((val2).x - num14 - 4f, num16, num14, num15), _currentWindow.IsMinimized ? "▭" : "—", GuiStyles.TitleBarButtonStyle))
 		{
 			_currentWindow.IsMinimized = !_currentWindow.IsMinimized;
 		}
@@ -1543,7 +1543,7 @@ public static class GhostUI
 			Rect cachedContentRect = _currentWindow.CachedContentRect;
 			if (Mathf.Abs(slideOffset) > 0.1f)
 			{
-				((Rect)(ref cachedContentRect))._002Ector(((Rect)(ref cachedContentRect)).x + slideOffset, ((Rect)(ref cachedContentRect)).y, ((Rect)(ref cachedContentRect)).width, ((Rect)(ref cachedContentRect)).height);
+				(cachedContentRect)._002Ector((cachedContentRect).x + slideOffset, (cachedContentRect).y, (cachedContentRect).width, (cachedContentRect).height);
 			}
 			GUILayout.BeginArea(cachedContentRect);
 			if (alpha < 1f)
@@ -1608,34 +1608,34 @@ public static class GhostUI
 		Event current = Event.current;
 		if (!_currentWindow.IsResizing)
 		{
-			if ((int)current.type == 0 && ((Rect)(ref _currentWindow.CachedHeaderRect)).Contains(current.mousePosition))
+			if ((int)current.type == 0 && (_currentWindow.CachedHeaderRect).Contains(current.mousePosition))
 			{
 				_currentWindow.IsDragging = true;
-				_currentWindow.DragOffset = current.mousePosition - ((Rect)(ref _currentWindow.WindowRect)).position;
+				_currentWindow.DragOffset = current.mousePosition - (_currentWindow.WindowRect).position;
 				current.Use();
 			}
 			else if ((int)current.type == 3 && _currentWindow.IsDragging)
 			{
 				Vector2 val = current.mousePosition - _currentWindow.DragOffset;
-				((Rect)(ref _currentWindow.WindowRect)).x = val.x;
-				((Rect)(ref _currentWindow.WindowRect)).y = val.y;
+				(_currentWindow.WindowRect).x = val.x;
+				(_currentWindow.WindowRect).y = val.y;
 				float num = (float)Screen.width / GuiStyles.Spacing.Scale;
 				float num2 = (float)Screen.height / GuiStyles.Spacing.Scale;
-				if (((Rect)(ref _currentWindow.WindowRect)).x < 15f)
+				if ((_currentWindow.WindowRect).x < 15f)
 				{
-					((Rect)(ref _currentWindow.WindowRect)).x = 0f;
+					(_currentWindow.WindowRect).x = 0f;
 				}
-				if (((Rect)(ref _currentWindow.WindowRect)).y < 15f)
+				if ((_currentWindow.WindowRect).y < 15f)
 				{
-					((Rect)(ref _currentWindow.WindowRect)).y = 0f;
+					(_currentWindow.WindowRect).y = 0f;
 				}
-				if (num - ((Rect)(ref _currentWindow.WindowRect)).xMax < 15f)
+				if (num - (_currentWindow.WindowRect).xMax < 15f)
 				{
-					((Rect)(ref _currentWindow.WindowRect)).x = num - ((Rect)(ref _currentWindow.WindowRect)).width;
+					(_currentWindow.WindowRect).x = num - (_currentWindow.WindowRect).width;
 				}
-				if (num2 - ((Rect)(ref _currentWindow.WindowRect)).yMax < 15f)
+				if (num2 - (_currentWindow.WindowRect).yMax < 15f)
 				{
-					((Rect)(ref _currentWindow.WindowRect)).y = num2 - ((Rect)(ref _currentWindow.WindowRect)).height;
+					(_currentWindow.WindowRect).y = num2 - (_currentWindow.WindowRect).height;
 				}
 				current.Use();
 			}
@@ -1648,8 +1648,8 @@ public static class GhostUI
 		if (!_currentWindow.IsMinimized)
 		{
 			Rect val2 = default(Rect);
-			((Rect)(ref val2))._002Ector(((Rect)(ref _currentWindow.CachedResizeHandle)).x - 4f, ((Rect)(ref _currentWindow.CachedResizeHandle)).y - 4f, 32f, 32f);
-			_currentWindow.ResizeHovered = ((Rect)(ref val2)).Contains(current.mousePosition);
+			(val2)._002Ector((_currentWindow.CachedResizeHandle).x - 4f, (_currentWindow.CachedResizeHandle).y - 4f, 32f, 32f);
+			_currentWindow.ResizeHovered = (val2).Contains(current.mousePosition);
 			if ((int)current.type == 0 && _currentWindow.ResizeHovered)
 			{
 				_currentWindow.IsResizing = true;
@@ -1661,8 +1661,8 @@ public static class GhostUI
 			else if ((int)current.type == 3 && _currentWindow.IsResizing)
 			{
 				Vector2 val3 = current.mousePosition - _currentWindow.ResizeStartMouse;
-				((Rect)(ref _currentWindow.WindowRect)).width = Mathf.Clamp(((Rect)(ref _currentWindow.ResizeStartRect)).width + val3.x, _currentWindow.MinWidth, _currentWindow.MaxWidth);
-				((Rect)(ref _currentWindow.WindowRect)).height = Mathf.Clamp(((Rect)(ref _currentWindow.ResizeStartRect)).height + val3.y, _currentWindow.MinHeight, _currentWindow.MaxHeight);
+				(_currentWindow.WindowRect).width = Mathf.Clamp((_currentWindow.ResizeStartRect).width + val3.x, _currentWindow.MinWidth, _currentWindow.MaxWidth);
+				(_currentWindow.WindowRect).height = Mathf.Clamp((_currentWindow.ResizeStartRect).height + val3.y, _currentWindow.MinHeight, _currentWindow.MaxHeight);
 				current.Use();
 			}
 			else if ((int)current.type == 1 && _currentWindow.IsResizing)
@@ -1680,10 +1680,10 @@ public static class GhostUI
 		}
 		float num3 = (float)Screen.width / GuiStyles.Spacing.Scale;
 		float num4 = (float)Screen.height / GuiStyles.Spacing.Scale;
-		float num5 = Mathf.Max(80f, ((Rect)(ref _currentWindow.WindowRect)).width * 0.5f);
+		float num5 = Mathf.Max(80f, (_currentWindow.WindowRect).width * 0.5f);
 		float num6 = 40f;
-		((Rect)(ref _currentWindow.WindowRect)).x = Mathf.Clamp(((Rect)(ref _currentWindow.WindowRect)).x, 0f - (((Rect)(ref _currentWindow.WindowRect)).width - num5), Mathf.Max(0f, num3 - num5));
-		((Rect)(ref _currentWindow.WindowRect)).y = Mathf.Clamp(((Rect)(ref _currentWindow.WindowRect)).y, 0f, Mathf.Max(0f, num4 - num6));
+		(_currentWindow.WindowRect).x = Mathf.Clamp((_currentWindow.WindowRect).x, 0f - ((_currentWindow.WindowRect).width - num5), Mathf.Max(0f, num3 - num5));
+		(_currentWindow.WindowRect).y = Mathf.Clamp((_currentWindow.WindowRect).y, 0f, Mathf.Max(0f, num4 - num6));
 		if (!_currentWindow.IsMinimized && (int)Event.current.type == 7)
 		{
 			GuiStyles.VisualEffects.UpdateAndDraw(_currentWindow.WindowRect);
@@ -1858,15 +1858,15 @@ public static class GhostUI
 		}
 		GUILayout.EndHorizontal();
 		Rect lastRect = GUILayoutUtility.GetLastRect();
-		((Rect)(ref lastRect)).x = 0f;
-		((Rect)(ref lastRect)).width = CurrentSidebarWidth;
+		(lastRect).x = 0f;
+		(lastRect).width = CurrentSidebarWidth;
 		if ((int)Event.current.type == 7)
 		{
 			if (flag)
 			{
-				GuiStyles.SidebarIndicator.SetTarget(((Rect)(ref lastRect)).y, ((Rect)(ref lastRect)).height);
+				GuiStyles.SidebarIndicator.SetTarget((lastRect).y, (lastRect).height);
 			}
-			else if (((Rect)(ref lastRect)).Contains(Event.current.mousePosition))
+			else if ((lastRect).Contains(Event.current.mousePosition))
 			{
 				GuiStyles.DrawMultiLayerBloom(lastRect, 0.25f);
 				_hoveredTabThisFrame = count;
@@ -1906,10 +1906,10 @@ public static class GhostUI
 			if (selected)
 			{
 				Color accent = GuiStyles.Theme.Accent;
-				Rect val = new Rect(((Rect)(ref iconRect)).x - 3f, ((Rect)(ref iconRect)).y - 3f, ((Rect)(ref iconRect)).width + 6f, ((Rect)(ref iconRect)).height + 6f);
+				Rect val = new Rect((iconRect).x - 3f, (iconRect).y - 3f, (iconRect).width + 6f, (iconRect).height + 6f);
 				GUI.color = new Color(accent.r, accent.g, accent.b, 0.15f);
 				GUI.Label(val, (Texture)(object)icon, GUIStyle.none);
-				Rect val2 = new Rect(((Rect)(ref iconRect)).x - 1f, ((Rect)(ref iconRect)).y - 1f, ((Rect)(ref iconRect)).width + 2f, ((Rect)(ref iconRect)).height + 2f);
+				Rect val2 = new Rect((iconRect).x - 1f, (iconRect).y - 1f, (iconRect).width + 2f, (iconRect).height + 2f);
 				GUI.color = new Color(accent.r, accent.g, accent.b, 0.35f);
 				GUI.Label(val2, (Texture)(object)icon, GUIStyle.none);
 				GUI.color = accent;
@@ -2392,7 +2392,7 @@ public static class GhostUI
 		string text2 = reader.ReadString();
 		InitV5Styles();
 		Color val = default(Color);
-		((Color)(ref val))._002Ector(num, num2, num3, 1f);
+		(val)._002Ector(num, num2, num3, 1f);
 		Color backgroundColor = ((b == 1) ? new Color(1f, 0.1f, 0.1f, 0.15f) : new Color(0.2f, 0.2f, 0.25f, 0.8f));
 		Color backgroundColor2 = GUI.backgroundColor;
 		GUI.backgroundColor = backgroundColor;
@@ -2442,7 +2442,7 @@ public static class GhostUI
 		float num3 = reader.ReadSingle();
 		InitV5Styles();
 		Color color = default(Color);
-		((Color)(ref color))._002Ector(num, num2, num3, 1f);
+		(color)._002Ector(num, num2, num3, 1f);
 		GUILayout.BeginHorizontal((GUILayoutOption[])(object)new GUILayoutOption[1] { GuiStyles.CachedHeight(GuiStyles.Spacing.MenuSize(28f, 20f)) });
 		Color color2 = GUI.color;
 		GUI.color = color;
@@ -2822,7 +2822,7 @@ public static class GhostUI
 					{
 						Rect lastRect4 = GUILayoutUtility.GetLastRect();
 						GuiStyles.DrawRippleEffect(text26, lastRect4);
-						if (((Rect)(ref lastRect4)).Contains(Event.current.mousePosition))
+						if ((lastRect4).Contains(Event.current.mousePosition))
 						{
 							GuiStyles.DrawMultiLayerBloom(lastRect4, 0.5f);
 						}
@@ -2903,7 +2903,7 @@ public static class GhostUI
 					{
 						Rect lastRect5 = GUILayoutUtility.GetLastRect();
 						GuiStyles.DrawToggleIndicator(text27, flag7, lastRect5);
-						if (((Rect)(ref lastRect5)).Contains(Event.current.mousePosition))
+						if ((lastRect5).Contains(Event.current.mousePosition))
 						{
 							GuiStyles.DrawMultiLayerBloom(lastRect5, 0.3f);
 						}
@@ -3065,7 +3065,7 @@ public static class GhostUI
 					GUILayout.EndHorizontal();
 					if ((int)current2.type == 0)
 					{
-						if (((Rect)(ref lastRect2)).Contains(current2.mousePosition))
+						if ((lastRect2).Contains(current2.mousePosition))
 						{
 							_textInputFocusedId = text21;
 							current2.Use();
@@ -3204,7 +3204,7 @@ public static class GhostUI
 					GUILayout.EndHorizontal();
 					if ((int)current.type == 0)
 					{
-						if (((Rect)(ref lastRect)).Contains(current.mousePosition))
+						if ((lastRect).Contains(current.mousePosition))
 						{
 							_textInputFocusedId = text14;
 							current.Use();
@@ -3670,7 +3670,7 @@ public static class GhostUI
 						break;
 					}
 					Rect lastRect3 = GUILayoutUtility.GetLastRect();
-					if (((Rect)(ref lastRect3)).Contains(Event.current.mousePosition))
+					if ((lastRect3).Contains(Event.current.mousePosition))
 					{
 						if (_tooltipHoverRect != lastRect3)
 						{
@@ -3731,8 +3731,8 @@ public static class GhostUI
 							_cachedProgressBgStyle.normal.background = _cachedProgressBgTex;
 						}
 						GUI.Box(rect2, GUIContent.none, _cachedProgressBgStyle);
-						Rect val = new Rect(((Rect)(ref rect2)).x, ((Rect)(ref rect2)).y, ((Rect)(ref rect2)).width * num19, ((Rect)(ref rect2)).height);
-						((Color)(ref val2))._002Ector(num16, num17, num18, 0.9f);
+						Rect val = new Rect((rect2).x, (rect2).y, (rect2).width * num19, (rect2).height);
+						(val2)._002Ector(num16, num17, num18, 0.9f);
 						if ((Object)(object)_cachedProgressFillTex == (Object)null || _cachedProgressFillColor != val2)
 						{
 							_cachedProgressFillTex = GuiStyles.MakeTexture(1, 1, val2);
@@ -3908,15 +3908,15 @@ public static class GhostUI
 						_tooltipStyle.richText = true;
 					}
 					Vector2 val5 = _tooltipStyle.CalcSize(new GUIContent(_pendingTooltipText));
-					((Rect)(ref _pendingTooltipRect)).width = Mathf.Min(val5.x + GuiStyles.Spacing.MenuSize(16f), GuiStyles.Spacing.MenuSize(300f, 180f));
-					((Rect)(ref _pendingTooltipRect)).height = _tooltipStyle.CalcHeight(new GUIContent(_pendingTooltipText), ((Rect)(ref _pendingTooltipRect)).width) + GuiStyles.Spacing.MenuSize(8f, 6f);
-					if (((Rect)(ref _pendingTooltipRect)).xMax > (float)Screen.width)
+					(_pendingTooltipRect).width = Mathf.Min(val5.x + GuiStyles.Spacing.MenuSize(16f), GuiStyles.Spacing.MenuSize(300f, 180f));
+					(_pendingTooltipRect).height = _tooltipStyle.CalcHeight(new GUIContent(_pendingTooltipText), (_pendingTooltipRect).width) + GuiStyles.Spacing.MenuSize(8f, 6f);
+					if ((_pendingTooltipRect).xMax > (float)Screen.width)
 					{
-						((Rect)(ref _pendingTooltipRect)).x = (float)Screen.width - ((Rect)(ref _pendingTooltipRect)).width;
+						(_pendingTooltipRect).x = (float)Screen.width - (_pendingTooltipRect).width;
 					}
-					if (((Rect)(ref _pendingTooltipRect)).yMax > (float)Screen.height)
+					if ((_pendingTooltipRect).yMax > (float)Screen.height)
 					{
-						((Rect)(ref _pendingTooltipRect)).y = (float)Screen.height - ((Rect)(ref _pendingTooltipRect)).height;
+						(_pendingTooltipRect).y = (float)Screen.height - (_pendingTooltipRect).height;
 					}
 					GUI.Box(_pendingTooltipRect, _pendingTooltipText, _tooltipStyle);
 				}

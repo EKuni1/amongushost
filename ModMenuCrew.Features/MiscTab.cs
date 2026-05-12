@@ -1171,7 +1171,7 @@ public class MiscTab
 		Rect lastRect = GUILayoutUtility.GetLastRect();
 		if ((int)current.type == 0)
 		{
-			if (((Rect)(ref lastRect)).Contains(current.mousePosition))
+			if ((lastRect).Contains(current.mousePosition))
 			{
 				_editingFieldId = fieldId;
 				current.Use();
@@ -1547,7 +1547,7 @@ public class MiscTab
 		DrawTex(rect, _svTexture);
 		Event current = Event.current;
 		Vector2 mousePosition = current.mousePosition;
-		if ((int)current.type == 0 && ((Rect)(ref rect)).Contains(mousePosition))
+		if ((int)current.type == 0 && (rect).Contains(mousePosition))
 		{
 			_draggingSV = true;
 		}
@@ -1557,14 +1557,14 @@ public class MiscTab
 		}
 		if (_draggingSV && ((int)current.type == 3 || (int)current.type == 0))
 		{
-			_pickerSat = Mathf.Clamp01((mousePosition.x - ((Rect)(ref rect)).x) / ((Rect)(ref rect)).width);
-			_pickerVal = Mathf.Clamp01(1f - (mousePosition.y - ((Rect)(ref rect)).y) / ((Rect)(ref rect)).height);
+			_pickerSat = Mathf.Clamp01((mousePosition.x - (rect).x) / (rect).width);
+			_pickerVal = Mathf.Clamp01(1f - (mousePosition.y - (rect).y) / (rect).height);
 			ApplyPickerColor(ref hexField, config);
 			current.Use();
 		}
 		float num6 = num3 * 0.5f;
-		float num7 = ((Rect)(ref rect)).x + _pickerSat * ((Rect)(ref rect)).width - num6;
-		float num8 = ((Rect)(ref rect)).y + (1f - _pickerVal) * ((Rect)(ref rect)).height - num6;
+		float num7 = (rect).x + _pickerSat * (rect).width - num6;
+		float num8 = (rect).y + (1f - _pickerVal) * (rect).height - num6;
 		GUI.color = ((_pickerVal > 0.5f && _pickerSat < 0.5f) ? Color.black : Color.white);
 		DrawTex(new Rect(num7, num8, num3, num3), _checkerDot);
 		GUI.color = Color.white;
@@ -1575,11 +1575,11 @@ public class MiscTab
 			GuiStyles.CachedHeight(num2)
 		});
 		DrawTex(rect2, _hueBarTexture);
-		float num9 = ((Rect)(ref rect2)).x + _pickerHue * ((Rect)(ref rect2)).width;
+		float num9 = (rect2).x + _pickerHue * (rect2).width;
 		GUI.color = Color.white;
-		DrawTex(new Rect(num9 - 1f, ((Rect)(ref rect2)).y - 2f, 3f, ((Rect)(ref rect2)).height + 4f), Texture2D.whiteTexture);
+		DrawTex(new Rect(num9 - 1f, (rect2).y - 2f, 3f, (rect2).height + 4f), Texture2D.whiteTexture);
 		GUI.color = Color.white;
-		if ((int)current.type == 0 && ((Rect)(ref rect2)).Contains(mousePosition))
+		if ((int)current.type == 0 && (rect2).Contains(mousePosition))
 		{
 			_draggingHue = true;
 		}
@@ -1589,7 +1589,7 @@ public class MiscTab
 		}
 		if (_draggingHue && ((int)current.type == 3 || (int)current.type == 0))
 		{
-			_pickerHue = Mathf.Clamp01((mousePosition.x - ((Rect)(ref rect2)).x) / ((Rect)(ref rect2)).width);
+			_pickerHue = Mathf.Clamp01((mousePosition.x - (rect2).x) / (rect2).width);
 			ApplyPickerColor(ref hexField, config);
 			current.Use();
 		}

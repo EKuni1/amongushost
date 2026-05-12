@@ -103,7 +103,7 @@ public static class EventLogger
 				else
 				{
 					RoleTypes role2 = role.Role;
-					obj2 = ((object)(RoleTypes)(ref role2)).ToString();
+					obj2 = ((object)(RoleTypes)role2.ToString();
 				}
 			}
 		}
@@ -143,7 +143,7 @@ public static class EventLogger
 			if ((Object)obj4 != (Object)null)
 			{
 				SystemTypes roomId = DestroyableSingleton<HudManager>.Instance.roomTracker.LastRoom.RoomId;
-				location = ((object)(SystemTypes)(ref roomId)).ToString();
+				location = ((object)(SystemTypes)roomId.ToString();
 			}
 		}
 		Log(GameEventType.Kill, $"{text} ({text2}) killed {value}", text, text2, location);
@@ -194,7 +194,7 @@ public static class EventLogger
 				else
 				{
 					RoleTypes role2 = role.Role;
-					obj2 = ((object)(RoleTypes)(ref role2)).ToString();
+					obj2 = ((object)(RoleTypes)role2.ToString();
 				}
 			}
 		}
@@ -251,7 +251,7 @@ public static class EventLogger
 				else
 				{
 					RoleTypes role2 = role.Role;
-					obj2 = ((object)(RoleTypes)(ref role2)).ToString();
+					obj2 = ((object)(RoleTypes)role2.ToString();
 				}
 			}
 		}

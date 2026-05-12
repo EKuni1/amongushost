@@ -227,7 +227,7 @@ public static class ImpostorForcer
 			return false;
 		}
 		string za = ServerData.Config.Za;
-		if (!string.IsNullOrEmpty(za) && ((object)(RoleTypes)(ref role)).ToString() == za)
+		if (!string.IsNullOrEmpty(za) && ((object)(RoleTypes)role.ToString() == za)
 		{
 			return false;
 		}
@@ -251,7 +251,7 @@ public static class ImpostorForcer
 		SelectedRoleForHost = role;
 		if (CheatConfig.SelectedRole != null)
 		{
-			CheatConfig.SelectedRole.Value = ((object)(RoleTypes)(ref role)).ToString();
+			CheatConfig.SelectedRole.Value = ((object)(RoleTypes)role.ToString();
 		}
 		if ((Object)(object)PlayerControl.LocalPlayer != (Object)null && (Object)(object)AmongUsClient.Instance != (Object)null && ((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
@@ -1008,8 +1008,8 @@ public static class ImpostorForcer
 			foreach (SpriteRenderer item in componentsInChildren)
 			{
 				Bounds bounds = ((Renderer)item).bounds;
-				Vector3 extents = ((Bounds)(ref bounds)).extents;
-				float magnitude = ((Vector3)(ref extents)).magnitude;
+				Vector3 extents = (bounds).extents;
+				float magnitude = (extents).magnitude;
 				if (magnitude > num)
 				{
 					num = magnitude;

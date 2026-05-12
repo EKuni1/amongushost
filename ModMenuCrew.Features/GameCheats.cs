@@ -1796,7 +1796,7 @@ public static class GameCheats
 						{
 							RoleTypes roleType = current.Data.RoleType;
 							flag = (int)roleType == 1 || (int)roleType == 5 || (int)roleType == 9 || (int)roleType == 18 || (int)roleType == 7;
-							value = ((object)(RoleTypes)(ref roleType)).ToString().ToUpper();
+							value = ((object)(RoleTypes)roleType.ToString().ToUpper();
 						}
 						string value2 = (flag ? "#FF3333" : "#99CCFF");
 						playerName = $"{playerName} <color={value2}>[{value}]</color>";
@@ -4627,7 +4627,7 @@ public static class GameCheats
 				_003C_003E1__state = -1;
 			}
 			Vector2 val = default(Vector2);
-			((Vector2)(ref val))._002Ector(1000f, 1000f);
+			(val)._002Ector(1000f, 1000f);
 			PlayerControl.LocalPlayer.NetTransform.SnapTo(val);
 			_003C_003E2__current = (object)new WaitForSeconds(0.2f);
 			_003C_003E1__state = 1;
@@ -9260,7 +9260,7 @@ public static class GameCheats
 				4 => "GUARDIAN ANGEL", 
 				6 => "CREWMATE GHOST", 
 				7 => "IMPOSTOR GHOST", 
-				_ => ((object)(RoleTypes)(ref role2)).ToString().ToUpper(), 
+				_ => ((object)(RoleTypes)role2.ToString().ToUpper(), 
 			};
 		}
 		catch
@@ -9294,7 +9294,7 @@ public static class GameCheats
 			4 => "GUARDIAN ANGEL", 
 			6 => "CREWMATE GHOST", 
 			7 => "IMPOSTOR GHOST", 
-			_ => ((object)(RoleTypes)(ref roleType)).ToString().ToUpper(), 
+			_ => ((object)(RoleTypes)roleType.ToString().ToUpper(), 
 		};
 	}
 
@@ -12085,7 +12085,7 @@ public static class GameCheats
 			if (!flag2)
 			{
 				Vector3 val = default(Vector3);
-				((Vector3)(ref val))._002Ector(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
+				(val)._002Ector(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
 				float num = freeCamSpeed;
 				if (Input.GetKey((KeyCode)304))
 				{
@@ -12521,7 +12521,7 @@ public static class GameCheats
 		if (!(zero == Vector2.zero))
 		{
 			float num = (Input.GetKey((KeyCode)304) ? (_noClipSpeed * 2f) : _noClipSpeed);
-			Vector2 val = Vector2.op_Implicit(((Component)PlayerControl.LocalPlayer).transform.position) + ((Vector2)(ref zero)).normalized * num * Time.deltaTime;
+			Vector2 val = Vector2.op_Implicit(((Component)PlayerControl.LocalPlayer).transform.position) + (zero).normalized * num * Time.deltaTime;
 			((Component)PlayerControl.LocalPlayer).transform.position = new Vector3(val.x, val.y, ((Component)PlayerControl.LocalPlayer).transform.position.z);
 			PlayerControl.LocalPlayer.NetTransform.SnapTo(val);
 		}
@@ -12710,8 +12710,8 @@ public static class GameCheats
 	internal static void SetRadarSize(float size)
 	{
 		size = Mathf.Clamp(size, 200f, 500f);
-		((Rect)(ref _radarRect)).width = size;
-		((Rect)(ref _radarRect)).height = size;
+		(_radarRect).width = size;
+		(_radarRect).height = size;
 	}
 
 	private static Texture2D MakeTex(Color c)
@@ -12932,7 +12932,7 @@ public static class GameCheats
 			for (int k = 0; k < 64; k++)
 			{
 				float num = 1f - (float)k / 64f;
-				((Color)(ref val))._002Ector(0.2f, 1f, 0.4f, num * 0.6f);
+				(val)._002Ector(0.2f, 1f, 0.4f, num * 0.6f);
 				_texSonarLine.SetPixel(0, k, val);
 				_texSonarLine.SetPixel(1, k, val);
 			}
@@ -13091,7 +13091,7 @@ public static class GameCheats
 			Vector2 val2 = WorldToRadar(info.imgMinX, info.imgMaxY, mapArea);
 			Vector2 val3 = WorldToRadar(info.imgMaxX, info.imgMinY, mapArea);
 			Rect val4 = default(Rect);
-			((Rect)(ref val4))._002Ector(val2.x, val2.y, val3.x - val2.x, val3.y - val2.y);
+			(val4)._002Ector(val2.x, val2.y, val3.x - val2.x, val3.y - val2.y);
 			Color color = GUI.color;
 			GUI.color = Color.white;
 			try
@@ -13590,13 +13590,13 @@ public static class GameCheats
 		}
 		float num = info.maxX - info.minX;
 		float num2 = info.maxY - info.minY;
-		float num3 = ((Rect)(ref mapArea)).width / num;
-		float num4 = ((Rect)(ref mapArea)).height / num2;
+		float num3 = (mapArea).width / num;
+		float num4 = (mapArea).height / num2;
 		float num5 = Mathf.Min(num3, num4);
-		float num6 = (((Rect)(ref mapArea)).width - num * num5) * 0.5f;
-		float num7 = (((Rect)(ref mapArea)).height - num2 * num5) * 0.5f;
-		float num8 = ((Rect)(ref mapArea)).x + num6 + (worldX - info.minX) * num5;
-		float num9 = ((Rect)(ref mapArea)).y + num7 + (info.maxY - worldY) * num5;
+		float num6 = ((mapArea).width - num * num5) * 0.5f;
+		float num7 = ((mapArea).height - num2 * num5) * 0.5f;
+		float num8 = (mapArea).x + num6 + (worldX - info.minX) * num5;
+		float num9 = (mapArea).y + num7 + (info.maxY - worldY) * num5;
 		return new Vector2(num8, num9);
 	}
 
@@ -13639,13 +13639,13 @@ public static class GameCheats
 		Vector2 val = Vector2.op_Implicit(Input.mousePosition);
 		val.y = (float)Screen.height - val.y;
 		Rect val2 = default(Rect);
-		((Rect)(ref val2))._002Ector(rx, ry, rw, rh);
+		(val2)._002Ector(rx, ry, rw, rh);
 		Rect val3 = default(Rect);
-		((Rect)(ref val3))._002Ector(rx, ry, rw - 44f, 24f);
+		(val3)._002Ector(rx, ry, rw - 44f, 24f);
 		Rect val4 = default(Rect);
-		((Rect)(ref val4))._002Ector(rx + rw - 20f, ry + rh - 20f, 20f, 20f);
+		(val4)._002Ector(rx + rw - 20f, ry + rh - 20f, 20f, 20f);
 		Rect val5 = default(Rect);
-		((Rect)(ref val5))._002Ector(rx + 4f, ry + 24f + 2f, rw - 8f, rh - 24f - 18f - 4f);
+		(val5)._002Ector(rx + 4f, ry + 24f + 2f, rw - 8f, rh - 24f - 18f - 4f);
 		bool flag = false;
 		try
 		{
@@ -13656,7 +13656,7 @@ public static class GameCheats
 		}
 		try
 		{
-			if (!flag && ((Rect)(ref val2)).Contains(val) && (Object)(object)PlayerControl.LocalPlayer != (Object)null)
+			if (!flag && (val2).Contains(val) && (Object)(object)PlayerControl.LocalPlayer != (Object)null)
 			{
 				if (PlayerControl.LocalPlayer.moveable)
 				{
@@ -13674,26 +13674,26 @@ public static class GameCheats
 		{
 			_radarBlockedMovement = false;
 		}
-		if (!RadarLocked && !RadarMinimized && ((Rect)(ref val2)).Contains(val))
+		if (!RadarLocked && !RadarMinimized && (val2).Contains(val))
 		{
 			float y = Input.mouseScrollDelta.y;
 			if (y != 0f)
 			{
 				float num = 20f;
-				float num2 = Mathf.Clamp(((Rect)(ref _radarRect)).width + y * num, 200f, 500f);
-				float width = ((Rect)(ref _radarRect)).width;
-				float height = ((Rect)(ref _radarRect)).height;
-				((Rect)(ref _radarRect)).width = num2;
-				((Rect)(ref _radarRect)).height = num2;
+				float num2 = Mathf.Clamp((_radarRect).width + y * num, 200f, 500f);
+				float width = (_radarRect).width;
+				float height = (_radarRect).height;
+				(_radarRect).width = num2;
+				(_radarRect).height = num2;
 				float num3 = (val.x - rx) / width;
 				float num4 = (val.y - ry) / height;
-				((Rect)(ref _radarRect)).x = Mathf.Clamp(val.x - num3 * num2, 0f, (float)Screen.width - num2);
-				((Rect)(ref _radarRect)).y = Mathf.Clamp(val.y - num4 * num2, 0f, (float)Screen.height - num2);
+				(_radarRect).x = Mathf.Clamp(val.x - num3 * num2, 0f, (float)Screen.width - num2);
+				(_radarRect).y = Mathf.Clamp(val.y - num4 * num2, 0f, (float)Screen.height - num2);
 			}
 		}
 		if (!RadarLocked)
 		{
-			if (Input.GetMouseButtonDown(0) && ((Rect)(ref val4)).Contains(val))
+			if (Input.GetMouseButtonDown(0) && (val4).Contains(val))
 			{
 				_isResizing = true;
 				_resizeStart = val;
@@ -13702,8 +13702,8 @@ public static class GameCheats
 			if (_isResizing && Input.GetMouseButton(0))
 			{
 				Vector2 val6 = val - _resizeStart;
-				float height2 = (((Rect)(ref _radarRect)).width = Mathf.Clamp(((Rect)(ref _resizeStartRect)).width + Mathf.Max(val6.x, val6.y), 200f, 500f));
-				((Rect)(ref _radarRect)).height = height2;
+				float height2 = ((_radarRect).width = Mathf.Clamp((_resizeStartRect).width + Mathf.Max(val6.x, val6.y), 200f, 500f));
+				(_radarRect).height = height2;
 			}
 			if (Input.GetMouseButtonUp(0))
 			{
@@ -13712,29 +13712,29 @@ public static class GameCheats
 		}
 		if (!RadarLocked && !_isResizing)
 		{
-			if (Input.GetMouseButtonDown(0) && ((Rect)(ref val3)).Contains(val))
+			if (Input.GetMouseButtonDown(0) && (val3).Contains(val))
 			{
 				_isDragging = true;
 				_dragOffset = val - new Vector2(rx, ry);
 			}
 			if (_isDragging && Input.GetMouseButton(0))
 			{
-				((Rect)(ref _radarRect)).x = Mathf.Clamp(val.x - _dragOffset.x, 0f, (float)Screen.width - rw);
-				((Rect)(ref _radarRect)).y = Mathf.Clamp(val.y - _dragOffset.y, 0f, (float)Screen.height - rh);
+				(_radarRect).x = Mathf.Clamp(val.x - _dragOffset.x, 0f, (float)Screen.width - rw);
+				(_radarRect).y = Mathf.Clamp(val.y - _dragOffset.y, 0f, (float)Screen.height - rh);
 			}
 			if (Input.GetMouseButtonUp(0))
 			{
 				_isDragging = false;
 			}
 		}
-		if (!RadarRightClickTP || RadarMinimized || flag || !Input.GetMouseButtonDown(1) || !((Rect)(ref val5)).Contains(val) || Input.GetKey((KeyCode)304) || Input.GetKey((KeyCode)306) || !TryGetMapInfo(out var info))
+		if (!RadarRightClickTP || RadarMinimized || flag || !Input.GetMouseButtonDown(1) || !(val5).Contains(val) || Input.GetKey((KeyCode)304) || Input.GetKey((KeyCode)306) || !TryGetMapInfo(out var info))
 		{
 			return;
 		}
-		float num6 = (val.x - ((Rect)(ref val5)).x) / ((Rect)(ref val5)).width;
-		float num7 = 1f - (val.y - ((Rect)(ref val5)).y) / ((Rect)(ref val5)).height;
+		float num6 = (val.x - (val5).x) / (val5).width;
+		float num7 = 1f - (val.y - (val5).y) / (val5).height;
 		Vector2 val7 = default(Vector2);
-		((Vector2)(ref val7))._002Ector(info.minX + num6 * (info.maxX - info.minX), info.minY + num7 * (info.maxY - info.minY));
+		(val7)._002Ector(info.minX + num6 * (info.maxX - info.minX), info.minY + num7 * (info.maxY - info.minY));
 		try
 		{
 			PlayerControl.LocalPlayer.NetTransform.SnapTo(val7);
@@ -13935,11 +13935,11 @@ public static class GameCheats
 				return;
 			}
 			InitRadar();
-			float x = ((Rect)(ref _radarRect)).x;
-			float y = ((Rect)(ref _radarRect)).y;
-			float width = ((Rect)(ref _radarRect)).width;
-			float num = (RadarMinimized ? 28f : ((Rect)(ref _radarRect)).height);
-			HandleInput(x, y, width, ((Rect)(ref _radarRect)).height);
+			float x = (_radarRect).x;
+			float y = (_radarRect).y;
+			float width = (_radarRect).width;
+			float num = (RadarMinimized ? 28f : (_radarRect).height);
+			HandleInput(x, y, width, (_radarRect).height);
 			GUI.Box(new Rect(x + 3f, y + 3f, width, num), GUIContent.none, _sShadow);
 			GUI.Box(new Rect(x, y, width, num), GUIContent.none, _sWindowBg);
 			if (RadarShowBorder)
@@ -13999,7 +13999,7 @@ public static class GameCheats
 				return;
 			}
 			Rect val = default(Rect);
-			((Rect)(ref val))._002Ector(x + 4f, y + 24f + 2f, width - 8f, num - 24f - 18f - 4f);
+			(val)._002Ector(x + 4f, y + 24f + 2f, width - 8f, num - 24f - 18f - 4f);
 			GUI.Box(val, GUIContent.none, _sMapBg);
 			bool flag = (_isAirship ? ((Object)(object)_airshipMapTexture != (Object)null) : (_mapTextures.ContainsKey(_currentMapType) && (Object)(object)_mapTextures[_currentMapType] != (Object)null));
 			if (RadarShowMapImage && flag)
@@ -14012,11 +14012,11 @@ public static class GameCheats
 			}
 			DrawMapGridSafe(val);
 			float num5 = Time.time * 0.4f % 1f;
-			GUI.Box(new Rect(((Rect)(ref val)).x + num5 * ((Rect)(ref val)).width, ((Rect)(ref val)).y, 2f, ((Rect)(ref val)).height), GUIContent.none, _sScanLine);
+			GUI.Box(new Rect((val).x + num5 * (val).width, (val).y, 2f, (val).height), GUIContent.none, _sScanLine);
 			GUI.color = new Color(1f, 1f, 1f, 0.04f);
-			for (int i = 0; (float)i < ((Rect)(ref val)).height; i += 20)
+			for (int i = 0; (float)i < (val).height; i += 20)
 			{
-				GUI.Box(new Rect(((Rect)(ref val)).x, ((Rect)(ref val)).y + (float)i, ((Rect)(ref val)).width, 1f), GUIContent.none, _sScanLine);
+				GUI.Box(new Rect((val).x, (val).y + (float)i, (val).width, 1f), GUIContent.none, _sScanLine);
 			}
 			GUI.color = Color.white;
 			if (_sonarInitialized && (Object)(object)_texSonarLine != (Object)null)
@@ -14026,9 +14026,9 @@ public static class GameCheats
 				{
 					_sonarAngle -= 360f;
 				}
-				float num6 = ((Rect)(ref val)).x + ((Rect)(ref val)).width / 2f;
-				float num7 = ((Rect)(ref val)).y + ((Rect)(ref val)).height / 2f;
-				float num8 = Mathf.Min(((Rect)(ref val)).width, ((Rect)(ref val)).height) / 2f - 4f;
+				float num6 = (val).x + (val).width / 2f;
+				float num7 = (val).y + (val).height / 2f;
+				float num8 = Mathf.Min((val).width, (val).height) / 2f - 4f;
 				float num9 = _sonarAngle * ((float)Math.PI / 180f);
 				float num10 = num6 + Mathf.Sin(num9) * num8;
 				float num11 = num7 - Mathf.Cos(num9) * num8;
@@ -14057,7 +14057,7 @@ public static class GameCheats
 			{
 				ref RadarDeadBodyData reference = ref _deadBodyCache[k];
 				Vector2 val2 = WorldToRadar(reference.x, reference.y, val);
-				if (((Rect)(ref val)).Contains(val2))
+				if ((val).Contains(val2))
 				{
 					GUI.Box(new Rect(val2.x - 7f, val2.y - 7f, 14f, 14f), GUIContent.none, _sDeadBodyBg);
 					GUI.Box(new Rect(val2.x - 5f, val2.y - 5f, 10f, 10f), GUIContent.none, _sPlayers[reference.colorId]);
@@ -14070,8 +14070,8 @@ public static class GameCheats
 			{
 				ref RadarPlayerData reference2 = ref _playerCache[l];
 				Vector2 val3 = WorldToRadar(reference2.x, reference2.y, val);
-				val3.x = Mathf.Clamp(val3.x, ((Rect)(ref val)).xMin + 8f, ((Rect)(ref val)).xMax - 8f);
-				val3.y = Mathf.Clamp(val3.y, ((Rect)(ref val)).yMin + 8f, ((Rect)(ref val)).yMax - 8f);
+				val3.x = Mathf.Clamp(val3.x, (val).xMin + 8f, (val).xMax - 8f);
+				val3.y = Mathf.Clamp(val3.y, (val).yMin + 8f, (val).yMax - 8f);
 				if (reference2.isDead)
 				{
 					_ = GUI.color;
@@ -14109,8 +14109,8 @@ public static class GameCheats
 				}
 			}
 			Vector2 val4 = WorldToRadar(_localPos.x, _localPos.y, val);
-			val4.x = Mathf.Clamp(val4.x, ((Rect)(ref val)).xMin + 8f, ((Rect)(ref val)).xMax - 8f);
-			val4.y = Mathf.Clamp(val4.y, ((Rect)(ref val)).yMin + 8f, ((Rect)(ref val)).yMax - 8f);
+			val4.x = Mathf.Clamp(val4.x, (val).xMin + 8f, (val).xMax - 8f);
+			val4.y = Mathf.Clamp(val4.y, (val).yMin + 8f, (val).yMax - 8f);
 			DrawPlayerDotSafe(val4.x, val4.y, num17, isImp: false);
 			float num19 = 0.7f + 0.3f * Mathf.Sin(_pulseTime * 5f);
 			GUI.color = new Color(1f, 1f, 1f, num19 * 0.5f);
@@ -14224,33 +14224,33 @@ public static class GameCheats
 		//IL_02b5: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00aa: Unknown result type (might be due to invalid IL or missing references)
 		int num = 8;
-		float num2 = ((Rect)(ref mapArea)).width / (float)num;
-		float num3 = ((Rect)(ref mapArea)).height / (float)num;
+		float num2 = (mapArea).width / (float)num;
+		float num3 = (mapArea).height / (float)num;
 		for (int i = 1; i < num; i++)
 		{
-			float num4 = ((Rect)(ref mapArea)).x + (float)i * num2;
+			float num4 = (mapArea).x + (float)i * num2;
 			bool flag = i == num / 2;
-			GUI.Box(new Rect(num4, ((Rect)(ref mapArea)).y, (float)((!flag) ? 1 : 2), ((Rect)(ref mapArea)).height), GUIContent.none, flag ? _sGridBright : _sGridDim);
+			GUI.Box(new Rect(num4, (mapArea).y, (float)((!flag) ? 1 : 2), (mapArea).height), GUIContent.none, flag ? _sGridBright : _sGridDim);
 		}
 		for (int j = 1; j < num; j++)
 		{
-			float num5 = ((Rect)(ref mapArea)).y + (float)j * num3;
+			float num5 = (mapArea).y + (float)j * num3;
 			bool flag2 = j == num / 2;
-			GUI.Box(new Rect(((Rect)(ref mapArea)).x, num5, ((Rect)(ref mapArea)).width, (float)((!flag2) ? 1 : 2)), GUIContent.none, flag2 ? _sGridBright : _sGridDim);
+			GUI.Box(new Rect((mapArea).x, num5, (mapArea).width, (float)((!flag2) ? 1 : 2)), GUIContent.none, flag2 ? _sGridBright : _sGridDim);
 		}
-		GUI.Box(new Rect(((Rect)(ref mapArea)).x, ((Rect)(ref mapArea)).y, ((Rect)(ref mapArea)).width, 1f), GUIContent.none, _sGridBright);
-		GUI.Box(new Rect(((Rect)(ref mapArea)).x, ((Rect)(ref mapArea)).yMax - 1f, ((Rect)(ref mapArea)).width, 1f), GUIContent.none, _sGridBright);
-		GUI.Box(new Rect(((Rect)(ref mapArea)).x, ((Rect)(ref mapArea)).y, 1f, ((Rect)(ref mapArea)).height), GUIContent.none, _sGridBright);
-		GUI.Box(new Rect(((Rect)(ref mapArea)).xMax - 1f, ((Rect)(ref mapArea)).y, 1f, ((Rect)(ref mapArea)).height), GUIContent.none, _sGridBright);
+		GUI.Box(new Rect((mapArea).x, (mapArea).y, (mapArea).width, 1f), GUIContent.none, _sGridBright);
+		GUI.Box(new Rect((mapArea).x, (mapArea).yMax - 1f, (mapArea).width, 1f), GUIContent.none, _sGridBright);
+		GUI.Box(new Rect((mapArea).x, (mapArea).y, 1f, (mapArea).height), GUIContent.none, _sGridBright);
+		GUI.Box(new Rect((mapArea).xMax - 1f, (mapArea).y, 1f, (mapArea).height), GUIContent.none, _sGridBright);
 		_sSmall.alignment = (TextAnchor)4;
 		_sSmall.normal.textColor = new Color(0.4f, 0.7f, 0.9f, 0.6f);
 		_sSmall.fontSize = 9;
-		float num6 = ((Rect)(ref mapArea)).x + ((Rect)(ref mapArea)).width * 0.5f;
-		float num7 = ((Rect)(ref mapArea)).y + ((Rect)(ref mapArea)).height * 0.5f;
-		GUI.Label(new Rect(num6 - 8f, ((Rect)(ref mapArea)).y + 2f, 16f, 12f), "N", _sSmall);
-		GUI.Label(new Rect(num6 - 8f, ((Rect)(ref mapArea)).yMax - 14f, 16f, 12f), "S", _sSmall);
-		GUI.Label(new Rect(((Rect)(ref mapArea)).x + 2f, num7 - 6f, 12f, 12f), "W", _sSmall);
-		GUI.Label(new Rect(((Rect)(ref mapArea)).xMax - 14f, num7 - 6f, 12f, 12f), "E", _sSmall);
+		float num6 = (mapArea).x + (mapArea).width * 0.5f;
+		float num7 = (mapArea).y + (mapArea).height * 0.5f;
+		GUI.Label(new Rect(num6 - 8f, (mapArea).y + 2f, 16f, 12f), "N", _sSmall);
+		GUI.Label(new Rect(num6 - 8f, (mapArea).yMax - 14f, 16f, 12f), "S", _sSmall);
+		GUI.Label(new Rect((mapArea).x + 2f, num7 - 6f, 12f, 12f), "W", _sSmall);
+		GUI.Label(new Rect((mapArea).xMax - 14f, num7 - 6f, 12f, 12f), "E", _sSmall);
 		_sSmall.fontSize = 8;
 	}
 
@@ -14294,8 +14294,8 @@ public static class GameCheats
 			float worldY2 = roomData.y - roomData.h / 2f;
 			Vector2 val = WorldToRadar(worldX, worldY, mapArea);
 			Vector2 val2 = WorldToRadar(worldX2, worldY2, mapArea);
-			((Rect)(ref val3))._002Ector(val.x, val.y, val2.x - val.x, val2.y - val.y);
-			if (!(((Rect)(ref val3)).xMax < ((Rect)(ref mapArea)).x) && !(((Rect)(ref val3)).x > ((Rect)(ref mapArea)).xMax) && !(((Rect)(ref val3)).yMax < ((Rect)(ref mapArea)).y) && !(((Rect)(ref val3)).y > ((Rect)(ref mapArea)).yMax))
+			(val3)._002Ector(val.x, val.y, val2.x - val.x, val2.y - val.y);
+			if (!((val3).xMax < (mapArea).x) && !((val3).x > (mapArea).xMax) && !((val3).yMax < (mapArea).y) && !((val3).y > (mapArea).yMax))
 			{
 				switch (roomData.shapeType)
 				{
@@ -14338,21 +14338,21 @@ public static class GameCheats
 		//IL_027e: Unknown result type (might be due to invalid IL or missing references)
 		//IL_02aa: Unknown result type (might be due to invalid IL or missing references)
 		//IL_02d6: Unknown result type (might be due to invalid IL or missing references)
-		float num = Mathf.Min(((Rect)(ref rect)).width, ((Rect)(ref rect)).height) * 0.15f;
-		GUI.Box(new Rect(((Rect)(ref rect)).x + num, ((Rect)(ref rect)).y, ((Rect)(ref rect)).width - num * 2f, ((Rect)(ref rect)).height), GUIContent.none, _sRoomFill);
-		GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).y + num, ((Rect)(ref rect)).width, ((Rect)(ref rect)).height - num * 2f), GUIContent.none, _sRoomFill);
-		GUI.Box(new Rect(((Rect)(ref rect)).x + num, ((Rect)(ref rect)).y, ((Rect)(ref rect)).width - num * 2f, 2f), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).x + num, ((Rect)(ref rect)).yMax - 2f, ((Rect)(ref rect)).width - num * 2f, 2f), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).y + num, 2f, ((Rect)(ref rect)).height - num * 2f), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).xMax - 2f, ((Rect)(ref rect)).y + num, 2f, ((Rect)(ref rect)).height - num * 2f), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).y + num - 2f, num, 2f), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).x + num - 2f, ((Rect)(ref rect)).y, 2f, num), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).xMax - num, ((Rect)(ref rect)).y + num - 2f, num, 2f), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).xMax - num, ((Rect)(ref rect)).y, 2f, num), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).yMax - num, num, 2f), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).x + num - 2f, ((Rect)(ref rect)).yMax - num, 2f, num), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).xMax - num, ((Rect)(ref rect)).yMax - num, num, 2f), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).xMax - num, ((Rect)(ref rect)).yMax - num, 2f, num), GUIContent.none, _sRoomBorder);
+		float num = Mathf.Min((rect).width, (rect).height) * 0.15f;
+		GUI.Box(new Rect((rect).x + num, (rect).y, (rect).width - num * 2f, (rect).height), GUIContent.none, _sRoomFill);
+		GUI.Box(new Rect((rect).x, (rect).y + num, (rect).width, (rect).height - num * 2f), GUIContent.none, _sRoomFill);
+		GUI.Box(new Rect((rect).x + num, (rect).y, (rect).width - num * 2f, 2f), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).x + num, (rect).yMax - 2f, (rect).width - num * 2f, 2f), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).x, (rect).y + num, 2f, (rect).height - num * 2f), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).xMax - 2f, (rect).y + num, 2f, (rect).height - num * 2f), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).x, (rect).y + num - 2f, num, 2f), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).x + num - 2f, (rect).y, 2f, num), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).xMax - num, (rect).y + num - 2f, num, 2f), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).xMax - num, (rect).y, 2f, num), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).x, (rect).yMax - num, num, 2f), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).x + num - 2f, (rect).yMax - num, 2f, num), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).xMax - num, (rect).yMax - num, num, 2f), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).xMax - num, (rect).yMax - num, 2f, num), GUIContent.none, _sRoomBorder);
 	}
 
 	private static void DrawRectRoom(Rect rect)
@@ -14363,10 +14363,10 @@ public static class GameCheats
 		//IL_008c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00c0: Unknown result type (might be due to invalid IL or missing references)
 		GUI.Box(rect, GUIContent.none, _sRoomFill);
-		GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).y, ((Rect)(ref rect)).width, 2f), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).yMax - 2f, ((Rect)(ref rect)).width, 2f), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).y, 2f, ((Rect)(ref rect)).height), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).xMax - 2f, ((Rect)(ref rect)).y, 2f, ((Rect)(ref rect)).height), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).x, (rect).y, (rect).width, 2f), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).x, (rect).yMax - 2f, (rect).width, 2f), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).x, (rect).y, 2f, (rect).height), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).xMax - 2f, (rect).y, 2f, (rect).height), GUIContent.none, _sRoomBorder);
 	}
 
 	private static void DrawHexagonRoom(Rect rect)
@@ -14377,13 +14377,13 @@ public static class GameCheats
 		//IL_00e8: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0120: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0154: Unknown result type (might be due to invalid IL or missing references)
-		float num = ((Rect)(ref rect)).width * 0.25f;
-		GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).y + ((Rect)(ref rect)).height * 0.3f, ((Rect)(ref rect)).width, ((Rect)(ref rect)).height * 0.7f), GUIContent.none, _sRoomFill);
-		GUI.Box(new Rect(((Rect)(ref rect)).x + num * 0.5f, ((Rect)(ref rect)).y, ((Rect)(ref rect)).width - num, ((Rect)(ref rect)).height * 0.4f), GUIContent.none, _sRoomFill);
-		GUI.Box(new Rect(((Rect)(ref rect)).x + num, ((Rect)(ref rect)).y, ((Rect)(ref rect)).width - num * 2f, 2f), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).y + num, 2f, ((Rect)(ref rect)).height - num), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).xMax - 2f, ((Rect)(ref rect)).y + num, 2f, ((Rect)(ref rect)).height - num), GUIContent.none, _sRoomBorder);
-		GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).yMax - 2f, ((Rect)(ref rect)).width, 2f), GUIContent.none, _sRoomBorder);
+		float num = (rect).width * 0.25f;
+		GUI.Box(new Rect((rect).x, (rect).y + (rect).height * 0.3f, (rect).width, (rect).height * 0.7f), GUIContent.none, _sRoomFill);
+		GUI.Box(new Rect((rect).x + num * 0.5f, (rect).y, (rect).width - num, (rect).height * 0.4f), GUIContent.none, _sRoomFill);
+		GUI.Box(new Rect((rect).x + num, (rect).y, (rect).width - num * 2f, 2f), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).x, (rect).y + num, 2f, (rect).height - num), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).xMax - 2f, (rect).y + num, 2f, (rect).height - num), GUIContent.none, _sRoomBorder);
+		GUI.Box(new Rect((rect).x, (rect).yMax - 2f, (rect).width, 2f), GUIContent.none, _sRoomBorder);
 	}
 
 	private static void DrawPentagonRoom(Rect rect, bool pointLeft)
@@ -14400,26 +14400,26 @@ public static class GameCheats
 		//IL_00f8: Unknown result type (might be due to invalid IL or missing references)
 		//IL_012c: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0154: Unknown result type (might be due to invalid IL or missing references)
-		float num = ((Rect)(ref rect)).width * 0.3f;
+		float num = (rect).width * 0.3f;
 		if (pointLeft)
 		{
-			GUI.Box(new Rect(((Rect)(ref rect)).x + num * 0.5f, ((Rect)(ref rect)).y, ((Rect)(ref rect)).width - num * 0.5f, ((Rect)(ref rect)).height), GUIContent.none, _sRoomFill);
-			float num2 = ((Rect)(ref rect)).y + ((Rect)(ref rect)).height * 0.5f;
-			GUI.Box(new Rect(((Rect)(ref rect)).x, num2 - ((Rect)(ref rect)).height * 0.25f, num, ((Rect)(ref rect)).height * 0.5f), GUIContent.none, _sRoomFill);
-			GUI.Box(new Rect(((Rect)(ref rect)).x + num, ((Rect)(ref rect)).y, ((Rect)(ref rect)).width - num, 2f), GUIContent.none, _sRoomBorder);
-			GUI.Box(new Rect(((Rect)(ref rect)).x + num, ((Rect)(ref rect)).yMax - 2f, ((Rect)(ref rect)).width - num, 2f), GUIContent.none, _sRoomBorder);
-			GUI.Box(new Rect(((Rect)(ref rect)).xMax - 2f, ((Rect)(ref rect)).y, 2f, ((Rect)(ref rect)).height), GUIContent.none, _sRoomBorder);
-			GUI.Box(new Rect(((Rect)(ref rect)).x, num2 - 1f, num, 2f), GUIContent.none, _sRoomBorder);
+			GUI.Box(new Rect((rect).x + num * 0.5f, (rect).y, (rect).width - num * 0.5f, (rect).height), GUIContent.none, _sRoomFill);
+			float num2 = (rect).y + (rect).height * 0.5f;
+			GUI.Box(new Rect((rect).x, num2 - (rect).height * 0.25f, num, (rect).height * 0.5f), GUIContent.none, _sRoomFill);
+			GUI.Box(new Rect((rect).x + num, (rect).y, (rect).width - num, 2f), GUIContent.none, _sRoomBorder);
+			GUI.Box(new Rect((rect).x + num, (rect).yMax - 2f, (rect).width - num, 2f), GUIContent.none, _sRoomBorder);
+			GUI.Box(new Rect((rect).xMax - 2f, (rect).y, 2f, (rect).height), GUIContent.none, _sRoomBorder);
+			GUI.Box(new Rect((rect).x, num2 - 1f, num, 2f), GUIContent.none, _sRoomBorder);
 		}
 		else
 		{
-			GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).y, ((Rect)(ref rect)).width - num * 0.5f, ((Rect)(ref rect)).height), GUIContent.none, _sRoomFill);
-			float num3 = ((Rect)(ref rect)).y + ((Rect)(ref rect)).height * 0.5f;
-			GUI.Box(new Rect(((Rect)(ref rect)).xMax - num, num3 - ((Rect)(ref rect)).height * 0.25f, num, ((Rect)(ref rect)).height * 0.5f), GUIContent.none, _sRoomFill);
-			GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).y, ((Rect)(ref rect)).width - num, 2f), GUIContent.none, _sRoomBorder);
-			GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).yMax - 2f, ((Rect)(ref rect)).width - num, 2f), GUIContent.none, _sRoomBorder);
-			GUI.Box(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).y, 2f, ((Rect)(ref rect)).height), GUIContent.none, _sRoomBorder);
-			GUI.Box(new Rect(((Rect)(ref rect)).xMax - num, num3 - 1f, num, 2f), GUIContent.none, _sRoomBorder);
+			GUI.Box(new Rect((rect).x, (rect).y, (rect).width - num * 0.5f, (rect).height), GUIContent.none, _sRoomFill);
+			float num3 = (rect).y + (rect).height * 0.5f;
+			GUI.Box(new Rect((rect).xMax - num, num3 - (rect).height * 0.25f, num, (rect).height * 0.5f), GUIContent.none, _sRoomFill);
+			GUI.Box(new Rect((rect).x, (rect).y, (rect).width - num, 2f), GUIContent.none, _sRoomBorder);
+			GUI.Box(new Rect((rect).x, (rect).yMax - 2f, (rect).width - num, 2f), GUIContent.none, _sRoomBorder);
+			GUI.Box(new Rect((rect).x, (rect).y, 2f, (rect).height), GUIContent.none, _sRoomBorder);
+			GUI.Box(new Rect((rect).xMax - num, num3 - 1f, num, 2f), GUIContent.none, _sRoomBorder);
 		}
 	}
 
@@ -15123,11 +15123,11 @@ public static class GameCheats
 		Event current = Event.current;
 		Vector2 mousePosition = current.mousePosition;
 		Rect val = default(Rect);
-		((Rect)(ref val))._002Ector(((Rect)(ref _eventLogRect)).x, ((Rect)(ref _eventLogRect)).y, ((Rect)(ref _eventLogRect)).width - 70f, 28f);
-		if ((int)current.type == 0 && ((Rect)(ref val)).Contains(mousePosition))
+		(val)._002Ector((_eventLogRect).x, (_eventLogRect).y, (_eventLogRect).width - 70f, 28f);
+		if ((int)current.type == 0 && (val).Contains(mousePosition))
 		{
 			_eventLogDragging = true;
-			_eventLogDragOffset = mousePosition - new Vector2(((Rect)(ref _eventLogRect)).x, ((Rect)(ref _eventLogRect)).y);
+			_eventLogDragOffset = mousePosition - new Vector2((_eventLogRect).x, (_eventLogRect).y);
 		}
 		else if ((int)current.type == 1)
 		{
@@ -15135,37 +15135,37 @@ public static class GameCheats
 		}
 		else if ((int)current.type == 3 && _eventLogDragging)
 		{
-			((Rect)(ref _eventLogRect)).x = mousePosition.x - _eventLogDragOffset.x;
-			((Rect)(ref _eventLogRect)).y = mousePosition.y - _eventLogDragOffset.y;
+			(_eventLogRect).x = mousePosition.x - _eventLogDragOffset.x;
+			(_eventLogRect).y = mousePosition.y - _eventLogDragOffset.y;
 		}
 		GUIStyle val2 = new GUIStyle();
 		val2.normal.background = _eventLogBgTex;
 		GUI.Box(_eventLogRect, GUIContent.none, val2);
-		Rect val3 = new Rect(((Rect)(ref _eventLogRect)).x, ((Rect)(ref _eventLogRect)).y, ((Rect)(ref _eventLogRect)).width, 28f);
+		Rect val3 = new Rect((_eventLogRect).x, (_eventLogRect).y, (_eventLogRect).width, 28f);
 		GUIStyle val4 = new GUIStyle();
 		val4.normal.background = _eventLogHeaderTex;
 		GUI.Box(val3, GUIContent.none, val4);
-		GUI.Label(new Rect(((Rect)(ref _eventLogRect)).x + 5f, ((Rect)(ref _eventLogRect)).y + 2f, 150f, 24f), "EVENT LOG", _eventLogHeaderStyle);
+		GUI.Label(new Rect((_eventLogRect).x + 5f, (_eventLogRect).y + 2f, 150f, 24f), "EVENT LOG", _eventLogHeaderStyle);
 		List<GameEvent> filteredEvents = EventLogger.GetFilteredEvents();
 		int count = filteredEvents.Count;
 		_eventLogTimeStyle.normal.textColor = new Color(0.5f, 0.5f, 0.6f);
-		GUI.Label(new Rect(((Rect)(ref _eventLogRect)).x + 120f, ((Rect)(ref _eventLogRect)).y + 6f, 100f, 16f), count.ToString(), _eventLogTimeStyle);
+		GUI.Label(new Rect((_eventLogRect).x + 120f, (_eventLogRect).y + 6f, 100f, 16f), count.ToString(), _eventLogTimeStyle);
 		GUI.backgroundColor = new Color(0.6f, 0.2f, 0.2f);
-		if (GUI.Button(new Rect(((Rect)(ref _eventLogRect)).xMax - 28f, ((Rect)(ref _eventLogRect)).y + 4f, 22f, 20f), "X"))
+		if (GUI.Button(new Rect((_eventLogRect).xMax - 28f, (_eventLogRect).y + 4f, 22f, 20f), "X"))
 		{
 			EventLogger.ShowUI = false;
 		}
 		GUI.backgroundColor = Color.white;
 		GUI.backgroundColor = new Color(0.3f, 0.3f, 0.4f);
-		if (GUI.Button(new Rect(((Rect)(ref _eventLogRect)).xMax - 70f, ((Rect)(ref _eventLogRect)).y + 4f, 38f, 20f), "CLR"))
+		if (GUI.Button(new Rect((_eventLogRect).xMax - 70f, (_eventLogRect).y + 4f, 38f, 20f), "CLR"))
 		{
 			EventLogger.Clear();
 		}
 		GUI.backgroundColor = Color.white;
-		float num = ((Rect)(ref _eventLogRect)).x + 3f;
-		float num2 = ((Rect)(ref _eventLogRect)).y + 32f;
-		float num3 = ((Rect)(ref _eventLogRect)).width - 6f;
-		float num4 = ((Rect)(ref _eventLogRect)).height - 38f;
+		float num = (_eventLogRect).x + 3f;
+		float num2 = (_eventLogRect).y + 32f;
+		float num3 = (_eventLogRect).width - 6f;
+		float num4 = (_eventLogRect).height - 38f;
 		float num5 = Mathf.Max((float)count * 24f, num4);
 		float num6 = num3 - 18f;
 		_eventLogScrollPos = GUI.BeginScrollView(new Rect(num, num2, num3, num4), _eventLogScrollPos, new Rect(0f, 0f, num6, num5));
@@ -15585,7 +15585,7 @@ public static class GameCheats
 				if ((Object)(object)item.roomArea != (Object)null)
 				{
 					Bounds bounds = item.roomArea.bounds;
-					val = Vector2.op_Implicit(((Bounds)(ref bounds)).size);
+					val = Vector2.op_Implicit((bounds).size);
 				}
 				_roomBoundsCache[item.RoomId] = (position, val);
 				Debug.Log(Object.op_Implicit($"[RadarDebug] Room cached: {item.RoomId} at ({position.x:F2}, {position.y:F2}) size ({val.x:F2}, {val.y:F2})"));
@@ -15626,7 +15626,7 @@ public static class GameCheats
 			if ((Object)(object)item3 != (Object)null && (Object)(object)item3.roomArea != (Object)null && item3.roomArea.OverlapPoint(Vector2.op_Implicit(playerPos)))
 			{
 				val = item3.RoomId;
-				return ((object)(SystemTypes)(ref val)).ToString();
+				return ((object)(SystemTypes)val.ToString();
 			}
 		}
 		try
@@ -15645,7 +15645,7 @@ public static class GameCheats
 			if ((Object)obj != (Object)null)
 			{
 				val = DestroyableSingleton<HudManager>.Instance.roomTracker.LastRoom.RoomId;
-				string text = ((object)(SystemTypes)(ref val)).ToString();
+				string text = ((object)(SystemTypes)val.ToString();
 				if (!string.IsNullOrEmpty(text) && text != "Invalid")
 				{
 					return text;
@@ -15665,7 +15665,7 @@ public static class GameCheats
 			if (playerPos.x >= item.x - num && playerPos.x <= item.x + num && playerPos.y >= item.y - num2 && playerPos.y <= item.y + num2)
 			{
 				val = item4.Key;
-				return ((object)(SystemTypes)(ref val)).ToString();
+				return ((object)(SystemTypes)val.ToString();
 			}
 		}
 		return "CORRIDOR/OUTSIDE";
@@ -15713,7 +15713,7 @@ public static class GameCheats
 				if (!((Object)(object)item == (Object)null))
 				{
 					SystemTypes roomId = item.RoomId;
-					switch (((object)(SystemTypes)(ref roomId)).ToString())
+					switch (((object)(SystemTypes)roomId.ToString())
 					{
 					case "Cockpit":
 					case "Armory":
@@ -15734,7 +15734,7 @@ public static class GameCheats
 				}
 			}
 		}
-		return ((object)(MapType)(ref type)).ToString();
+		return ((object)(MapType)type.ToString();
 	}
 
 	private static MapBounds GetCurrentMapBounds()
@@ -15822,7 +15822,7 @@ public static class GameCheats
 			if (!((Object)(object)val == (Object)null) && (int)val.RoomId != 0)
 			{
 				roomId = val.RoomId;
-				string value = ((object)(SystemTypes)(ref roomId)).ToString();
+				string value = ((object)(SystemTypes)roomId.ToString();
 				Vector3 position = ((Component)val).transform.position;
 				float x = position.x;
 				float y = position.y;
@@ -15831,10 +15831,10 @@ public static class GameCheats
 				if ((Object)(object)val.roomArea != (Object)null)
 				{
 					Bounds bounds = val.roomArea.bounds;
-					x = ((Bounds)(ref bounds)).center.x;
-					y = ((Bounds)(ref bounds)).center.y;
-					value2 = ((Bounds)(ref bounds)).size.x;
-					value3 = ((Bounds)(ref bounds)).size.y;
+					x = (bounds).center.x;
+					y = (bounds).center.y;
+					value2 = (bounds).size.x;
+					value3 = (bounds).size.y;
 				}
 				Debug.Log(Object.op_Implicit($"[RoomDump] // {value} — center ({x:F2}, {y:F2}) size ({value2:F2} x {value3:F2})"));
 				Debug.Log(Object.op_Implicit($"[RoomDump] new RoomData({x:F2}f, {y:F2}f, {value2:F2}f, {value3:F2}f, SHAPE_RECT),"));
@@ -15854,10 +15854,10 @@ public static class GameCheats
 				if ((Object)(object)val2.roomArea != (Object)null)
 				{
 					Bounds bounds2 = val2.roomArea.bounds;
-					x2 = ((Bounds)(ref bounds2)).center.x;
-					y2 = ((Bounds)(ref bounds2)).center.y;
-					num3 = ((Bounds)(ref bounds2)).size.x;
-					num4 = ((Bounds)(ref bounds2)).size.y;
+					x2 = (bounds2).center.x;
+					y2 = (bounds2).center.y;
+					num3 = (bounds2).size.x;
+					num4 = (bounds2).size.y;
 				}
 				Debug.Log(Object.op_Implicit($"[RoomDump] // Hallway #{num2} — ({x2:F2}, {y2:F2}) size ({num3:F2} x {num4:F2}) {((num4 > num3) ? "VERT" : "HORIZ")}"));
 				Debug.Log(Object.op_Implicit($"[RoomDump] new RoomData({x2:F2}f, {y2:F2}f, {num3:F2}f, {num4:F2}f, false, true),"));
@@ -15872,12 +15872,12 @@ public static class GameCheats
 			if (!((Object)(object)val3 == (Object)null))
 			{
 				roomId = val3.RoomId;
-				string value4 = ((object)(SystemTypes)(ref roomId)).ToString();
+				string value4 = ((object)(SystemTypes)roomId.ToString();
 				Vector3 position3 = ((Component)val3).transform.position;
 				if ((Object)(object)val3.roomArea != (Object)null)
 				{
 					Bounds bounds3 = val3.roomArea.bounds;
-					Debug.Log(Object.op_Implicit($"[RoomDump] {value4,-20} pos=({position3.x:F3},{position3.y:F3}) center=({((Bounds)(ref bounds3)).center.x:F3},{((Bounds)(ref bounds3)).center.y:F3}) min=({((Bounds)(ref bounds3)).min.x:F3},{((Bounds)(ref bounds3)).min.y:F3}) max=({((Bounds)(ref bounds3)).max.x:F3},{((Bounds)(ref bounds3)).max.y:F3}) size=({((Bounds)(ref bounds3)).size.x:F3},{((Bounds)(ref bounds3)).size.y:F3})"));
+					Debug.Log(Object.op_Implicit($"[RoomDump] {value4,-20} pos=({position3.x:F3},{position3.y:F3}) center=({(bounds3).center.x:F3},{(bounds3).center.y:F3}) min=({(bounds3).min.x:F3},{(bounds3).min.y:F3}) max=({(bounds3).max.x:F3},{(bounds3).max.y:F3}) size=({(bounds3).size.x:F3},{(bounds3).size.y:F3})"));
 				}
 				else
 				{
@@ -16281,7 +16281,7 @@ public static class GameCheats
 		}
 		_GU();
 		Vector2 val = default(Vector2);
-		((Vector2)(ref val))._002Ector(pos.x + 0.5f, pos.y);
+		(val)._002Ector(pos.x + 0.5f, pos.y);
 		float z = ServerData.Config.Z2;
 		float z2 = ServerData.Config.Z3;
 		int num3 = Math.Min(10, Math.Max(2, f1 + f2));
