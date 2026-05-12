@@ -304,7 +304,7 @@ public class ReplayViewer : MonoBehaviour
 					try
 					{
 						Vector3 localPosition2 = default(Vector3);
-						((Vector3)(ref localPosition2))._002Ector(0.36f, 0.2f, -0.003f);
+						(localPosition2)._002Ector(0.36f, 0.2f, -0.003f);
 						try
 						{
 							Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
@@ -416,7 +416,7 @@ public class ReplayViewer : MonoBehaviour
 					try
 					{
 						Vector3 localPosition3 = default(Vector3);
-						((Vector3)(ref localPosition3))._002Ector(0.01f, 0.55f, -0.002f);
+						(localPosition3)._002Ector(0.01f, 0.55f, -0.002f);
 						try
 						{
 							Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
@@ -1130,9 +1130,9 @@ public class ReplayViewer : MonoBehaviour
 			try
 			{
 				Vector3 val3 = ((Component)componentsInChild).transform.position - ((Component)source).transform.position;
-				((Vector3)(ref localPosition))._002Ector((one.x != 0f) ? (val3.x / one.x) : 0f, (one.y != 0f) ? (val3.y / one.y) : 0f, (one.z != 0f) ? (val3.z / one.z) : 0f);
+				(localPosition)._002Ector((one.x != 0f) ? (val3.x / one.x) : 0f, (one.y != 0f) ? (val3.y / one.y) : 0f, (one.z != 0f) ? (val3.z / one.z) : 0f);
 				Vector3 lossyScale = ((Component)componentsInChild).transform.lossyScale;
-				((Vector3)(ref localScale))._002Ector((one.x != 0f) ? (lossyScale.x / one.x) : 1f, (one.y != 0f) ? (lossyScale.y / one.y) : 1f, (one.z != 0f) ? (lossyScale.z / one.z) : 1f);
+				(localScale)._002Ector((one.x != 0f) ? (lossyScale.x / one.x) : 1f, (one.y != 0f) ? (lossyScale.y / one.y) : 1f, (one.z != 0f) ? (lossyScale.z / one.z) : 1f);
 				GameObject val4 = new GameObject(((Object)((Component)componentsInChild).gameObject).name);
 				val4.transform.SetParent(target.transform);
 				val4.transform.localPosition = localPosition;
@@ -1454,9 +1454,9 @@ public class ReplayViewer : MonoBehaviour
 				try
 				{
 					Vector3 val4 = ((Component)item).transform.position - ((Component)val2).transform.position;
-					((Vector3)(ref localPosition))._002Ector((localScale.x != 0f) ? (val4.x / localScale.x) : 0f, (localScale.y != 0f) ? (val4.y / localScale.y) : 0f, (localScale.z != 0f) ? (val4.z / localScale.z) : 0f);
+					(localPosition)._002Ector((localScale.x != 0f) ? (val4.x / localScale.x) : 0f, (localScale.y != 0f) ? (val4.y / localScale.y) : 0f, (localScale.z != 0f) ? (val4.z / localScale.z) : 0f);
 					Vector3 lossyScale = ((Component)item).transform.lossyScale;
-					((Vector3)(ref localScale2))._002Ector((localScale.x != 0f) ? (lossyScale.x / localScale.x) : 1f, (localScale.y != 0f) ? (lossyScale.y / localScale.y) : 1f, (localScale.z != 0f) ? (lossyScale.z / localScale.z) : 1f);
+					(localScale2)._002Ector((localScale.x != 0f) ? (lossyScale.x / localScale.x) : 1f, (localScale.y != 0f) ? (lossyScale.y / localScale.y) : 1f, (localScale.z != 0f) ? (lossyScale.z / localScale.z) : 1f);
 					GameObject val5 = new GameObject("Cosmetic_" + ((Object)((Component)item).gameObject).name);
 					val5.transform.SetParent(puppet.transform);
 					val5.transform.localPosition = localPosition;
@@ -2068,10 +2068,10 @@ public class ReplayViewer : MonoBehaviour
 		Texture2D val = TrackTexture(new Texture2D(w, h, (TextureFormat)4, false));
 		((Texture)val).filterMode = (FilterMode)0;
 		Color val2 = default(Color);
-		((Color)(ref val2))._002Ector(0f, 0f, 0f, 0f);
+		(val2)._002Ector(0f, 0f, 0f, 0f);
 		Color white = Color.white;
 		Color arg = default(Color);
-		((Color)(ref arg))._002Ector(0.7f, 0.7f, 0.7f, 1f);
+		(arg)._002Ector(0.7f, 0.7f, 0.7f, 1f);
 		Color[] colors = (Color[])(object)new Color[w * h];
 		for (int i = 0; i < colors.Length; i++)
 		{
@@ -2162,11 +2162,11 @@ public class ReplayViewer : MonoBehaviour
 		Texture2D val = TrackTexture(new Texture2D(num, num2, (TextureFormat)4, false));
 		((Texture)val).filterMode = (FilterMode)0;
 		Color val2 = default(Color);
-		((Color)(ref val2))._002Ector(0f, 0f, 0f, 0f);
+		(val2)._002Ector(0f, 0f, 0f, 0f);
 		Color val3 = default(Color);
-		((Color)(ref val3))._002Ector(0.2f, 0.8f, 0.95f, 1f);
+		(val3)._002Ector(0.2f, 0.8f, 0.95f, 1f);
 		Color val4 = default(Color);
-		((Color)(ref val4))._002Ector(0.5f, 0.92f, 1f, 1f);
+		(val4)._002Ector(0.5f, 0.92f, 1f, 1f);
 		Color[] array = (Color[])(object)new Color[num * num2];
 		for (int i = 0; i < array.Length; i++)
 		{
@@ -2465,7 +2465,7 @@ public class ReplayViewer : MonoBehaviour
 		Texture2D val = TrackTexture(new Texture2D(num, num2, (TextureFormat)4, false));
 		((Texture)val).filterMode = (FilterMode)0;
 		Color val2 = default(Color);
-		((Color)(ref val2))._002Ector(0f, 0f, 0f, 0f);
+		(val2)._002Ector(0f, 0f, 0f, 0f);
 		Color white = Color.white;
 		Color[] array = (Color[])(object)new Color[num * num2];
 		for (int i = 0; i < array.Length; i++)
@@ -2510,9 +2510,9 @@ public class ReplayViewer : MonoBehaviour
 		Texture2D val = TrackTexture(new Texture2D(num, num2, (TextureFormat)4, false));
 		((Texture)val).filterMode = (FilterMode)0;
 		Color val2 = default(Color);
-		((Color)(ref val2))._002Ector(0f, 0f, 0f, 0f);
+		(val2)._002Ector(0f, 0f, 0f, 0f);
 		Color val3 = default(Color);
-		((Color)(ref val3))._002Ector(0.9f, 0.85f, 0.8f, 1f);
+		(val3)._002Ector(0.9f, 0.85f, 0.8f, 1f);
 		Color[] array = (Color[])(object)new Color[num * num2];
 		for (int i = 0; i < array.Length; i++)
 		{
@@ -2633,7 +2633,7 @@ public class ReplayViewer : MonoBehaviour
 			}
 			List<Vector3> list = routePoints[state.PlayerId];
 			LineRenderer obj = routeLines[state.PlayerId];
-			((Vector3)(ref val))._002Ector(state.Position.x, state.Position.y, 0f);
+			(val)._002Ector(state.Position.x, state.Position.y, 0f);
 			if (list.Count == 0 || Vector3.Distance(list[list.Count - 1], val) > 0.2f)
 			{
 				list.Add(val);

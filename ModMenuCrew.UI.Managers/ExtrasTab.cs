@@ -255,7 +255,7 @@ public class ExtrasTab
 		Rect lastRect = GUILayoutUtility.GetLastRect();
 		if ((int)current.type == 0)
 		{
-			if (((Rect)(ref lastRect)).Contains(current.mousePosition))
+			if ((lastRect).Contains(current.mousePosition))
 			{
 				_editingFieldId = fieldId;
 				current.Use();

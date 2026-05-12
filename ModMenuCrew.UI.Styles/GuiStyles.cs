@@ -176,7 +176,7 @@ public static class GuiStyles
 		public static float GetHoverScale(string id, Rect rect)
 		{
 			//IL_0007: Unknown result type (might be due to invalid IL or missing references)
-			if (((Rect)(ref rect)).Contains(Event.current.mousePosition))
+			if ((rect).Contains(Event.current.mousePosition))
 			{
 				if (_lastHoveredId != id)
 				{
@@ -396,7 +396,7 @@ public static class GuiStyles
 				float num2 = num;
 				Color glowColor = GetGlowColor(state, 0.2f * num2);
 				Rect val = default(Rect);
-				((Rect)(ref val))._002Ector(((Rect)(ref elementRect)).x - padding, ((Rect)(ref elementRect)).y - padding, ((Rect)(ref elementRect)).width + padding * 2f, ((Rect)(ref elementRect)).height + padding * 2f);
+				(val)._002Ector((elementRect).x - padding, (elementRect).y - padding, (elementRect).width + padding * 2f, (elementRect).height + padding * 2f);
 				Texture2D glowTexture = GetGlowTexture(state);
 				if ((Object)(object)glowTexture != (Object)null)
 				{
@@ -617,10 +617,10 @@ public static class GuiStyles
 			}
 			if (_particles.Count < 30 && LcgNext() < 0.1f)
 			{
-				float num2 = LcgRange(((Rect)(ref windowRect)).x, ((Rect)(ref windowRect)).xMax);
+				float num2 = LcgRange((windowRect).x, (windowRect).xMax);
 				_particles.Add(new Particle
 				{
-					position = new Vector2(num2, ((Rect)(ref windowRect)).yMax),
+					position = new Vector2(num2, (windowRect).yMax),
 					velocity = new Vector2(LcgRange(-5f, 5f), LcgRange(-20f, -60f)),
 					size = LcgRange(2f, 5f),
 					alpha = 0f,
@@ -649,7 +649,7 @@ public static class GuiStyles
 				{
 					Color color = value.color;
 					color.a = value.alpha * 0.4f;
-					if (value.position.x > ((Rect)(ref windowRect)).x && value.position.x < ((Rect)(ref windowRect)).xMax && value.position.y > ((Rect)(ref windowRect)).y && value.position.y < ((Rect)(ref windowRect)).yMax)
+					if (value.position.x > (windowRect).x && value.position.x < (windowRect).xMax && value.position.y > (windowRect).y && value.position.y < (windowRect).yMax)
 					{
 						DrawParticle(value.position, value.size, color);
 					}
@@ -1487,13 +1487,13 @@ public static class GuiStyles
 				val.clipping = (TextClipping)1;
 				_buttonStyle = val;
 				Color innerTop = default(Color);
-				((Color)(ref innerTop))._002Ector(0.14f, 0.14f, 0.16f, 1f);
+				(innerTop)._002Ector(0.14f, 0.14f, 0.16f, 1f);
 				Color border = default(Color);
-				((Color)(ref border))._002Ector(0.45f, 0.12f, 0.12f, 1f);
+				(border)._002Ector(0.45f, 0.12f, 0.12f, 1f);
 				_buttonStyle.normal.background = MakeFrameTexture(16, 64, innerTop, new Color(0.11f, 0.11f, 0.13f, 1f), border, 1);
 				_buttonStyle.normal.textColor = new Color(0.92f, 0.92f, 0.92f, 1f);
 				Color innerTop2 = default(Color);
-				((Color)(ref innerTop2))._002Ector(0.22f, 0.08f, 0.08f, 1f);
+				(innerTop2)._002Ector(0.22f, 0.08f, 0.08f, 1f);
 				_buttonStyle.hover.background = MakeFrameTexture(16, 64, innerTop2, new Color(0.18f, 0.06f, 0.06f, 1f), Theme.Accent, 2);
 				_buttonStyle.hover.textColor = Color.white;
 				_buttonStyle.active.background = MakeFrameTexture(16, 64, new Color(0.5f, 0.05f, 0.05f, 1f), new Color(0.4f, 0.04f, 0.04f, 1f), new Color(0.7f, 0.1f, 0.1f, 1f), 1);
@@ -1517,9 +1517,9 @@ public static class GuiStyles
 					}
 				}
 				Color val2 = default(Color);
-				((Color)(ref val2))._002Ector(0.22f, 0.22f, 0.24f, 1f);
+				(val2)._002Ector(0.22f, 0.22f, 0.24f, 1f);
 				Color border2 = default(Color);
-				((Color)(ref border2))._002Ector(0.5f, 0.2f, 0.2f, 1f);
+				(border2)._002Ector(0.5f, 0.2f, 0.2f, 1f);
 				_buttonStyle.normal.background = MakeFrameTexture(16, 64, val2, val2, border2, 1);
 				_buttonStyle.hover.background = MakeFrameTexture(16, 64, new Color(0.28f, 0.18f, 0.18f, 1f), new Color(0.28f, 0.18f, 0.18f, 1f), Theme.Accent, 2);
 				_buttonStyle.active.background = MakeTexture(16, 64, new Color(0.5f, 0.1f, 0.1f, 1f));
@@ -1586,17 +1586,17 @@ public static class GuiStyles
 					clipping = (TextClipping)1
 				};
 				Color val = default(Color);
-				((Color)(ref val))._002Ector(0.08f, 0.08f, 0.1f, 1f);
+				(val)._002Ector(0.08f, 0.08f, 0.1f, 1f);
 				Color border = default(Color);
-				((Color)(ref border))._002Ector(0.22f, 0.22f, 0.26f, 1f);
+				(border)._002Ector(0.22f, 0.22f, 0.26f, 1f);
 				Color textColor = default(Color);
-				((Color)(ref textColor))._002Ector(0.55f, 0.58f, 0.64f, 1f);
+				(textColor)._002Ector(0.55f, 0.58f, 0.64f, 1f);
 				Color val2 = default(Color);
-				((Color)(ref val2))._002Ector(0.28f, 0.05f, 0.09f, 1f);
+				(val2)._002Ector(0.28f, 0.05f, 0.09f, 1f);
 				Color border2 = default(Color);
-				((Color)(ref border2))._002Ector(1f, 0.13f, 0.25f, 1f);
+				(border2)._002Ector(1f, 0.13f, 0.25f, 1f);
 				Color textColor2 = default(Color);
-				((Color)(ref textColor2))._002Ector(1f, 0.78f, 0.82f, 1f);
+				(textColor2)._002Ector(1f, 0.78f, 0.82f, 1f);
 				_toggleStyle.normal.background = MakeFrameTexture(16, 64, val, val, border, 1);
 				_toggleStyle.normal.textColor = textColor;
 				_toggleStyle.onNormal.background = MakeFrameTexture(16, 64, val2, val2, border2, 1);
@@ -2182,17 +2182,17 @@ public static class GuiStyles
 					stretchWidth = true
 				};
 				Color innerTop = default(Color);
-				((Color)(ref innerTop))._002Ector(0.12f, 0.12f, 0.15f, 0.95f);
+				(innerTop)._002Ector(0.12f, 0.12f, 0.15f, 0.95f);
 				Color innerBottom = default(Color);
-				((Color)(ref innerBottom))._002Ector(0.08f, 0.08f, 0.1f, 0.95f);
+				(innerBottom)._002Ector(0.08f, 0.08f, 0.1f, 0.95f);
 				Color border = default(Color);
-				((Color)(ref border))._002Ector(0.35f, 0.35f, 0.4f, 1f);
+				(border)._002Ector(0.35f, 0.35f, 0.4f, 1f);
 				Color innerTop2 = default(Color);
-				((Color)(ref innerTop2))._002Ector(0.08f, 0.4f, 0.15f, 0.95f);
+				(innerTop2)._002Ector(0.08f, 0.4f, 0.15f, 0.95f);
 				Color innerBottom2 = default(Color);
-				((Color)(ref innerBottom2))._002Ector(0.04f, 0.28f, 0.1f, 0.95f);
+				(innerBottom2)._002Ector(0.04f, 0.28f, 0.1f, 0.95f);
 				Color border2 = default(Color);
-				((Color)(ref border2))._002Ector(0.25f, 0.95f, 0.4f, 1f);
+				(border2)._002Ector(0.25f, 0.95f, 0.4f, 1f);
 				_betterToggleStyle.normal.background = MakeFrameTexture(16, 64, innerTop, innerBottom, border, 2);
 				_betterToggleStyle.normal.textColor = new Color(0.55f, 0.55f, 0.6f, 1f);
 				_betterToggleStyle.onNormal.background = MakeFrameTexture(16, 64, innerTop2, innerBottom2, border2, 2);
@@ -2503,15 +2503,15 @@ public static class GuiStyles
 					stretchWidth = true
 				};
 				Color val = default(Color);
-				((Color)(ref val))._002Ector(0.08f, 0.08f, 0.12f, 0.95f);
+				(val)._002Ector(0.08f, 0.08f, 0.12f, 0.95f);
 				Color border = default(Color);
-				((Color)(ref border))._002Ector(0.3f, 0.3f, 0.38f, 1f);
+				(border)._002Ector(0.3f, 0.3f, 0.38f, 1f);
 				_crewToggleStyle.normal.background = MakeFrameTexture(16, 34, val, val, border, 2);
 				_crewToggleStyle.normal.textColor = Theme.TextMuted;
 				Color innerTop = default(Color);
-				((Color)(ref innerTop))._002Ector(0.15f, 0.03f, 0.06f, 0.95f);
+				(innerTop)._002Ector(0.15f, 0.03f, 0.06f, 0.95f);
 				Color innerBottom = default(Color);
-				((Color)(ref innerBottom))._002Ector(0.1f, 0.02f, 0.04f, 0.95f);
+				(innerBottom)._002Ector(0.1f, 0.02f, 0.04f, 0.95f);
 				_crewToggleStyle.onNormal.background = MakeFrameTexture(16, 34, innerTop, innerBottom, Theme.Visor, 2);
 				_crewToggleStyle.onNormal.textColor = Theme.TextPrimary;
 				_crewToggleStyle.hover.background = MakeFrameTexture(16, 34, new Color(0.12f, 0.12f, 0.16f, 0.95f), new Color(0.1f, 0.1f, 0.14f, 0.95f), new Color(0.5f, 0.5f, 0.6f, 1f), 2);
@@ -3417,12 +3417,12 @@ public static class GuiStyles
 		{
 			Color textColor = s.normal.textColor;
 			Color textColor2 = default(Color);
-			((Color)(ref textColor2))._002Ector(0f, 0f, 0f, 0.9f);
+			(textColor2)._002Ector(0f, 0f, 0f, 0.9f);
 			s.normal.textColor = textColor2;
-			GUI.Label(new Rect(((Rect)(ref r)).x - 1f, ((Rect)(ref r)).y - 1f, ((Rect)(ref r)).width, ((Rect)(ref r)).height), content, s);
-			GUI.Label(new Rect(((Rect)(ref r)).x - 1f, ((Rect)(ref r)).y + 1f, ((Rect)(ref r)).width, ((Rect)(ref r)).height), content, s);
-			GUI.Label(new Rect(((Rect)(ref r)).x + 1f, ((Rect)(ref r)).y - 1f, ((Rect)(ref r)).width, ((Rect)(ref r)).height), content, s);
-			GUI.Label(new Rect(((Rect)(ref r)).x + 1f, ((Rect)(ref r)).y + 1f, ((Rect)(ref r)).width, ((Rect)(ref r)).height), content, s);
+			GUI.Label(new Rect((r).x - 1f, (r).y - 1f, (r).width, (r).height), content, s);
+			GUI.Label(new Rect((r).x - 1f, (r).y + 1f, (r).width, (r).height), content, s);
+			GUI.Label(new Rect((r).x + 1f, (r).y - 1f, (r).width, (r).height), content, s);
+			GUI.Label(new Rect((r).x + 1f, (r).y + 1f, (r).width, (r).height), content, s);
 			s.normal.textColor = textColor;
 			GUI.Label(r, content, s);
 		}
@@ -3452,13 +3452,13 @@ public static class GuiStyles
 		{
 			return false;
 		}
-		bool num = ((Rect)(ref r)).Contains(Event.current.mousePosition);
+		bool num = (r).Contains(Event.current.mousePosition);
 		bool flag = num && Input.GetMouseButton(0);
 		Rect val = r;
 		if (flag)
 		{
-			((Rect)(ref val)).x = ((Rect)(ref val)).x + 1f;
-			((Rect)(ref val)).y = ((Rect)(ref val)).y + 2f;
+			(val).x = (val).x + 1f;
+			(val).y = (val).y + 2f;
 		}
 		if (num && !flag)
 		{
@@ -3472,7 +3472,7 @@ public static class GuiStyles
 			{
 				float num3 = (float)num2 * 3f;
 				GUI.color = new Color(accent.r, accent.g, accent.b, 0.05f * (float)num2);
-				GUI.Box(new Rect(((Rect)(ref r)).x - num3, ((Rect)(ref r)).y - num3, ((Rect)(ref r)).width + num3 * 2f, ((Rect)(ref r)).height + num3 * 2f), GUIContent.none, WhitePixelBoxStyle);
+				GUI.Box(new Rect((r).x - num3, (r).y - num3, (r).width + num3 * 2f, (r).height + num3 * 2f), GUIContent.none, WhitePixelBoxStyle);
 			}
 			GUI.color = color;
 			if (_hoverGlowBoxStyle == null || (Object)(object)_hoverGlowBoxStyle.normal.background != (Object)(object)_cachedHoverGlowTexture)
@@ -3480,7 +3480,7 @@ public static class GuiStyles
 				_hoverGlowBoxStyle = new GUIStyle();
 				_hoverGlowBoxStyle.normal.background = _cachedHoverGlowTexture;
 			}
-			GUI.Box(new Rect(((Rect)(ref r)).x - 2f, ((Rect)(ref r)).y - 2f, ((Rect)(ref r)).width + 4f, ((Rect)(ref r)).height + 4f), GUIContent.none, _hoverGlowBoxStyle);
+			GUI.Box(new Rect((r).x - 2f, (r).y - 2f, (r).width + 4f, (r).height + 4f), GUIContent.none, _hoverGlowBoxStyle);
 		}
 		return GUI.Button(val, label, s);
 	}
@@ -3974,7 +3974,7 @@ public static class GuiStyles
 			GUILayout.Space(4f);
 			float activePulse = GlowSystem.GetActivePulse();
 			Color color = default(Color);
-			((Color)(ref color))._002Ector(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, alpha * activePulse);
+			(color)._002Ector(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, alpha * activePulse);
 			Rect rect = GUILayoutUtility.GetRect(GUIContent.none, GUIStyle.none, (GUILayoutOption[])(object)new GUILayoutOption[2]
 			{
 				GUILayout.ExpandWidth(true),
@@ -4008,7 +4008,7 @@ public static class GuiStyles
 		}
 		float activePulse = GlowSystem.GetActivePulse();
 		Color color = default(Color);
-		((Color)(ref color))._002Ector(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, alpha * activePulse);
+		(color)._002Ector(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, alpha * activePulse);
 		Rect rect = GUILayoutUtility.GetRect(GUIContent.none, GUIStyle.none, (GUILayoutOption[])(object)new GUILayoutOption[2]
 		{
 			GUILayout.ExpandWidth(true),
@@ -4018,13 +4018,13 @@ public static class GuiStyles
 		{
 			float num = 8f;
 			float num2 = 4f;
-			float num3 = ((Rect)(ref rect)).x;
+			float num3 = (rect).x;
 			Color color2 = GUI.color;
 			GUI.color = color;
-			for (; num3 < ((Rect)(ref rect)).xMax; num3 += num + num2)
+			for (; num3 < (rect).xMax; num3 += num + num2)
 			{
-				float num4 = Mathf.Min(num3 + num, ((Rect)(ref rect)).xMax);
-				GUI.Box(new Rect(num3, ((Rect)(ref rect)).y, num4 - num3, height), GUIContent.none, WhitePixelBoxStyle);
+				float num4 = Mathf.Min(num3 + num, (rect).xMax);
+				GUI.Box(new Rect(num3, (rect).y, num4 - num3, height), GUIContent.none, WhitePixelBoxStyle);
 			}
 			GUI.color = color2;
 		}
@@ -4193,7 +4193,7 @@ public static class GuiStyles
 		//IL_0044: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0059: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
-		if (!string.IsNullOrEmpty(tooltip) && ((Rect)(ref rect)).Contains(Event.current.mousePosition))
+		if (!string.IsNullOrEmpty(tooltip) && (rect).Contains(Event.current.mousePosition))
 		{
 			float num = Mathf.Min(200f, (float)tooltip.Length * 7f + 20f);
 			float num2 = 28f;
@@ -4258,7 +4258,7 @@ public static class GuiStyles
 				float num3 = (float)i / (float)(num - 1);
 				float num4 = 1f - Mathf.Abs(num3 * 2f - 1f);
 				num4 *= num4;
-				((Color)(ref val))._002Ector(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, num4 * 0.5f);
+				(val)._002Ector(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, num4 * 0.5f);
 				for (int j = 0; j < num2; j++)
 				{
 					array[j * num + i] = val;
@@ -4471,10 +4471,10 @@ public static class GuiStyles
 		//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
 		Color color = GUI.color;
 		GUI.color = c;
-		GUI.Box(new Rect(((Rect)(ref r)).x, ((Rect)(ref r)).y, ((Rect)(ref r)).width, thickness), GUIContent.none, WhitePixelBoxStyle);
-		GUI.Box(new Rect(((Rect)(ref r)).x, ((Rect)(ref r)).y + ((Rect)(ref r)).height - thickness, ((Rect)(ref r)).width, thickness), GUIContent.none, WhitePixelBoxStyle);
-		GUI.Box(new Rect(((Rect)(ref r)).x, ((Rect)(ref r)).y, thickness, ((Rect)(ref r)).height), GUIContent.none, WhitePixelBoxStyle);
-		GUI.Box(new Rect(((Rect)(ref r)).x + ((Rect)(ref r)).width - thickness, ((Rect)(ref r)).y, thickness, ((Rect)(ref r)).height), GUIContent.none, WhitePixelBoxStyle);
+		GUI.Box(new Rect((r).x, (r).y, (r).width, thickness), GUIContent.none, WhitePixelBoxStyle);
+		GUI.Box(new Rect((r).x, (r).y + (r).height - thickness, (r).width, thickness), GUIContent.none, WhitePixelBoxStyle);
+		GUI.Box(new Rect((r).x, (r).y, thickness, (r).height), GUIContent.none, WhitePixelBoxStyle);
+		GUI.Box(new Rect((r).x + (r).width - thickness, (r).y, thickness, (r).height), GUIContent.none, WhitePixelBoxStyle);
 		GUI.color = color;
 	}
 
@@ -4522,7 +4522,7 @@ public static class GuiStyles
 		EnsureGameStyles();
 		Rect rect = GUILayoutUtility.GetRect(0f, Spacing.MenuSize(height, 70f), (GUILayoutOption[])(object)new GUILayoutOption[1] { GUILayout.ExpandWidth(true) });
 		bool result = false;
-		bool flag = ((Rect)(ref rect)).Contains(Event.current.mousePosition);
+		bool flag = (rect).Contains(Event.current.mousePosition);
 		if ((int)Event.current.type == 0 && flag)
 		{
 			result = true;
@@ -4531,25 +4531,25 @@ public static class GuiStyles
 		if ((int)Event.current.type == 7)
 		{
 			Color c = default(Color);
-			((Color)(ref c))._002Ector(tint.r * 0.2f, tint.g * 0.2f, tint.b * 0.2f, 0.95f);
+			(c)._002Ector(tint.r * 0.2f, tint.g * 0.2f, tint.b * 0.2f, 0.95f);
 			DrawSolidRect(rect, c);
 			DrawRectBorder(rect, new Color(tint.r, tint.g, tint.b, flag ? 1f : 0.65f), 2f);
 			if (flag)
 			{
 				DrawSolidRect(rect, new Color(tint.r, tint.g, tint.b, 0.1f));
 			}
-			float num = ((Rect)(ref rect)).height * 0.35f;
-			float num2 = ((Rect)(ref rect)).height * 0.3f;
-			float num3 = ((Rect)(ref rect)).height * 0.3f;
+			float num = (rect).height * 0.35f;
+			float num2 = (rect).height * 0.3f;
+			float num3 = (rect).height * 0.3f;
 			float num4 = Spacing.MenuSize(6f, 3f);
 			Color color = GUI.color;
 			GUI.color = tint;
-			GUI.Label(new Rect(((Rect)(ref rect)).x, ((Rect)(ref rect)).y + ((Rect)(ref rect)).height * 0.08f, ((Rect)(ref rect)).width, num), letter, _gameLetterBig);
-			string text = TruncateToWidth(title, _gameTitleStyle.fontSize, ((Rect)(ref rect)).width - num4 * 2f);
-			GUI.Label(new Rect(((Rect)(ref rect)).x + num4, ((Rect)(ref rect)).y + ((Rect)(ref rect)).height * 0.45f, ((Rect)(ref rect)).width - num4 * 2f, num2), text, _gameTitleStyle);
+			GUI.Label(new Rect((rect).x, (rect).y + (rect).height * 0.08f, (rect).width, num), letter, _gameLetterBig);
+			string text = TruncateToWidth(title, _gameTitleStyle.fontSize, (rect).width - num4 * 2f);
+			GUI.Label(new Rect((rect).x + num4, (rect).y + (rect).height * 0.45f, (rect).width - num4 * 2f, num2), text, _gameTitleStyle);
 			GUI.color = Theme.TextMuted;
-			string text2 = TruncateToWidth(subtitle, _gameSubtitleStyle.fontSize, ((Rect)(ref rect)).width - num4 * 2f);
-			GUI.Label(new Rect(((Rect)(ref rect)).x + num4, ((Rect)(ref rect)).y + ((Rect)(ref rect)).height * 0.72f, ((Rect)(ref rect)).width - num4 * 2f, num3), text2, _gameSubtitleStyle);
+			string text2 = TruncateToWidth(subtitle, _gameSubtitleStyle.fontSize, (rect).width - num4 * 2f);
+			GUI.Label(new Rect((rect).x + num4, (rect).y + (rect).height * 0.72f, (rect).width - num4 * 2f, num3), text2, _gameSubtitleStyle);
 			GUI.color = color;
 		}
 		return result;
@@ -4603,7 +4603,7 @@ public static class GuiStyles
 		EnsureGameStyles();
 		Rect rect = GUILayoutUtility.GetRect(0f, Spacing.MenuSize(height, 32f), (GUILayoutOption[])(object)new GUILayoutOption[1] { GUILayout.ExpandWidth(true) });
 		bool result = false;
-		bool flag = ((Rect)(ref rect)).Contains(Event.current.mousePosition);
+		bool flag = (rect).Contains(Event.current.mousePosition);
 		if ((int)Event.current.type == 0 && flag)
 		{
 			result = true;
@@ -4621,9 +4621,9 @@ public static class GuiStyles
 			float num = Spacing.MenuSize(24f, 16f);
 			float num2 = Spacing.MenuSize(8f, 4f);
 			float num3 = Spacing.MenuSize(8f, 4f);
-			float num4 = ((Rect)(ref rect)).x + num2 + num + num3;
-			float num5 = ((Rect)(ref rect)).width - num2 - num - num3 - num2;
-			Rect val = new Rect(((Rect)(ref rect)).x + num2, ((Rect)(ref rect)).y + (((Rect)(ref rect)).height - num) * 0.5f, num, num);
+			float num4 = (rect).x + num2 + num + num3;
+			float num5 = (rect).width - num2 - num - num3 - num2;
+			Rect val = new Rect((rect).x + num2, (rect).y + ((rect).height - num) * 0.5f, num, num);
 			Color c2 = (useAccentBg ? new Color(1f, 1f, 1f, 0.2f) : new Color(accentColor.r, accentColor.g, accentColor.b, 0.3f));
 			DrawSolidRect(val, c2);
 			Color color = GUI.color;
@@ -4636,7 +4636,7 @@ public static class GuiStyles
 				val2 = _gameLetterSmall;
 			}
 			string text = TruncateToWidth(label, val2.fontSize, num5);
-			GUI.Label(new Rect(num4, ((Rect)(ref rect)).y, num5, ((Rect)(ref rect)).height), text, val2);
+			GUI.Label(new Rect(num4, (rect).y, num5, (rect).height), text, val2);
 			GUI.color = color;
 		}
 		return result;
@@ -4707,7 +4707,7 @@ public static class GuiStyles
 		EnsureGameStyles();
 		Rect rect = GUILayoutUtility.GetRect(0f, Spacing.MenuSize(height, 44f), (GUILayoutOption[])(object)new GUILayoutOption[1] { GUILayout.ExpandWidth(true) });
 		bool flag = false;
-		bool flag2 = ((Rect)(ref rect)).Contains(Event.current.mousePosition);
+		bool flag2 = (rect).Contains(Event.current.mousePosition);
 		if ((int)Event.current.type == 0 && flag2)
 		{
 			flag = true;
@@ -4729,9 +4729,9 @@ public static class GuiStyles
 		if ((int)Event.current.type == 7)
 		{
 			Color val = default(Color);
-			((Color)(ref val))._002Ector(0.07f, 0.07f, 0.1f, 1f);
+			(val)._002Ector(0.07f, 0.07f, 0.1f, 1f);
 			Color val2 = default(Color);
-			((Color)(ref val2))._002Ector(iconColor.r * 0.22f, iconColor.g * 0.22f, iconColor.b * 0.22f, 1f);
+			(val2)._002Ector(iconColor.r * 0.22f, iconColor.g * 0.22f, iconColor.b * 0.22f, 1f);
 			DrawSolidRect(rect, Color.Lerp(val, val2, num2));
 			Color c = Color.Lerp(new Color(iconColor.r, iconColor.g, iconColor.b, 0.2f), new Color(iconColor.r, iconColor.g, iconColor.b, 0.85f), num2);
 			DrawRectBorder(rect, c);
@@ -4744,9 +4744,9 @@ public static class GuiStyles
 			float num5 = Spacing.MenuSize(44f, 28f);
 			float num6 = Spacing.MenuSize(22f, 14f);
 			float num7 = Spacing.MenuSize(8f, 4f);
-			float num8 = ((Rect)(ref rect)).x + num3 + num4 + num7;
-			float num9 = ((Rect)(ref rect)).width - num3 - num4 - num7 - num5 - num3 - num7;
-			Rect val3 = new Rect(((Rect)(ref rect)).x + num3, ((Rect)(ref rect)).y + (((Rect)(ref rect)).height - num4) * 0.5f, num4, num4);
+			float num8 = (rect).x + num3 + num4 + num7;
+			float num9 = (rect).width - num3 - num4 - num7 - num5 - num3 - num7;
+			Rect val3 = new Rect((rect).x + num3, (rect).y + ((rect).height - num4) * 0.5f, num4, num4);
 			DrawSolidRect(val3, new Color(iconColor.r, iconColor.g, iconColor.b, 0.22f));
 			DrawRectBorder(val3, new Color(iconColor.r, iconColor.g, iconColor.b, 0.55f));
 			Color color = GUI.color;
@@ -4754,22 +4754,22 @@ public static class GuiStyles
 			GUI.Label(val3, letter, _gameLetterSmall);
 			GUI.color = Color.white;
 			string text = TruncateToWidth(title, _gamePillTitleStyle.fontSize, num9);
-			GUI.Label(new Rect(num8, ((Rect)(ref rect)).y + ((Rect)(ref rect)).height * 0.18f, num9, ((Rect)(ref rect)).height * 0.36f), text, _gamePillTitleStyle);
+			GUI.Label(new Rect(num8, (rect).y + (rect).height * 0.18f, num9, (rect).height * 0.36f), text, _gamePillTitleStyle);
 			GUI.color = Theme.TextMuted;
 			string text2 = TruncateToWidth(subtitle, _gamePillSubStyle.fontSize, num9);
-			GUI.Label(new Rect(num8, ((Rect)(ref rect)).y + ((Rect)(ref rect)).height * 0.52f, num9, ((Rect)(ref rect)).height * 0.34f), text2, _gamePillSubStyle);
+			GUI.Label(new Rect(num8, (rect).y + (rect).height * 0.52f, num9, (rect).height * 0.34f), text2, _gamePillSubStyle);
 			Rect r = default(Rect);
-			((Rect)(ref r))._002Ector(((Rect)(ref rect)).x + ((Rect)(ref rect)).width - num5 - num3, ((Rect)(ref rect)).y + (((Rect)(ref rect)).height - num6) * 0.5f, num5, num6);
+			(r)._002Ector((rect).x + (rect).width - num5 - num3, (rect).y + ((rect).height - num6) * 0.5f, num5, num6);
 			Color val4 = default(Color);
-			((Color)(ref val4))._002Ector(0.18f, 0.18f, 0.22f, 1f);
+			(val4)._002Ector(0.18f, 0.18f, 0.22f, 1f);
 			Color val5 = default(Color);
-			((Color)(ref val5))._002Ector(iconColor.r, iconColor.g, iconColor.b, 1f);
+			(val5)._002Ector(iconColor.r, iconColor.g, iconColor.b, 1f);
 			DrawSolidRect(r, Color.Lerp(val4, val5, num2));
 			DrawRectBorder(r, new Color(0f, 0f, 0f, 0.4f));
 			float num10 = num6 - Mathf.Max(4f, num6 * 0.2f);
 			float num11 = (num6 - num10) * 0.5f;
-			float num12 = Mathf.Lerp(((Rect)(ref r)).x + num11, ((Rect)(ref r)).x + num5 - num10 - num11, num2);
-			DrawSolidRect(new Rect(num12, ((Rect)(ref r)).y + num11, num10, num10), Color.white);
+			float num12 = Mathf.Lerp((r).x + num11, (r).x + num5 - num10 - num11, num2);
+			DrawSolidRect(new Rect(num12, (r).y + num11, num10, num10), Color.white);
 			GUI.color = color;
 		}
 		if (!flag)
@@ -4809,7 +4809,7 @@ public static class GuiStyles
 		EnsureGameStyles();
 		Rect rect = GUILayoutUtility.GetRect(0f, Spacing.MenuSize(height, 26f), (GUILayoutOption[])(object)new GUILayoutOption[1] { GUILayout.ExpandWidth(true) });
 		bool result = false;
-		bool flag = ((Rect)(ref rect)).Contains(Event.current.mousePosition);
+		bool flag = (rect).Contains(Event.current.mousePosition);
 		if ((int)Event.current.type == 0 && flag)
 		{
 			result = true;
@@ -4826,11 +4826,11 @@ public static class GuiStyles
 			Color color2 = GUI.color;
 			GUI.color = color;
 			GUIStyle val = _gameAnimLabelStyle;
-			if (EstimateTextWidth(label, val.fontSize) > ((Rect)(ref rect)).width - 6f)
+			if (EstimateTextWidth(label, val.fontSize) > (rect).width - 6f)
 			{
 				val = _gameLetterSmall;
 			}
-			string text = TruncateToWidth(label, val.fontSize, ((Rect)(ref rect)).width - 4f);
+			string text = TruncateToWidth(label, val.fontSize, (rect).width - 4f);
 			GUI.Label(rect, text, val);
 			GUI.color = color2;
 		}
@@ -4870,7 +4870,7 @@ public static class GuiStyles
 		EnsureGameStyles();
 		Rect rect = GUILayoutUtility.GetRect(0f, Spacing.MenuSize(height, 28f), (GUILayoutOption[])(object)new GUILayoutOption[1] { GUILayout.ExpandWidth(true) });
 		bool result = false;
-		bool flag = ((Rect)(ref rect)).Contains(Event.current.mousePosition);
+		bool flag = (rect).Contains(Event.current.mousePosition);
 		if ((int)Event.current.type == 0 && flag)
 		{
 			result = true;
@@ -4889,9 +4889,9 @@ public static class GuiStyles
 			float num3 = Spacing.MenuSize(6f, 3f);
 			float num4 = Spacing.MenuSize(6f, 3f);
 			float num5 = Spacing.MenuSize(4f, 2f);
-			float num6 = ((Rect)(ref rect)).x + num3 + num + num5;
-			float num7 = ((Rect)(ref rect)).width - num3 - num - num5 - num2 - num4 - num5;
-			Rect val = new Rect(((Rect)(ref rect)).x + num3, ((Rect)(ref rect)).y + (((Rect)(ref rect)).height - num) * 0.5f, num, num);
+			float num6 = (rect).x + num3 + num + num5;
+			float num7 = (rect).width - num3 - num - num5 - num2 - num4 - num5;
+			Rect val = new Rect((rect).x + num3, (rect).y + ((rect).height - num) * 0.5f, num, num);
 			Color color = GUI.color;
 			GUI.color = iconColor;
 			GUI.Label(val, letter, _gameLetterSmall);
@@ -4902,9 +4902,9 @@ public static class GuiStyles
 				val2 = _gameLetterSmall;
 			}
 			string text = TruncateToWidth(label, val2.fontSize, num7);
-			GUI.Label(new Rect(num6, ((Rect)(ref rect)).y, num7, ((Rect)(ref rect)).height), text, val2);
+			GUI.Label(new Rect(num6, (rect).y, num7, (rect).height), text, val2);
 			GUI.color = iconColor;
-			GUI.Label(new Rect(((Rect)(ref rect)).x + ((Rect)(ref rect)).width - num4 - num2, ((Rect)(ref rect)).y, num2, ((Rect)(ref rect)).height), "▶", _gameLetterSmall);
+			GUI.Label(new Rect((rect).x + (rect).width - num4 - num2, (rect).y, num2, (rect).height), "▶", _gameLetterSmall);
 			GUI.color = color;
 		}
 		return result;
@@ -5156,13 +5156,13 @@ public static class GuiStyles
 		//IL_014b: Unknown result type (might be due to invalid IL or missing references)
 		float num = Mathf.Clamp01((value - min) / (max - min));
 		Rect val = default(Rect);
-		((Rect)(ref val))._002Ector(((Rect)(ref sliderRect)).x + 9f, ((Rect)(ref sliderRect)).y + 5f, ((Rect)(ref sliderRect)).width - 18f, 8f);
+		(val)._002Ector((sliderRect).x + 9f, (sliderRect).y + 5f, (sliderRect).width - 18f, 8f);
 		GUI.color = new Color(0.08f, 0.08f, 0.12f, 0.9f);
 		GUI.Box(val, GUIContent.none, GUIStyle.none);
 		if (num > 0.01f)
 		{
 			Rect val2 = default(Rect);
-			((Rect)(ref val2))._002Ector(((Rect)(ref val)).x, ((Rect)(ref val)).y, ((Rect)(ref val)).width * num, ((Rect)(ref val)).height);
+			(val2)._002Ector((val).x, (val).y, (val).width * num, (val).height);
 			Color val3 = Color.Lerp(Theme.AccentDim, Theme.Accent, num);
 			float num2 = 0.9f + Mathf.Sin(Time.realtimeSinceStartup * 2f) * 0.1f;
 			GUI.color = val3 * num2;
@@ -5170,8 +5170,8 @@ public static class GuiStyles
 			if (num > 0.05f)
 			{
 				Color color = default(Color);
-				((Color)(ref color))._002Ector(Theme.Visor.r, Theme.Visor.g, Theme.Visor.b, 0.4f * num);
-				Rect val4 = new Rect(((Rect)(ref val2)).xMax - 4f, ((Rect)(ref val)).y - 1f, 8f, ((Rect)(ref val)).height + 2f);
+				(color)._002Ector(Theme.Visor.r, Theme.Visor.g, Theme.Visor.b, 0.4f * num);
+				Rect val4 = new Rect((val2).xMax - 4f, (val).y - 1f, 8f, (val).height + 2f);
 				GUI.color = color;
 				GUI.Box(val4, GUIContent.none, GUIStyle.none);
 			}
@@ -5268,7 +5268,7 @@ public static class GuiStyles
 			if (isActive)
 			{
 				float num = Animation.Pulse(2f, 0.7f);
-				((Color)(ref val))._002Ector(val.r * num, val.g * num, val.b * num, val.a);
+				(val)._002Ector(val.r * num, val.g * num, val.b * num, val.a);
 			}
 			if (_eliteDotBoxStyle == null)
 			{
@@ -5339,15 +5339,15 @@ public static class GuiStyles
 			if (progress > 0.01f)
 			{
 				Rect val = default(Rect);
-				((Rect)(ref val))._002Ector(((Rect)(ref rect)).x, ((Rect)(ref rect)).y, ((Rect)(ref rect)).width * progress, ((Rect)(ref rect)).height);
+				(val)._002Ector((rect).x, (rect).y, (rect).width * progress, (rect).height);
 				float num = Animation.Pulse();
 				Color val2 = Color.Lerp(Theme.AccentActive, Theme.Accent, progress);
-				((Color)(ref val2))._002Ector(val2.r * num, val2.g * num, val2.b * num, 1f);
+				(val2)._002Ector(val2.r * num, val2.g * num, val2.b * num, 1f);
 				GUI.color = val2;
 				GUI.Box(val, GUIContent.none, WhitePixelBoxStyle);
 				if (progress < 0.99f)
 				{
-					Rect val3 = new Rect(((Rect)(ref val)).xMax - 4f, ((Rect)(ref rect)).y, 8f, ((Rect)(ref rect)).height);
+					Rect val3 = new Rect((val).xMax - 4f, (rect).y, 8f, (rect).height);
 					GUI.color = new Color(1f, 1f, 1f, 0.3f * num);
 					GUI.Box(val3, GUIContent.none, WhitePixelBoxStyle);
 				}
@@ -5463,7 +5463,7 @@ public static class GuiStyles
 		}
 		Color color = GUI.color;
 		GUI.color = new Color(0f, 0f, 0f, alpha);
-		GUI.Box(new Rect(((Rect)(ref elementRect)).x - spread * 0.5f + 2f, ((Rect)(ref elementRect)).y - spread * 0.5f + 4f, ((Rect)(ref elementRect)).width + spread, ((Rect)(ref elementRect)).height + spread), GUIContent.none, _dropShadowBoxStyle);
+		GUI.Box(new Rect((elementRect).x - spread * 0.5f + 2f, (elementRect).y - spread * 0.5f + 4f, (elementRect).width + spread, (elementRect).height + spread), GUIContent.none, _dropShadowBoxStyle);
 		GUI.color = color;
 	}
 
@@ -5491,7 +5491,7 @@ public static class GuiStyles
 				float num2 = (float)num * 5f;
 				float num3 = 0.12f * (float)num * intensity;
 				GUI.color = new Color(accent.r, accent.g, accent.b, num3);
-				GUI.Box(new Rect(((Rect)(ref r)).x - num2, ((Rect)(ref r)).y - num2, ((Rect)(ref r)).width + num2 * 2f, ((Rect)(ref r)).height + num2 * 2f), GUIContent.none, RadialGlowBoxStyle);
+				GUI.Box(new Rect((r).x - num2, (r).y - num2, (r).width + num2 * 2f, (r).height + num2 * 2f), GUIContent.none, RadialGlowBoxStyle);
 			}
 			GUI.color = color;
 		}
@@ -5586,7 +5586,7 @@ public static class GuiStyles
 			_scanlineTileTex.Apply();
 			((Object)_scanlineTileTex).hideFlags = (HideFlags)61;
 		}
-		int num = Mathf.CeilToInt(((Rect)(ref area)).height) + 6;
+		int num = Mathf.CeilToInt((area).height) + 6;
 		if (_scanlineBoxStyle == null || Mathf.Abs(_scanlineCachedHeight - num) > 20)
 		{
 			Texture2D val = new Texture2D(1, num, (TextureFormat)4, false);
@@ -5632,35 +5632,35 @@ public static class GuiStyles
 		{
 			float num = 3f;
 			Rect val = default(Rect);
-			((Rect)(ref val))._002Ector(((Rect)(ref windowRect)).x, ((Rect)(ref windowRect)).y, ((Rect)(ref windowRect)).width, num);
+			(val)._002Ector((windowRect).x, (windowRect).y, (windowRect).width, num);
 			Color color = GUI.color;
 			GUI.color = Theme.Accent;
 			GUI.Box(val, GUIContent.none, WhitePixelBoxStyle);
 			float num2 = Time.realtimeSinceStartup * 0.3f % 1f;
-			float num3 = ((Rect)(ref windowRect)).width * 0.25f;
-			float num4 = ((Rect)(ref val)).x + num2 * (((Rect)(ref val)).width + num3) - num3;
+			float num3 = (windowRect).width * 0.25f;
+			float num4 = (val).x + num2 * ((val).width + num3) - num3;
 			float num5 = num3 * 0.3f;
 			float num6 = num3 * 0.4f;
-			float num7 = Mathf.Max(num4 + num5, ((Rect)(ref val)).x);
-			float num8 = Mathf.Max(0f, Mathf.Min(num6, ((Rect)(ref val)).xMax - num7));
-			float num9 = Mathf.Max(num4, ((Rect)(ref val)).x);
-			float num10 = Mathf.Max(0f, Mathf.Min(num5, ((Rect)(ref val)).xMax - num9));
-			float num11 = Mathf.Max(num4 + num5 + num6, ((Rect)(ref val)).x);
-			float num12 = Mathf.Max(0f, Mathf.Min(num5, ((Rect)(ref val)).xMax - num11));
+			float num7 = Mathf.Max(num4 + num5, (val).x);
+			float num8 = Mathf.Max(0f, Mathf.Min(num6, (val).xMax - num7));
+			float num9 = Mathf.Max(num4, (val).x);
+			float num10 = Mathf.Max(0f, Mathf.Min(num5, (val).xMax - num9));
+			float num11 = Mathf.Max(num4 + num5 + num6, (val).x);
+			float num12 = Mathf.Max(0f, Mathf.Min(num5, (val).xMax - num11));
 			if (num8 > 0f)
 			{
 				GUI.color = new Color(1f, 1f, 1f, 0.45f);
-				GUI.Box(new Rect(num7, ((Rect)(ref val)).y, num8, num), GUIContent.none, WhitePixelBoxStyle);
+				GUI.Box(new Rect(num7, (val).y, num8, num), GUIContent.none, WhitePixelBoxStyle);
 			}
 			if (num10 > 0f)
 			{
 				GUI.color = new Color(1f, 1f, 1f, 0.18f);
-				GUI.Box(new Rect(num9, ((Rect)(ref val)).y, num10, num), GUIContent.none, WhitePixelBoxStyle);
+				GUI.Box(new Rect(num9, (val).y, num10, num), GUIContent.none, WhitePixelBoxStyle);
 			}
 			if (num12 > 0f)
 			{
 				GUI.color = new Color(1f, 1f, 1f, 0.18f);
-				GUI.Box(new Rect(num11, ((Rect)(ref val)).y, num12, num), GUIContent.none, WhitePixelBoxStyle);
+				GUI.Box(new Rect(num11, (val).y, num12, num), GUIContent.none, WhitePixelBoxStyle);
 			}
 			GUI.color = color;
 		}
@@ -5692,7 +5692,7 @@ public static class GuiStyles
 			float num5 = num3 * 16f;
 			Color color = GUI.color;
 			GUI.color = new Color(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, num4);
-			GUI.Box(new Rect(((Rect)(ref r)).x - num5, ((Rect)(ref r)).y - num5, ((Rect)(ref r)).width + num5 * 2f, ((Rect)(ref r)).height + num5 * 2f), GUIContent.none, RadialGlowBoxStyle);
+			GUI.Box(new Rect((r).x - num5, (r).y - num5, (r).width + num5 * 2f, (r).height + num5 * 2f), GUIContent.none, RadialGlowBoxStyle);
 			GUI.color = color;
 		}
 	}
@@ -5716,9 +5716,9 @@ public static class GuiStyles
 			GUI.color = new Color(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, 0.25f);
 			GUI.Box(rect, GUIContent.none, WhitePixelBoxStyle);
 			float num = Time.realtimeSinceStartup * 0.4f % 1f;
-			float num2 = ((Rect)(ref rect)).x + num * ((Rect)(ref rect)).width;
-			float num3 = ((Rect)(ref rect)).width * 0.28f;
-			Rect val = new Rect(Mathf.Max(num2 - num3 * 0.5f, ((Rect)(ref rect)).x), ((Rect)(ref rect)).y - 1f, Mathf.Min(num3, ((Rect)(ref rect)).xMax - Mathf.Max(num2 - num3 * 0.5f, ((Rect)(ref rect)).x)), ((Rect)(ref rect)).height + 2f);
+			float num2 = (rect).x + num * (rect).width;
+			float num3 = (rect).width * 0.28f;
+			Rect val = new Rect(Mathf.Max(num2 - num3 * 0.5f, (rect).x), (rect).y - 1f, Mathf.Min(num3, (rect).xMax - Mathf.Max(num2 - num3 * 0.5f, (rect).x)), (rect).height + 2f);
 			float num4 = 0.9f * Mathf.Sin(num * (float)Math.PI);
 			GUI.color = new Color(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, num4);
 			GUI.Box(val, GUIContent.none, RadialGlowBoxStyle);
@@ -5742,7 +5742,7 @@ public static class GuiStyles
 		{
 			return;
 		}
-		if (!((Rect)(ref triggerRect)).Contains(Event.current.mousePosition))
+		if (!(triggerRect).Contains(Event.current.mousePosition))
 		{
 			if (_eliteTooltipTriggerRect == triggerRect)
 			{
@@ -5815,7 +5815,7 @@ public static class GuiStyles
 		float num10 = Mathf.Min(_eliteTooltipPos.x + 14f, num8 - num6 - 4f);
 		float num11 = Mathf.Min(_eliteTooltipPos.y + 18f, num9 - num7 - 4f);
 		Rect val = default(Rect);
-		((Rect)(ref val))._002Ector(num10, num11, num6 * num2, num7 * num2);
+		(val)._002Ector(num10, num11, num6 * num2, num7 * num2);
 		Color color = GUI.color;
 		if (_tooltipBgBoxStyle == null || (Object)(object)_tooltipBgBoxStyle.normal.background != (Object)(object)_eliteTooltipBgTex)
 		{
@@ -5823,7 +5823,7 @@ public static class GuiStyles
 			_tooltipBgBoxStyle.normal.background = _eliteTooltipBgTex;
 		}
 		GUI.color = new Color(0f, 0f, 0f, 0.5f * num);
-		GUI.Box(new Rect(((Rect)(ref val)).x + 3f, ((Rect)(ref val)).y + 3f, ((Rect)(ref val)).width, ((Rect)(ref val)).height), GUIContent.none, RadialGlowBoxStyle);
+		GUI.Box(new Rect((val).x + 3f, (val).y + 3f, (val).width, (val).height), GUIContent.none, RadialGlowBoxStyle);
 		GUI.color = new Color(1f, 1f, 1f, num);
 		GUI.Box(val, GUIContent.none, _tooltipBgBoxStyle);
 		GUI.color = new Color(Theme.TextPrimary.r, Theme.TextPrimary.g, Theme.TextPrimary.b, num);
@@ -5852,15 +5852,15 @@ public static class GuiStyles
 			_toggleAnim[id] = value2;
 			float num2 = value2 * value2 * (3f - 2f * value2);
 			float num3 = 3f;
-			float num4 = ((Rect)(ref toggleRect)).height * 0.6f;
-			float num5 = ((Rect)(ref toggleRect)).y + (((Rect)(ref toggleRect)).height - num4) * 0.5f;
+			float num4 = (toggleRect).height * 0.6f;
+			float num5 = (toggleRect).y + ((toggleRect).height - num4) * 0.5f;
 			Color color = GUI.color;
 			GUI.color = new Color(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, num2);
-			GUI.Box(new Rect(((Rect)(ref toggleRect)).x, num5, num3, num4), GUIContent.none, WhitePixelBoxStyle);
+			GUI.Box(new Rect((toggleRect).x, num5, num3, num4), GUIContent.none, WhitePixelBoxStyle);
 			if (num2 > 0.1f)
 			{
 				GUI.color = new Color(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, num2 * 0.12f);
-				GUI.Box(new Rect(((Rect)(ref toggleRect)).x - 2f, num5 - 2f, num3 + 10f, num4 + 4f), GUIContent.none, RadialGlowBoxStyle);
+				GUI.Box(new Rect((toggleRect).x - 2f, num5 - 2f, num3 + 10f, num4 + 4f), GUIContent.none, RadialGlowBoxStyle);
 			}
 			GUI.color = color;
 		}
@@ -5912,11 +5912,11 @@ public static class GuiStyles
 		float num5 = Mathf.Max(num4, 20f * menuScale);
 		GUILayout.BeginHorizontal((Il2CppReferenceArray<GUILayoutOption>)null);
 		Rect rect = GUILayoutUtility.GetRect(num3, num5, (GUILayoutOption[])(object)new GUILayoutOption[1] { GUILayout.Width(num3) });
-		float num6 = ((Rect)(ref rect)).y + (num5 - num4) * 0.5f;
+		float num6 = (rect).y + (num5 - num4) * 0.5f;
 		Rect val = default(Rect);
-		((Rect)(ref val))._002Ector(((Rect)(ref rect)).x, num6, num3, num4);
+		(val)._002Ector((rect).x, num6, num3, num4);
 		bool flag = false;
-		if ((int)Event.current.type == 0 && ((Rect)(ref val)).Contains(Event.current.mousePosition))
+		if ((int)Event.current.type == 0 && (val).Contains(Event.current.mousePosition))
 		{
 			flag = true;
 			Event.current.Use();
@@ -5925,20 +5925,20 @@ public static class GuiStyles
 		{
 			Color val2 = new Color(0.18f, 0.18f, 0.22f, 1f);
 			Color val3 = default(Color);
-			((Color)(ref val3))._002Ector(Theme.Accent.r * 0.6f, Theme.Accent.g * 0.6f, Theme.Accent.b * 0.6f, 1f);
+			(val3)._002Ector(Theme.Accent.r * 0.6f, Theme.Accent.g * 0.6f, Theme.Accent.b * 0.6f, 1f);
 			Color color = Color.Lerp(val2, val3, num2);
 			Color color2 = GUI.color;
 			GUI.color = color;
 			GUI.Box(val, GUIContent.none, PillBoxStyle);
 			float num7 = num4 - 4f;
-			float num8 = Mathf.Lerp(((Rect)(ref val)).x + 2f, ((Rect)(ref val)).x + num3 - num7 - 2f, num2);
+			float num8 = Mathf.Lerp((val).x + 2f, (val).x + num3 - num7 - 2f, num2);
 			float num9 = num6 + 2f;
 			GUI.color = Color.Lerp(new Color(0.65f, 0.65f, 0.68f, 1f), Color.white, num2);
 			GUI.Box(new Rect(num8, num9, num7, num7), GUIContent.none, KnobBoxStyle);
 			if (num2 > 0.1f)
 			{
 				GUI.color = new Color(Theme.Accent.r, Theme.Accent.g, Theme.Accent.b, num2 * 0.15f);
-				GUI.Box(new Rect(((Rect)(ref val)).x - 4f, ((Rect)(ref val)).y - 4f, num3 + 8f, num4 + 8f), GUIContent.none, RadialGlowBoxStyle);
+				GUI.Box(new Rect((val).x - 4f, (val).y - 4f, num3 + 8f, num4 + 8f), GUIContent.none, RadialGlowBoxStyle);
 			}
 			GUI.color = color2;
 		}
@@ -5949,7 +5949,7 @@ public static class GuiStyles
 		GUILayout.Label(label, ToggleLabelStyle ?? LabelStyle, (GUILayoutOption[])(object)new GUILayoutOption[1] { CachedHeight(num5) });
 		Rect lastRect = GUILayoutUtility.GetLastRect();
 		GUI.color = color4;
-		if ((int)Event.current.type == 0 && ((Rect)(ref lastRect)).Contains(Event.current.mousePosition))
+		if ((int)Event.current.type == 0 && (lastRect).Contains(Event.current.mousePosition))
 		{
 			flag = true;
 			Event.current.Use();

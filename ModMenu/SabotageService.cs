@@ -84,7 +84,7 @@ public static class SabotageService
 		//IL_0005: Unknown result type (might be due to invalid IL or missing references)
 		if (!DoorRoomNames.TryGetValue(room, out var value))
 		{
-			return ((object)(SystemTypes)(ref room)).ToString();
+			return ((object)(SystemTypes)room.ToString();
 		}
 		return value;
 	}

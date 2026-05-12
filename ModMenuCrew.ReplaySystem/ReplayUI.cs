@@ -857,7 +857,7 @@ public class ReplayUI : MonoBehaviour
 		float num = h - timelineHeight - controlsHeight;
 		float num2 = Mathf.Min(80f, w * 0.1f);
 		Rect val = default(Rect);
-		((Rect)(ref val))._002Ector(num2, num, w - num2 * 2f, timelineHeight);
+		(val)._002Ector(num2, num, w - num2 * 2f, timelineHeight);
 		GUI.Box(val, "", timelineStyle);
 		float totalDuration = viewer.TotalDuration;
 		if (totalDuration <= 0f)
@@ -865,23 +865,23 @@ public class ReplayUI : MonoBehaviour
 			return;
 		}
 		float num3 = viewer.CurrentTime / totalDuration;
-		float num4 = ((Rect)(ref val)).y + 18f;
+		float num4 = (val).y + 18f;
 		float num5 = 14f;
-		float num6 = ((Rect)(ref val)).width - 10f;
+		float num6 = (val).width - 10f;
 		Rect val2 = default(Rect);
-		((Rect)(ref val2))._002Ector(((Rect)(ref val)).x + 5f, num4, num6, num5);
+		(val2)._002Ector((val).x + 5f, num4, num6, num5);
 		GUI.color = new Color(0.15f, 0.15f, 0.15f, 1f);
 		GUI.Box(val2, "", _accentLineStyle);
 		GUI.color = ACCENT;
-		GUI.Box(new Rect(((Rect)(ref val2)).x, ((Rect)(ref val2)).y, num6 * num3, num5), "", _accentLineStyle);
-		GUI.Label(new Rect(((Rect)(ref val2)).x + num6 * num3 - 5f, num4 - 12f, 12f, 14f), "<size=12><b>▼</b></size>", _centerLabelStyle);
+		GUI.Box(new Rect((val2).x, (val2).y, num6 * num3, num5), "", _accentLineStyle);
+		GUI.Label(new Rect((val2).x + num6 * num3 - 5f, num4 - 12f, 12f, 14f), "<size=12><b>▼</b></size>", _centerLabelStyle);
 		GUI.color = Color.white;
 		if (viewer.Data?.Events != null)
 		{
 			foreach (ReplayEvent @event in viewer.Data.Events)
 			{
 				float num7 = Mathf.Clamp01(@event.Time / totalDuration);
-				float num8 = ((Rect)(ref val2)).x + num6 * num7;
+				float num8 = (val2).x + num6 * num7;
 				GUI.color = @event.GetColor();
 				GUI.Box(new Rect(num8 - 1f, num4, 2f, num5), "", _accentLineStyle);
 			}
@@ -889,16 +889,16 @@ public class ReplayUI : MonoBehaviour
 		}
 		for (int i = 0; i <= 4; i++)
 		{
-			GUI.Label(new Rect(((Rect)(ref val2)).x + num6 * ((float)i / 4f) - 18f, num4 + num5 + 2f, 40f, 14f), "<size=9>" + FormatTime(totalDuration * (float)i / 4f) + "</size>", _centerLabelStyle);
+			GUI.Label(new Rect((val2).x + num6 * ((float)i / 4f) - 18f, num4 + num5 + 2f, 40f, 14f), "<size=9>" + FormatTime(totalDuration * (float)i / 4f) + "</size>", _centerLabelStyle);
 		}
 		if (Input.GetMouseButtonDown(0))
 		{
 			float scale = GuiStyles.Spacing.Scale;
 			Vector2 val3 = default(Vector2);
-			((Vector2)(ref val3))._002Ector(Input.mousePosition.x / scale, ((float)Screen.height - Input.mousePosition.y) / scale);
-			if (((Rect)(ref val2)).Contains(val3))
+			(val3)._002Ector(Input.mousePosition.x / scale, ((float)Screen.height - Input.mousePosition.y) / scale);
+			if ((val2).Contains(val3))
 			{
-				viewer.Seek((val3.x - ((Rect)(ref val2)).x) / num6 * totalDuration);
+				viewer.Seek((val3.x - (val2).x) / num6 * totalDuration);
 			}
 		}
 	}
@@ -1315,7 +1315,7 @@ public class ReplayUI : MonoBehaviour
 		float num = 160f;
 		float num2 = w - num - 15f;
 		Rect val = default(Rect);
-		((Rect)(ref val))._002Ector(num2, startY, num, num);
+		(val)._002Ector(num2, startY, num, num);
 		GUI.Box(val, "", boxStyle);
 		if (viewer.Data == null)
 		{
@@ -1332,8 +1332,8 @@ public class ReplayUI : MonoBehaviour
 				Vector2 val2 = Vector2.op_Implicit(((Component)puppet).transform.position);
 				float num5 = Mathf.Clamp01((val2.x - x) / num3);
 				float num6 = 1f - Mathf.Clamp01((val2.y - y) / num4);
-				float num7 = ((Rect)(ref val)).x + num5 * ((Rect)(ref val)).width;
-				float num8 = ((Rect)(ref val)).y + 14f + num6 * (((Rect)(ref val)).height - 14f);
+				float num7 = (val).x + num5 * (val).width;
+				float num8 = (val).y + 14f + num6 * ((val).height - 14f);
 				GUI.color = ((((Il2CppArrayBase<Color32>)(object)Palette.PlayerColors).Length > puppet.Info.ColorId) ? Color32.op_Implicit(((Il2CppArrayBase<Color32>)(object)Palette.PlayerColors)[puppet.Info.ColorId]) : Color.white);
 				if (viewer.FollowingPlayerId == puppet.Info.PlayerId)
 				{
@@ -1509,7 +1509,7 @@ public class ReplayUI : MonoBehaviour
 		if (showDiagnostics && viewer.Data != null)
 		{
 			Rect val = default(Rect);
-			((Rect)(ref val))._002Ector(w / 2f - 160f, 50f, 320f, 120f);
+			(val)._002Ector(w / 2f - 160f, 50f, 320f, 120f);
 			GUI.Box(val, "", boxStyle);
 			int num3 = 0;
 			try
@@ -1525,7 +1525,7 @@ public class ReplayUI : MonoBehaviour
 			}
 			ReplayGameSettings settings = viewer.Data.Settings;
 			string text = $"<size=10><b>DIAGNOSTICS [F3]</b>\nFrames: {viewer.Data.Frames.Count} | Events: {viewer.Data.Events?.Count ?? 0} | Puppets: {num3}\nMap: {viewer.Data.MapName} (ID {viewer.Data.MapId}) | Version: v{5}\nSpeed: {settings?.PlayerSpeed:F1}x | Vision: C{settings?.CrewmateVision:F1} I{settings?.ImpostorVision:F1} | Kill CD: {settings?.KillCooldown:F0}s\nTasks: {settings?.NumCommonTasks}C {settings?.NumLongTasks}L {settings?.NumShortTasks}S | Mode: {settings?.GameMode ?? "?"}\nConfirm Ejects: {settings?.ConfirmEjects} | Anon Votes: {settings?.AnonymousVotes} | Visual Tasks: {settings?.VisualTasks}</size>";
-			GUI.Label(new Rect(((Rect)(ref val)).x + 8f, ((Rect)(ref val)).y + 4f, ((Rect)(ref val)).width - 16f, ((Rect)(ref val)).height - 8f), text, labelStyle);
+			GUI.Label(new Rect((val).x + 8f, (val).y + 4f, (val).width - 16f, (val).height - 8f), text, labelStyle);
 		}
 		float num4 = 43f;
 		GUI.color = new Color(1f, 1f, 1f, 0.6f);

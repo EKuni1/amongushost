@@ -98,8 +98,8 @@ public class VMWindowState
 					float num = Mathf.Clamp(Mathf.Pow((float)Screen.height / 1080f, 0.7f), 0.85f, 2.2f);
 					float num2 = (float)Screen.width / num;
 					float num3 = (float)Screen.height / num;
-					((Rect)(ref WindowRect)).x = Mathf.Clamp(((Rect)(ref WindowRect)).x, 0f, Mathf.Max(0f, num2 - MinWidth));
-					((Rect)(ref WindowRect)).y = Mathf.Clamp(((Rect)(ref WindowRect)).y, 0f, Mathf.Max(0f, num3 - 80f));
+					(WindowRect).x = Mathf.Clamp((WindowRect).x, 0f, Mathf.Max(0f, num2 - MinWidth));
+					(WindowRect).y = Mathf.Clamp((WindowRect).y, 0f, Mathf.Max(0f, num3 - 80f));
 				}
 			}
 			else if (Screen.width > 0 && Screen.height > 0)
@@ -124,10 +124,10 @@ public class VMWindowState
 		try
 		{
 			string text = "GhostUI_" + WindowId;
-			PlayerPrefs.SetFloat(text + "_x", ((Rect)(ref WindowRect)).x);
-			PlayerPrefs.SetFloat(text + "_y", ((Rect)(ref WindowRect)).y);
-			PlayerPrefs.SetFloat(text + "_w", ((Rect)(ref WindowRect)).width);
-			PlayerPrefs.SetFloat(text + "_h", ((Rect)(ref WindowRect)).height);
+			PlayerPrefs.SetFloat(text + "_x", (WindowRect).x);
+			PlayerPrefs.SetFloat(text + "_y", (WindowRect).y);
+			PlayerPrefs.SetFloat(text + "_w", (WindowRect).width);
+			PlayerPrefs.SetFloat(text + "_h", (WindowRect).height);
 			PlayerPrefs.Save();
 		}
 		catch

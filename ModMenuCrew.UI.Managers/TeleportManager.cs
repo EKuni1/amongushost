@@ -216,7 +216,7 @@ public class TeleportManager
 						if ((Object)(object)value != (Object)null && (Object)(object)value.roomArea != (Object)null)
 						{
 							Bounds bounds = value.roomArea.bounds;
-							Vector2 value2 = Vector2.op_Implicit(((Bounds)(ref bounds)).center);
+							Vector2 value2 = Vector2.op_Implicit((bounds).center);
 							cachedLocations[key] = value2;
 						}
 					}

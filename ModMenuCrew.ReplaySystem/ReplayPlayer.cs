@@ -344,7 +344,7 @@ public class ReplayPlayer : MonoBehaviour
 		Texture2D val = (_cachedDummyTex = new Texture2D(num, num2, (TextureFormat)4, false));
 		Color[] array = (Color[])(object)new Color[num * num2];
 		Vector2 val2 = default(Vector2);
-		((Vector2)(ref val2))._002Ector((float)(num / 2), (float)(num2 / 2));
+		(val2)._002Ector((float)(num / 2), (float)(num2 / 2));
 		for (int i = 0; i < num2; i++)
 		{
 			for (int j = 0; j < num; j++)

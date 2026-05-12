@@ -2790,8 +2790,8 @@ public class ModMenuCrewPlugin : BasePlugin
 				GUILayout.Width(72f),
 				GUILayout.Height(72f)
 			});
-			float num14 = ((Rect)(ref rect)).x + 36f;
-			float num15 = ((Rect)(ref rect)).y + 36f;
+			float num14 = (rect).x + 36f;
+			float num15 = (rect).y + 36f;
 			if ((Object)(object)DiscordAuthManager.AvatarTexture != (Object)null)
 			{
 				Texture2D avatarTexture = DiscordAuthManager.AvatarTexture;
@@ -2810,12 +2810,12 @@ public class ModMenuCrewPlugin : BasePlugin
 						float num17 = Mathf.Clamp01((num2 - 0.2f) * 2f) * (0.3f + num16 * 0.4f);
 						float num18 = 76f + num16 * 6f;
 						GUI.color = new Color(GuiStyles.Theme.Blurple.r, GuiStyles.Theme.Blurple.g, GuiStyles.Theme.Blurple.b, num17);
-						((Rect)(ref _f2GlowRect)).Set(num14 - num18 * 0.5f, num15 - num18 * 0.5f, num18, num18);
+						(_f2GlowRect).Set(num14 - num18 * 0.5f, num15 - num18 * 0.5f, num18, num18);
 						GUI.Box(_f2GlowRect, "", GUI.skin.box);
 						GUI.color = Color.white;
 					}
 					float num19 = 64f * num6;
-					((Rect)(ref _f2AvatarRect)).Set(num14 - num19 * 0.5f, num15 - num19 * 0.5f, num19, num19);
+					(_f2AvatarRect).Set(num14 - num19 * 0.5f, num15 - num19 * 0.5f, num19, num19);
 					GUI.color = new Color(1f, 1f, 1f, num9);
 					GUI.Box(_f2AvatarRect, GUIContent.none, _cachedAvatarStyle);
 					GUI.color = Color.white;
@@ -2830,7 +2830,7 @@ public class ModMenuCrewPlugin : BasePlugin
 							float num24 = num15 + Mathf.Sin(num21) * num22;
 							float num25 = 0.4f + 0.4f * Mathf.Sin(Time.time * 3f + (float)i * 2f);
 							GUI.color = new Color(0.6f, 0.7f, 1f, num25);
-							((Rect)(ref _f2SparkleRect)).Set(num23 - 4f, num24 - 4f, 12f, 12f);
+							(_f2SparkleRect).Set(num23 - 4f, num24 - 4f, 12f, 12f);
 							GUI.Label(_f2SparkleRect, "✦", GuiStyles.LabelStyle);
 						}
 						GUI.color = Color.white;
@@ -2849,7 +2849,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			{
 				float num27 = 0.92f + 0.08f * Mathf.Sin(Time.time * 2f);
 				float num28 = 12f * num27;
-				((Rect)(ref _f2BadgeRect)).Set(((Rect)(ref rect)).xMax - num28 - 4f, ((Rect)(ref rect)).yMax - num28 - 4f, num28, num28);
+				(_f2BadgeRect).Set((rect).xMax - num28 - 4f, (rect).yMax - num28 - 4f, num28, num28);
 				GUI.color = GuiStyles.Theme.OnlineGreen;
 				GUI.Box(_f2BadgeRect, "", GUI.skin.box);
 				GUI.color = Color.white;
@@ -3291,7 +3291,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				8 => "Noisemaker", 
 				10 => "Tracker", 
 				0 => "Crewmate", 
-				_ => ((object)(RoleTypes)(ref role)).ToString(), 
+				_ => ((object)(RoleTypes)role.ToString(), 
 			};
 		}
 
@@ -4686,7 +4686,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					((TMP_Text)_titleTextTMP).fontStyle = (FontStyles)1;
 					((TMP_Text)_titleTextTMP).characterSpacing = 3f;
 				}
-				CreateTMPText(val9, "Get your free key and unlock all features.", 14, new Color(0.85f, 0.85f, 0.92f, 1f), new Vector2(20f, -30f), new Vector2(800f, 22f), (TextAlignmentOptions)514);
+				CreateTMPText(val9, "Welcome to ModMenuCrew - Access Terminal.", 14, new Color(0.85f, 0.85f, 0.92f, 1f), new Vector2(20f, -30f), new Vector2(800f, 22f), (TextAlignmentOptions)514);
 				Button val13 = CreateTMPButton(val9, "", UnityAction.op_Implicit((Action)delegate
 				{
 					if ((Object)(object)_panelCanvasGroup != (Object)null)
@@ -4827,7 +4827,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					_stepCircle1 = img;
 					_stepLabel1 = lbl;
 				});
-				obj11("2", "GET KEY", "Receive your key", -40f, arg5: false, delegate(Image img, TextMeshProUGUI lbl)
+				obj11("2", "GET KEY", "Activate mod", -40f, arg5: false, delegate(Image img, TextMeshProUGUI lbl)
 				{
 					_stepCircle2 = img;
 					_stepLabel2 = lbl;
@@ -4895,7 +4895,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					((TMP_Text)val24).fontStyle = (FontStyles)1;
 					((TMP_Text)val24).characterSpacing = 1f;
 				}
-				TextMeshProUGUI val25 = CreateTMPText(loginCardRT, "Login with your Discord account to get\nyour <color=#A78BFA>free key</color> and access the mod.", 13, GuiStyles.Theme.TextMuted, new Vector2(-220f, 60f), new Vector2(540f, 40f), (TextAlignmentOptions)513);
+				TextMeshProUGUI val25 = CreateTMPText(loginCardRT, "Login with your Discord account to access\nthe mod and all features.", 13, GuiStyles.Theme.TextMuted, new Vector2(-220f, 60f), new Vector2(540f, 40f), (TextAlignmentOptions)513);
 				if ((Object)(object)val25 != (Object)null)
 				{
 					((TMP_Text)val25).lineSpacing = 4f;
@@ -4957,11 +4957,11 @@ public class ModMenuCrewPlugin : BasePlugin
 					CreateTMPText(loginCardRT, desc, 11, GuiStyles.Theme.TextMuted, new Vector2(-285f, posY - 9f), new Vector2(330f, 18f), (TextAlignmentOptions)513);
 				};
 				Color arg = default(Color);
-				((Color)(ref arg))._002Ector(0.13f, 0.82f, 0.48f, 1f);
+				(arg)._002Ector(0.13f, 0.82f, 0.48f, 1f);
 				Color arg2 = default(Color);
-				((Color)(ref arg2))._002Ector(0.65f, 0.55f, 0.98f, 1f);
+				(arg2)._002Ector(0.65f, 0.55f, 0.98f, 1f);
 				Color arg3 = default(Color);
-				((Color)(ref arg3))._002Ector(0.96f, 0.78f, 0.18f, 1f);
+				(arg3)._002Ector(0.96f, 0.78f, 0.18f, 1f);
 				obj15("shield_check", "Secure & Safe", "100% secure login with Discord OAuth2", arg, 20f);
 				obj15("gift", "Free Access", "Get your key completely for free", arg2, -32f);
 				obj15("zap", "Fast & Easy", "Just 3 simple steps to start", arg3, -84f);
@@ -5492,7 +5492,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					component42.anchoredPosition = new Vector2(-88f, 0f);
 					component42.sizeDelta = new Vector2(36f, 36f);
 				}
-				TextMeshProUGUI val67 = CreateTMPText(component40, "GET FREE KEY", 16, Color.white, new Vector2(40f, 11f), new Vector2(180f, 22f), (TextAlignmentOptions)513);
+				TextMeshProUGUI val67 = CreateTMPText(component40, "GET KEY", 16, Color.white, new Vector2(40f, 11f), new Vector2(180f, 22f), (TextAlignmentOptions)513);
 				if ((Object)(object)val67 != (Object)null)
 				{
 					((TMP_Text)val67).fontStyle = (FontStyles)1;
@@ -5650,13 +5650,13 @@ public class ModMenuCrewPlugin : BasePlugin
 					CreateTMPText(component54, desc, 10, GuiStyles.Theme.TextMuted, new Vector2(15f, -10f), new Vector2(170f, 32f), (TextAlignmentOptions)513);
 				};
 				Color arg4 = default(Color);
-				((Color)(ref arg4))._002Ector(0.13f, 0.82f, 0.48f, 1f);
+				(arg4)._002Ector(0.13f, 0.82f, 0.48f, 1f);
 				Color arg5 = default(Color);
-				((Color)(ref arg5))._002Ector(0.78f, 0.55f, 0.98f, 1f);
+				(arg5)._002Ector(0.78f, 0.55f, 0.98f, 1f);
 				Color arg6 = default(Color);
-				((Color)(ref arg6))._002Ector(0.4f, 0.65f, 0.98f, 1f);
+				(arg6)._002Ector(0.4f, 0.65f, 0.98f, 1f);
 				Color arg7 = default(Color);
-				((Color)(ref arg7))._002Ector(0.98f, 0.62f, 0.3f, 1f);
+				(arg7)._002Ector(0.98f, 0.62f, 0.3f, 1f);
 				obj47("shield_alert", "ANTI-BAN PROTECTION", "Stay safe while using\nadvanced protection", arg4, -420f);
 				obj47("crown", "PREMIUM FEATURES", "Unlock all mod menu\nfeatures", arg5, -140f);
 				obj47("zap", "REGULAR UPDATES", "Always the latest version\nand improvements", arg6, 140f);
@@ -5770,7 +5770,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				}
 				StyleButton(getKeyButtonTMP, ref _cachedGetKeyBtnSprite, new Color(0.13f, 0.13f, 0.2f, 1f), new Color(0.08f, 0.08f, 0.13f, 1f));
 				Color bottomColor = default(Color);
-				((Color)(ref bottomColor))._002Ector(GuiStyles.Theme.Accent.r * 0.78f, GuiStyles.Theme.Accent.g * 0.78f, GuiStyles.Theme.Accent.b * 0.92f, 1f);
+				(bottomColor)._002Ector(GuiStyles.Theme.Accent.r * 0.78f, GuiStyles.Theme.Accent.g * 0.78f, GuiStyles.Theme.Accent.b * 0.92f, 1f);
 				StyleButton(validateButtonTMP, ref _cachedValidateBtnSprite, GuiStyles.Theme.Accent, bottomColor);
 				ConfigureActivationNavigation();
 				try
@@ -5888,7 +5888,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			_currentStep = step;
 			Color accent = GuiStyles.Theme.Accent;
 			Color val = default(Color);
-			((Color)(ref val))._002Ector(0.12f, 0.12f, 0.18f, 0.6f);
+			(val)._002Ector(0.12f, 0.12f, 0.18f, 0.6f);
 			Color val2 = GuiStyles.Theme.Accent * new Color(1f, 1f, 1f, 0.6f);
 			Color stepLineOff = GuiStyles.Theme.StepLineOff;
 			if ((Object)(object)_stepCircle1 != (Object)null)
@@ -6150,7 +6150,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				if ((Object)(object)activationCanvasTMP != (Object)null)
 				{
 					Rect rect = ((Component)activationCanvasTMP).GetComponent<RectTransform>().rect;
-					num2 = ((Rect)(ref rect)).height;
+					num2 = (rect).height;
 				}
 				Vector2 anchoredPosition = _scanLineRT.anchoredPosition;
 				anchoredPosition.y -= num * Time.deltaTime;
@@ -6218,7 +6218,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				if ((Object)(object)val != (Object)null)
 				{
 					Rect rect = val.rect;
-					float height = ((Rect)(ref rect)).height;
+					float height = (rect).height;
 					if (height > 0f)
 					{
 						float num2 = realtimeSinceStartup * 90f % height;
@@ -6499,7 +6499,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				num = Random.Range(-800f, 800f);
 				num2 = Random.Range(-400f, 400f);
 				Vector2 val3 = new Vector2(Random.Range(-1f, 1f), Random.Range(-0.5f, 0.5f));
-				val4 = ((Vector2)(ref val3)).normalized;
+				val4 = (val3).normalized;
 			}
 			else
 			{
@@ -6508,7 +6508,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				num2 = Random.Range(-450, 450);
 				val4 = (num3 ? Vector2.right : Vector2.left);
 				val4 += new Vector2(0f, Random.Range(-0.3f, 0.3f));
-				((Vector2)(ref val4)).Normalize();
+				(val4).Normalize();
 			}
 			val2.anchoredPosition = new Vector2(num, num2);
 			float num4 = Random.Range(0.6f, 1.3f);
@@ -6527,29 +6527,29 @@ public class ModMenuCrewPlugin : BasePlugin
 			Color randomCrewmateColor = GetRandomCrewmateColor();
 			new Color(randomCrewmateColor.r * 0.7f, randomCrewmateColor.g * 0.7f, randomCrewmateColor.b * 0.7f);
 			Color col2 = default(Color);
-			((Color)(ref col2))._002Ector(0f, 0f, 0f, 1f);
+			(col2)._002Ector(0f, 0f, 0f, 1f);
 			Color col3 = default(Color);
-			((Color)(ref col3))._002Ector(0.55f, 0.82f, 0.96f);
+			(col3)._002Ector(0.55f, 0.82f, 0.96f);
 			Color col4 = default(Color);
-			((Color)(ref col4))._002Ector(1f, 1f, 1f, 0.9f);
+			(col4)._002Ector(1f, 1f, 1f, 0.9f);
 			new Color(0.25f, 0.45f, 0.55f);
 			float num6 = 65f;
 			float num7 = 60f;
 			float num8 = 6f;
 			Vector2 val5 = default(Vector2);
-			((Vector2)(ref val5))._002Ector(num6 * 0.35f, num7 * 0.7f);
+			(val5)._002Ector(num6 * 0.35f, num7 * 0.7f);
 			Vector2 pos2 = default(Vector2);
-			((Vector2)(ref pos2))._002Ector((0f - num6) * 0.45f, (0f - num7) * 0.05f);
+			(pos2)._002Ector((0f - num6) * 0.45f, (0f - num7) * 0.05f);
 			CreatePart("BackpackOut", pos2, val5 + Vector2.one * num8, col2, val.transform, 1.5f);
 			CreatePart("Backpack", pos2, val5, randomCrewmateColor, val.transform, 1.5f);
 			Vector2 val6 = default(Vector2);
-			((Vector2)(ref val6))._002Ector(num6 * 0.85f, num7 * 0.95f);
+			(val6)._002Ector(num6 * 0.85f, num7 * 0.95f);
 			Vector2 pos3 = default(Vector2);
-			((Vector2)(ref pos3))._002Ector(0f, 0f);
+			(pos3)._002Ector(0f, 0f);
 			CreatePart("BodyOut", pos3, val6 + Vector2.one * num8, col2, val.transform, 0.5f);
 			CreatePart("Body", pos3, val6, randomCrewmateColor, val.transform, 0.5f);
 			Vector2 val7 = default(Vector2);
-			((Vector2)(ref val7))._002Ector(num6 * 0.3f, num7 * 0.4f);
+			(val7)._002Ector(num6 * 0.3f, num7 * 0.4f);
 			float num9 = (0f - num7) * 0.5f;
 			CreatePart("LegLOut", new Vector2((0f - num6) * 0.25f, num9), val7 + Vector2.one * num8, col2, val.transform, 0.8f);
 			CreatePart("LegL", new Vector2((0f - num6) * 0.25f, num9 + 2f), val7, randomCrewmateColor, val.transform, 0.8f);
@@ -6557,9 +6557,9 @@ public class ModMenuCrewPlugin : BasePlugin
 			CreatePart("LegR", new Vector2(num6 * 0.25f, num9 + 2f), val7, randomCrewmateColor, val.transform, 0.8f);
 			GameObject val8 = CreatePart("BodyCover", pos3, val6, randomCrewmateColor, val.transform, 0.5f);
 			Vector2 val9 = default(Vector2);
-			((Vector2)(ref val9))._002Ector(num6 * 0.65f, num7 * 0.45f);
+			(val9)._002Ector(num6 * 0.65f, num7 * 0.45f);
 			Vector2 pos4 = default(Vector2);
-			((Vector2)(ref pos4))._002Ector(num6 * 0.35f, num7 * 0.1f);
+			(pos4)._002Ector(num6 * 0.35f, num7 * 0.1f);
 			CreatePart("VisorOut", pos4, val9 + Vector2.one * num8, col2, val.transform, 0.6f);
 			GameObject val10 = CreatePart("Visor", pos4, val9, col3, val.transform, 0.6f);
 			CreatePart("VisorShine", new Vector2(val9.x * 0.25f, val9.y * 0.2f), new Vector2(val9.x * 0.4f, val9.y * 0.2f), col4, val10.transform);
@@ -6619,7 +6619,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				num = Random.Range(-800f, 800f);
 				num2 = Random.Range(-400f, 400f);
 				Vector2 val = new Vector2(Random.Range(-1f, 1f), Random.Range(-0.5f, 0.5f));
-				val2 = ((Vector2)(ref val)).normalized;
+				val2 = (val).normalized;
 			}
 			else
 			{
@@ -6628,7 +6628,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				num2 = Random.Range(-450, 450);
 				val2 = (num3 ? Vector2.right : Vector2.left);
 				val2 += new Vector2(0f, Random.Range(-0.3f, 0.3f));
-				((Vector2)(ref val2)).Normalize();
+				(val2).Normalize();
 			}
 			crew.Rect.anchoredPosition = new Vector2(num, num2);
 			float num4 = Random.Range(0.6f, 1.3f);
@@ -6671,7 +6671,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			Color[] array = (Color[])(object)new Color[num * num];
 			float num2 = (float)num / 2f;
 			Vector2 val2 = default(Vector2);
-			((Vector2)(ref val2))._002Ector(num2, num2);
+			(val2)._002Ector(num2, num2);
 			for (int i = 0; i < num; i++)
 			{
 				for (int j = 0; j < num; j++)
@@ -6749,7 +6749,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			case 1:
 			{
 				Color color4 = default(Color);
-				((Color)(ref color4))._002Ector(1f, 0.85f, 0.1f);
+				(color4)._002Ector(1f, 0.85f, 0.1f);
 				CreateImage(root, "Halo", new Vector2(12f, 50f), new Vector2(30f, 4f), color4);
 				CreateImage(root, "HaloL", new Vector2(-2f, 50f), new Vector2(4f, 4f), color4);
 				CreateImage(root, "HaloR", new Vector2(28f, 50f), new Vector2(4f, 4f), color4);
@@ -6758,7 +6758,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			case 2:
 			{
 				Color color3 = default(Color);
-				((Color)(ref color3))._002Ector(1f, 0.95f, 0.4f);
+				(color3)._002Ector(1f, 0.95f, 0.4f);
 				CreateImage(body, "Dum", new Vector2(10f, 25f), new Vector2(20f, 15f), color3);
 				break;
 			}
@@ -6770,7 +6770,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			case 4:
 			{
 				Color color2 = default(Color);
-				((Color)(ref color2))._002Ector(1f, 0.8f, 0f);
+				(color2)._002Ector(1f, 0.8f, 0f);
 				GameObject val = CreateImage(root, "CrownBase", new Vector2(10f, 40f), new Vector2(30f, 8f), color2);
 				CreateImage(val.transform, "Spike1", new Vector2(-10f, 8f), new Vector2(8f, 8f), color2);
 				CreateImage(val.transform, "Spike2", new Vector2(0f, 10f), new Vector2(8f, 8f), color2);
@@ -6780,7 +6780,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			case 5:
 			{
 				Color color = default(Color);
-				((Color)(ref color))._002Ector(0.2f, 0.8f, 0.2f);
+				(color)._002Ector(0.2f, 0.8f, 0.2f);
 				CreateImage(root, "Stem", new Vector2(12f, 40f), new Vector2(4f, 12f), color);
 				CreateImage(root, "LeafL", new Vector2(4f, 50f), new Vector2(10f, 6f), color);
 				CreateImage(root, "LeafR", new Vector2(18f, 52f), new Vector2(10f, 6f), color);
@@ -7501,7 +7501,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			{
 				Color gold = GuiStyles.Theme.Gold;
 				Color accentSoft = default(Color);
-				((Color)(ref accentSoft))._002Ector(1f, 0.92f, 0.4f, 1f);
+				(accentSoft)._002Ector(1f, 0.92f, 0.4f, 1f);
 				return new PopupTheme(gold, accentSoft, new Color(0.12f, 0.09f, 0.02f, 1f), new Color(1f, 0.84f, 0.2f, 1f), new Color(0.75f, 0.52f, 0.05f, 1f), new Color(0.18f, 0.18f, 0.24f, 1f), new Color(0.1f, 0.1f, 0.14f, 1f));
 			}
 			return new PopupTheme(GuiStyles.Theme.Visor, new Color(0.2f, 1f, 1f, 1f), new Color(0.02f, 0.06f, 0.08f, 1f), new Color(0f, 0.6f, 0.6f, 1f), new Color(0f, 0.3f, 0.3f, 1f), new Color(0.18f, 0.18f, 0.24f, 1f), new Color(0.1f, 0.1f, 0.14f, 1f));
@@ -8743,7 +8743,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				}
 				else if (num == 0)
 				{
-					((TMP_Text)_yourKeysEmptyTxt).text = "No keys yet. Click GET FREE KEY below.";
+					((TMP_Text)_yourKeysEmptyTxt).text = "No keys yet. Click GET KEY below.";
 				}
 				else if (count == 0)
 				{
@@ -9263,7 +9263,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			//IL_0005: Unknown result type (might be due to invalid IL or missing references)
 			if (!_tpRoomNames.TryGetValue(room, out var value))
 			{
-				return ((object)(SystemTypes)(ref room)).ToString();
+				return ((object)(SystemTypes)room.ToString();
 			}
 			return value;
 		}
@@ -10007,17 +10007,17 @@ public class ModMenuCrewPlugin : BasePlugin
 			bool flag = (Object)(object)AmongUsClient.Instance != (Object)null && ((InnerNetClient)AmongUsClient.Instance).AmHost;
 			bool flag2 = GameEndManager.CanEndGame();
 			Color val = default(Color);
-			((Color)(ref val))._002Ector(0.3f, 0.9f, 0.55f, 1f);
+			(val)._002Ector(0.3f, 0.9f, 0.55f, 1f);
 			Color val2 = default(Color);
-			((Color)(ref val2))._002Ector(1f, 0.55f, 0.3f, 1f);
+			(val2)._002Ector(1f, 0.55f, 0.3f, 1f);
 			Color color2 = default(Color);
-			((Color)(ref color2))._002Ector(1f, 0.4f, 0.45f, 1f);
+			(color2)._002Ector(1f, 0.4f, 0.45f, 1f);
 			Color color3 = default(Color);
-			((Color)(ref color3))._002Ector(0.45f, 0.75f, 1f, 1f);
+			(color3)._002Ector(0.45f, 0.75f, 1f, 1f);
 			Color color4 = default(Color);
-			((Color)(ref color4))._002Ector(0.35f, 0.95f, 0.55f, 1f);
+			(color4)._002Ector(0.35f, 0.95f, 0.55f, 1f);
 			Color color5 = default(Color);
-			((Color)(ref color5))._002Ector(0.55f, 0.85f, 1f, 1f);
+			(color5)._002Ector(0.55f, 0.85f, 1f, 1f);
 			GUILayout.BeginHorizontal((Il2CppReferenceArray<GUILayoutOption>)null);
 			GUILayout.BeginVertical((GUILayoutOption[])(object)new GUILayoutOption[1] { GuiStyles.CachedExpandWidth });
 			GUILayout.BeginVertical(GuiStyles.SectionStyle, Array.Empty<GUILayoutOption>());
@@ -10599,7 +10599,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			{
 				return value;
 			}
-			string? text = ((object)(SystemTypes)(ref location)).ToString();
+			string? text = ((object)(SystemTypes)location.ToString();
 			StringBuilder stringBuilder = new StringBuilder(text.Length + 4);
 			string text2 = text;
 			foreach (char c in text2)
@@ -10699,7 +10699,7 @@ public class ModMenuCrewPlugin : BasePlugin
 						if (_cachedRoles == null)
 						{
 							_cachedRoles = ImpostorForcer.GetSupportedRoles();
-							_cachedRoleNames = _cachedRoles.Select((RoleTypes r) => ((object)(RoleTypes)(ref r)).ToString()).ToArray();
+							_cachedRoleNames = _cachedRoles.Select((RoleTypes r) => ((object)(RoleTypes)r.ToString()).ToArray();
 						}
 						RoleTypes[] cachedRoles = _cachedRoles;
 						string[] cachedRoleNames = _cachedRoleNames;

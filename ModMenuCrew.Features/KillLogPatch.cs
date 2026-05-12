@@ -51,7 +51,7 @@ public static class KillLogPatch
 				if ((Object)(object)current.Value != (Object)null && (Object)(object)current.Value.roomArea != (Object)null && current.Value.roomArea.OverlapPoint(position))
 				{
 					SystemTypes roomId = current.Value.RoomId;
-					return ((object)(SystemTypes)(ref roomId)).ToString();
+					return ((object)(SystemTypes)roomId.ToString();
 				}
 			}
 		}

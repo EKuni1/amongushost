@@ -369,7 +369,7 @@ public class ReplayPuppet : MonoBehaviour
 		switch (anim)
 		{
 		case AnimState.VentEnter:
-			((Vector3)(ref val))._002Ector(0.01f, 0.01f, 1f);
+			(val)._002Ector(0.01f, 0.01f, 1f);
 			num2 = 8f;
 			isInVent = true;
 			break;
@@ -386,7 +386,7 @@ public class ReplayPuppet : MonoBehaviour
 		case AnimState.Ghost:
 		{
 			float num3 = 1f + Mathf.Sin(Time.time * 2f) * 0.02f;
-			((Vector3)(ref val))._002Ector(originalScale.x, originalScale.y * num3, originalScale.z);
+			(val)._002Ector(originalScale.x, originalScale.y * num3, originalScale.z);
 			num2 = 100f;
 			isInVent = false;
 			break;
