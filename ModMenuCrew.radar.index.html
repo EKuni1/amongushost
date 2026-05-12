@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/radar/radar.css">
+</head>
+<body>
+    <canvas id="radar-canvas"></canvas>
+    <div id="hud">
+        <div id="connection-status">offline</div>
+        <div id="map-name">--</div>
+        <div id="player-count">0 players</div>
+        <div id="fps-counter">--</div>
+        <button id="share-btn" title="Share radar link">SHARE</button>
+    </div>
+    <div id="share-modal" style="display:none">
+        <div id="share-content">
+            <div id="share-title">Share Radar</div>
+            <input id="share-url" readonly>
+            <button id="share-copy">COPY</button>
+            <button id="share-close">CLOSE</button>
+        </div>
+    </div>
+    <script src="/radar/mapdata.js"></script>
+    <script src="/radar/radar.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+S:\modmenu\MyAssembly_Decompiled\obj\Debug\netcoreapp6.0\MyAssembly.GeneratedMSBuildEditorConfig.editorconfig
+S:\modmenu\MyAssembly_Decompiled\obj\Debug\netcoreapp6.0\MyAssembly.csproj.CoreCompileInputs.cache

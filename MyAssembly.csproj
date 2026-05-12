@@ -1,0 +1,119 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>ModMenuCrew</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>11.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="ModMenuCrew.radar.index.html" />
+    <None Remove="ModMenuCrew.radar.radar.css" />
+    <None Remove="ModMenuCrew.radar.radar.js" />
+    <None Remove="ModMenuCrew.radar.mapdata.js" />
+    <None Remove="ModMenuCrew.TabIcons.dashboard.png" />
+    <None Remove="ModMenuCrew.TabIcons.ban_menu.png" />
+    <None Remove="ModMenuCrew.TabIcons.host_controls.png" />
+    <None Remove="ModMenuCrew.TabIcons.spoofing.png" />
+    <None Remove="ModMenuCrew.TabIcons.lobbies.png" />
+    <None Remove="ModMenuCrew.TabIcons.settings.png" />
+    <None Remove="ModMenuCrew.TabIcons.game.png" />
+    <None Remove="ModMenuCrew.TabIcons.cheats.png" />
+    <None Remove="ModMenuCrew.TabIcons.playerpick.png" />
+    <None Remove="ModMenuCrew.TabIcons.movement.png" />
+    <None Remove="ModMenuCrew.TabIcons.impostor.png" />
+    <None Remove="ModMenuCrew.TabIcons.sabotage.png" />
+    <None Remove="ModMenuCrew.TabIcons.replay.png" />
+    <None Remove="ModMenuCrew.TabIcons.misc.png" />
+    <None Remove="ModMenuCrew.TabIcons.extras.png" />
+    <None Remove="ModMenuCrew.TabIcons.animations.png" />
+    <None Remove="ModMenuCrew.Resources.logo_crewmate.png" />
+    <None Remove="ModMenuCrew.Resources.planet_bg.png" />
+    <None Remove="ModMenuCrew.Resources.crewmate_red.png" />
+    <None Remove="ModMenuCrew.Resources.crewmate_green.png" />
+    <None Remove="ModMenuCrew.Icons.shield_check.png" />
+    <None Remove="ModMenuCrew.Icons.lock.png" />
+    <None Remove="ModMenuCrew.Icons.zap.png" />
+    <None Remove="ModMenuCrew.Icons.check.png" />
+    <None Remove="ModMenuCrew.Icons.eye.png" />
+    <None Remove="ModMenuCrew.Icons.eye_off.png" />
+    <None Remove="ModMenuCrew.Icons.copy.png" />
+    <None Remove="ModMenuCrew.Icons.key_round.png" />
+    <None Remove="ModMenuCrew.Icons.crown.png" />
+    <None Remove="ModMenuCrew.Icons.puzzle.png" />
+    <None Remove="ModMenuCrew.Icons.shield_alert.png" />
+    <None Remove="ModMenuCrew.Icons.headphones.png" />
+    <None Remove="ModMenuCrew.Icons.external_link.png" />
+    <None Remove="ModMenuCrew.Icons.circle.png" />
+    <None Remove="ModMenuCrew.Icons.discord.png" />
+    <None Remove="ModMenuCrew.Icons.gift.png" />
+    <None Remove="ModMenuCrew.Icons.lock_keyhole_open.png" />
+    <EmbeddedResource Include="ModMenuCrew.radar.index.html" LogicalName="ModMenuCrew.radar.index.html" />
+    <EmbeddedResource Include="ModMenuCrew.radar.radar.css" LogicalName="ModMenuCrew.radar.radar.css" />
+    <EmbeddedResource Include="ModMenuCrew.radar.radar.js" LogicalName="ModMenuCrew.radar.radar.js" />
+    <EmbeddedResource Include="ModMenuCrew.radar.mapdata.js" LogicalName="ModMenuCrew.radar.mapdata.js" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.dashboard.png" LogicalName="ModMenuCrew.TabIcons.dashboard.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.ban_menu.png" LogicalName="ModMenuCrew.TabIcons.ban_menu.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.host_controls.png" LogicalName="ModMenuCrew.TabIcons.host_controls.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.spoofing.png" LogicalName="ModMenuCrew.TabIcons.spoofing.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.lobbies.png" LogicalName="ModMenuCrew.TabIcons.lobbies.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.settings.png" LogicalName="ModMenuCrew.TabIcons.settings.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.game.png" LogicalName="ModMenuCrew.TabIcons.game.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.cheats.png" LogicalName="ModMenuCrew.TabIcons.cheats.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.playerpick.png" LogicalName="ModMenuCrew.TabIcons.playerpick.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.movement.png" LogicalName="ModMenuCrew.TabIcons.movement.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.impostor.png" LogicalName="ModMenuCrew.TabIcons.impostor.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.sabotage.png" LogicalName="ModMenuCrew.TabIcons.sabotage.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.replay.png" LogicalName="ModMenuCrew.TabIcons.replay.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.misc.png" LogicalName="ModMenuCrew.TabIcons.misc.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.extras.png" LogicalName="ModMenuCrew.TabIcons.extras.png" />
+    <EmbeddedResource Include="ModMenuCrew.TabIcons.animations.png" LogicalName="ModMenuCrew.TabIcons.animations.png" />
+    <EmbeddedResource Include="ModMenuCrew.Resources.logo_crewmate.png" LogicalName="ModMenuCrew.Resources.logo_crewmate.png" />
+    <EmbeddedResource Include="ModMenuCrew.Resources.planet_bg.png" LogicalName="ModMenuCrew.Resources.planet_bg.png" />
+    <EmbeddedResource Include="ModMenuCrew.Resources.crewmate_red.png" LogicalName="ModMenuCrew.Resources.crewmate_red.png" />
+    <EmbeddedResource Include="ModMenuCrew.Resources.crewmate_green.png" LogicalName="ModMenuCrew.Resources.crewmate_green.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.shield_check.png" LogicalName="ModMenuCrew.Icons.shield_check.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.lock.png" LogicalName="ModMenuCrew.Icons.lock.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.zap.png" LogicalName="ModMenuCrew.Icons.zap.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.check.png" LogicalName="ModMenuCrew.Icons.check.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.eye.png" LogicalName="ModMenuCrew.Icons.eye.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.eye_off.png" LogicalName="ModMenuCrew.Icons.eye_off.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.copy.png" LogicalName="ModMenuCrew.Icons.copy.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.key_round.png" LogicalName="ModMenuCrew.Icons.key_round.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.crown.png" LogicalName="ModMenuCrew.Icons.crown.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.puzzle.png" LogicalName="ModMenuCrew.Icons.puzzle.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.shield_alert.png" LogicalName="ModMenuCrew.Icons.shield_alert.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.headphones.png" LogicalName="ModMenuCrew.Icons.headphones.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.external_link.png" LogicalName="ModMenuCrew.Icons.external_link.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.circle.png" LogicalName="ModMenuCrew.Icons.circle.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.discord.png" LogicalName="ModMenuCrew.Icons.discord.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.gift.png" LogicalName="ModMenuCrew.Icons.gift.png" />
+    <EmbeddedResource Include="ModMenuCrew.Icons.lock_keyhole_open.png" LogicalName="ModMenuCrew.Icons.lock_keyhole_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine.IMGUIModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="Il2Cppmscorlib" />
+    <Reference Include="Assembly-CSharp" />
+    <Reference Include="BepInEx.Core" />
+    <Reference Include="BepInEx.Unity.IL2CPP" />
+    <Reference Include="0Harmony" />
+    <Reference Include="UnityEngine.UIModule" />
+    <Reference Include="Unity.TextMeshPro" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="Il2CppInterop.Runtime" />
+    <Reference Include="UnityEngine.AnimationModule" />
+    <Reference Include="Hazel" />
+    <Reference Include="UnityEngine.AudioModule" />
+    <Reference Include="Unity.Addressables" />
+    <Reference Include="UnityEngine.Physics2DModule" />
+    <Reference Include="UnityEngine.TextRenderingModule" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+  </ItemGroup>
+</Project>

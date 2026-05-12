@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "sX9H7OrilG0=",
+  "success": true,
+  "projectFilePath": "S:\\modmenu\\MyAssembly_Decompiled\\MyAssembly.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Selino\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.35\\microsoft.netcore.app.ref.6.0.35.nupkg.sha512",
+    "C:\\Users\\Selino\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.35\\microsoft.windowsdesktop.app.ref.6.0.35.nupkg.sha512",
+    "C:\\Users\\Selino\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.35\\microsoft.aspnetcore.app.ref.6.0.35.nupkg.sha512"
+  ],
+  "logs": []
+}

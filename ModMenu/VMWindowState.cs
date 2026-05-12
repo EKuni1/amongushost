@@ -1,0 +1,168 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace ModMenuCrew;
+
+public class VMWindowState
+{
+	public Rect WindowRect;
+
+	public float MinWidth = 200f;
+
+	public float MinHeight = 200f;
+
+	public float MaxWidth = 1200f;
+
+	public float MaxHeight = 800f;
+
+	public bool IsDragging;
+
+	public bool IsResizing;
+
+	public bool IsMinimized;
+
+	public bool ResizeHovered;
+
+	public Vector2 DragOffset;
+
+	public Vector2 ResizeStartMouse;
+
+	public Rect ResizeStartRect;
+
+	public float FadeAlpha;
+
+	public float FadeStartTime = -1f;
+
+	public bool FadeComplete;
+
+	public float CachedPulse;
+
+	public float ResizeHintStart = -1f;
+
+	public bool ResizeHintShown;
+
+	public float ResizeHoverT;
+
+	public float ResizeActiveT;
+
+	public float LastAnimTime = -1f;
+
+	public int SelectedTab;
+
+	public int PreviousTab = -1;
+
+	public Vector2 SidebarScroll = Vector2.zero;
+
+	public Vector2 ContentScroll = Vector2.zero;
+
+	public Vector2 MainScroll = Vector2.zero;
+
+	public Dictionary<string, bool> SectionStates = new Dictionary<string, bool>();
+
+	public Dictionary<string, Vector2> ScrollStates = new Dictionary<string, Vector2>();
+
+	public Rect CachedHeaderRect;
+
+	public Rect CachedContentRect;
+
+	public Rect CachedResizeHandle;
+
+	public string WindowId;
+
+	public VMWindowState(string id)
+	{
+		//IL_0055: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005a: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0060: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0065: Unknown result type (might be due to invalid IL or missing references)
+		//IL_006b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0070: Unknown result type (might be due to invalid IL or missing references)
+		WindowId = id;
+		TryLoadPosition();
+	}
+
+	public void TryLoadPosition()
+	{
+		//IL_007d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0082: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01f7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_01fc: Unknown result type (might be due to invalid IL or missing references)
+		try
+		{
+			string text = "GhostUI_" + WindowId;
+			if (PlayerPrefs.HasKey(text + "_x"))
+			{
+				WindowRect = new Rect(PlayerPrefs.GetFloat(text + "_x", 100f), PlayerPrefs.GetFloat(text + "_y", 100f), PlayerPrefs.GetFloat(text + "_w", MinWidth), PlayerPrefs.GetFloat(text + "_h", MinHeight));
+				if (Screen.width > 0 && Screen.height > 0)
+				{
+					float num = Mathf.Clamp(Mathf.Pow((float)Screen.height / 1080f, 0.7f), 0.85f, 2.2f);
+					float num2 = (float)Screen.width / num;
+					float num3 = (float)Screen.height / num;
+					((Rect)(ref WindowRect)).x = Mathf.Clamp(((Rect)(ref WindowRect)).x, 0f, Mathf.Max(0f, num2 - MinWidth));
+					((Rect)(ref WindowRect)).y = Mathf.Clamp(((Rect)(ref WindowRect)).y, 0f, Mathf.Max(0f, num3 - 80f));
+				}
+			}
+			else if (Screen.width > 0 && Screen.height > 0)
+			{
+				float num4 = Mathf.Clamp(Mathf.Pow((float)Screen.height / 1080f, 0.7f), 0.85f, 2.2f);
+				float num5 = (float)Screen.width / num4;
+				float num6 = (float)Screen.height / num4;
+				float num7 = Mathf.Clamp(770f, MinWidth, MaxWidth);
+				float num8 = Mathf.Clamp(600f, MinHeight, MaxHeight);
+				float num9 = Mathf.Max(0f, (num5 - num7) / 2f);
+				float num10 = Mathf.Max(0f, (num6 - num8) / 2f);
+				WindowRect = new Rect(num9, num10, num7, num8);
+			}
+		}
+		catch
+		{
+		}
+	}
+
+	public void SavePosition()
+	{
+		try
+		{
+			string text = "GhostUI_" + WindowId;
+			PlayerPrefs.SetFloat(text + "_x", ((Rect)(ref WindowRect)).x);
+			PlayerPrefs.SetFloat(text + "_y", ((Rect)(ref WindowRect)).y);
+			PlayerPrefs.SetFloat(text + "_w", ((Rect)(ref WindowRect)).width);
+			PlayerPrefs.SetFloat(text + "_h", ((Rect)(ref WindowRect)).height);
+			PlayerPrefs.Save();
+		}
+		catch
+		{
+		}
+	}
+
+	public bool IsSectionExpanded(string id)
+	{
+		if (!SectionStates.ContainsKey(id))
+		{
+			SectionStates[id] = true;
+		}
+		return SectionStates[id];
+	}
+
+	public void ToggleSection(string id)
+	{
+		SectionStates[id] = !IsSectionExpanded(id);
+	}
+
+	public Vector2 GetScroll(string id)
+	{
+		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
+		if (!ScrollStates.ContainsKey(id))
+		{
+			ScrollStates[id] = Vector2.zero;
+		}
+		return ScrollStates[id];
+	}
+
+	public void SetScroll(string id, Vector2 pos)
+	{
+		//IL_0007: Unknown result type (might be due to invalid IL or missing references)
+		ScrollStates[id] = pos;
+	}
+}
