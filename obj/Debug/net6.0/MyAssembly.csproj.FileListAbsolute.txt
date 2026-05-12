@@ -1,0 +1,4 @@
+S:\amongushost\obj\Debug\net6.0\MyAssembly.csproj.AssemblyReference.cache
+S:\amongushost\obj\Debug\net6.0\MyAssembly.GeneratedMSBuildEditorConfig.editorconfig
+S:\amongushost\obj\Debug\net6.0\MyAssembly.csproj.CoreCompileInputs.cache
+S:\amongushost\obj\Debug\net6.0\MyAssembly.sourcelink.json

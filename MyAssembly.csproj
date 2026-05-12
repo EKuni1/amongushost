@@ -2,7 +2,7 @@
   <PropertyGroup>
     <AssemblyName>ModMenuCrew</AssemblyName>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-    <TargetFramework>netcoreapp6.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>11.0</LangVersion>
@@ -11,6 +11,7 @@
   <PropertyGroup>
     <RootNamespace />
   </PropertyGroup>
+  
   <ItemGroup>
     <None Remove="ModMenuCrew.radar.index.html" />
     <None Remove="ModMenuCrew.radar.radar.css" />
@@ -53,6 +54,7 @@
     <None Remove="ModMenuCrew.Icons.discord.png" />
     <None Remove="ModMenuCrew.Icons.gift.png" />
     <None Remove="ModMenuCrew.Icons.lock_keyhole_open.png" />
+    
     <EmbeddedResource Include="ModMenuCrew.radar.index.html" LogicalName="ModMenuCrew.radar.index.html" />
     <EmbeddedResource Include="ModMenuCrew.radar.radar.css" LogicalName="ModMenuCrew.radar.radar.css" />
     <EmbeddedResource Include="ModMenuCrew.radar.radar.js" LogicalName="ModMenuCrew.radar.radar.js" />
@@ -94,26 +96,64 @@
     <EmbeddedResource Include="ModMenuCrew.Icons.discord.png" LogicalName="ModMenuCrew.Icons.discord.png" />
     <EmbeddedResource Include="ModMenuCrew.Icons.gift.png" LogicalName="ModMenuCrew.Icons.gift.png" />
     <EmbeddedResource Include="ModMenuCrew.Icons.lock_keyhole_open.png" LogicalName="ModMenuCrew.Icons.lock_keyhole_open.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="UnityEngine.IMGUIModule" />
-    <Reference Include="UnityEngine.CoreModule" />
-    <Reference Include="Il2Cppmscorlib" />
-    <Reference Include="Assembly-CSharp" />
-    <Reference Include="BepInEx.Core" />
-    <Reference Include="BepInEx.Unity.IL2CPP" />
-    <Reference Include="0Harmony" />
-    <Reference Include="UnityEngine.UIModule" />
-    <Reference Include="Unity.TextMeshPro" />
-    <Reference Include="UnityEngine.UI" />
-    <Reference Include="Il2CppInterop.Runtime" />
-    <Reference Include="UnityEngine.AnimationModule" />
-    <Reference Include="Hazel" />
-    <Reference Include="UnityEngine.AudioModule" />
-    <Reference Include="Unity.Addressables" />
-    <Reference Include="UnityEngine.Physics2DModule" />
-    <Reference Include="UnityEngine.TextRenderingModule" />
-    <Reference Include="UnityEngine.InputLegacyModule" />
-    <Reference Include="UnityEngine.ImageConversionModule" />
+    
+    <!-- References -->
+    <Reference Include="UnityEngine.IMGUIModule">
+        <HintPath>lib\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+        <HintPath>lib\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+        <HintPath>lib\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+        <HintPath>lib\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Core">
+        <HintPath>lib\BepInEx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP">
+        <HintPath>lib\BepInEx.Unity.IL2CPP.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony">
+        <HintPath>lib\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+        <HintPath>lib\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+        <HintPath>lib\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+        <HintPath>lib\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+        <HintPath>lib\Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+        <HintPath>lib\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Hazel">
+        <HintPath>lib\Hazel.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+        <HintPath>lib\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+        <HintPath>lib\Unity.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+        <HintPath>lib\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+        <HintPath>lib\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+        <HintPath>lib\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+        <HintPath>lib\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

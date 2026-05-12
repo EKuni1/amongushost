@@ -13,24 +13,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\modmenu\\MyAssembly_Decompiled\\MyAssembly.csproj",
+      "projectUniqueName": "S:\\amongushost\\MyAssembly.csproj",
       "projectName": "ModMenuCrew",
-      "projectPath": "S:\\modmenu\\MyAssembly_Decompiled\\MyAssembly.csproj",
+      "projectPath": "S:\\amongushost\\MyAssembly.csproj",
       "packagesPath": "C:\\Users\\Selino\\.nuget\\packages\\",
-      "outputPath": "S:\\modmenu\\MyAssembly_Decompiled\\obj\\",
+      "outputPath": "S:\\amongushost\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Selino\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp6.0"
+        "net6.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
-          "targetAlias": "netcoreapp6.0",
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -47,7 +47,7 @@
     },
     "frameworks": {
       "net6.0": {
-        "targetAlias": "netcoreapp6.0",
+        "targetAlias": "net6.0",
         "imports": [
           "net461",
           "net462",
