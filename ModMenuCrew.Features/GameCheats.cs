@@ -15713,7 +15713,7 @@ public static class GameCheats
 				if (!((Object)(object)item == (Object)null))
 				{
 					SystemTypes roomId = item.RoomId;
-					switch (((object)(SystemTypes)roomId).ToString()
+					switch (((object)(SystemTypes)roomId).ToString())
 					{
 					case "Cockpit":
 					case "Armory":

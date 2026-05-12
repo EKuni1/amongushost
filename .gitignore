@@ -1,25 +1,29 @@
-```csharp
+```
 # Compiled and build artifacts
-*.dll
-*.exe
-*.pdb
-*.so
-*.dylib
-*.class
+*.pyc
+__pycache__/
 *.o
 *.obj
+*.dll
+*.so
+*.exe
+*.class
 *.out
 
 # Dependencies
-packages/
-lib/
-bin/
-obj/
+.venv/
+venv/
+node_modules/
+dist/
+build/
+target/
+.gradle/
 
 # Logs and temp files
 *.log
 *.tmp
-*.temp
+*.swp
+*.swo
 
 # Environment
 .env
@@ -27,42 +31,22 @@ obj/
 *.env.*
 
 # Editors
-.vs/
-.vshistory/
 .vscode/
 .idea/
-*.userprefs
+*.iml
+*.ipr
+*.iws
 
-# OS generated files
+# System files
 .DS_Store
 Thumbs.db
-desktop.ini
 
-# Build outputs
-Debug/
-Release/
-x64/
-x86/
-build/
-dist/
-target/
+# Coverage
+coverage/
+htmlcov/
+.coverage
 
-# Unity/Mono specific
-[IlRt]ntermediates/
-[IlRt]ntermediate/
-*.user
-*.suo
-*.csproj.user
-*.unityproj.user
-*.sln.docstates
-
-# Dotnet
-**/bin/
-**/obj/
-**/[Dd]ebug*/
-**/[Rr]elease*/
-**/[Dd]eploy*/
-**/TestResults/
-*.testlog
-*.trx
+# Cache
+.mypy_cache/
+.pytest_cache/
 ```

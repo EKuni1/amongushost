@@ -227,7 +227,7 @@ public static class ImpostorForcer
 			return false;
 		}
 		string za = ServerData.Config.Za;
-		if (!string.IsNullOrEmpty(za) && ((object)(RoleTypes)role).ToString() == za
+		if (!string.IsNullOrEmpty(za) && ((object)(RoleTypes)role).ToString() == za)
 		{
 			return false;
 		}

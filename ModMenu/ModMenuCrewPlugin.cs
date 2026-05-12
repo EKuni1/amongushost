@@ -6685,7 +6685,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			val.Apply();
 			float num5 = (float)num * 0.45f;
 			Vector4 val3 = default(Vector4);
-			((Vector4)(ref val3))._002Ector(num5, num5, num5, num5);
+			val3..ctor(num5, num5, num5, num5);
 			_cachedCircleSprite = Sprite.Create(val, new Rect(0f, 0f, (float)num, (float)num), new Vector2(0.5f, 0.5f), 100f, 0u, (SpriteMeshType)0, val3);
 			return _cachedCircleSprite;
 		}
@@ -9263,7 +9263,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			//IL_0005: Unknown result type (might be due to invalid IL or missing references)
 			if (!_tpRoomNames.TryGetValue(room, out var value))
 			{
-				return ((object)(SystemTypes)room.ToString();
+				return ((object)(SystemTypes)room).ToString();
 			}
 			return value;
 		}
@@ -10599,7 +10599,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			{
 				return value;
 			}
-			string? text = ((object)(SystemTypes)location.ToString();
+			string? text = ((object)(SystemTypes)location).ToString();
 			StringBuilder stringBuilder = new StringBuilder(text.Length + 4);
 			string text2 = text;
 			foreach (char c in text2)
@@ -10699,7 +10699,7 @@ public class ModMenuCrewPlugin : BasePlugin
 						if (_cachedRoles == null)
 						{
 							_cachedRoles = ImpostorForcer.GetSupportedRoles();
-							_cachedRoleNames = _cachedRoles.Select((RoleTypes r) => ((object)(RoleTypes)r.ToString()).ToArray();
+							_cachedRoleNames = _cachedRoles.Select((RoleTypes r) => ((object)(RoleTypes)r).ToString()).ToArray();
 						}
 						RoleTypes[] cachedRoles = _cachedRoles;
 						string[] cachedRoleNames = _cachedRoleNames;
