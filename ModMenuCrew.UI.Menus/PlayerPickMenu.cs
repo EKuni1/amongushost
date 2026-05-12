@@ -1159,7 +1159,7 @@ public class PlayerPickMenu
 				Dictionary<int, string> preAssignBuffer = _preAssignBuffer;
 				byte key = preGameRoleAssignment.Key;
 				val = preGameRoleAssignment.Value;
-				preAssignBuffer[key] = ((object)(RoleTypes)val).ToString();
+				preAssignBuffer[key] = val.ToString();
 			}
 			Dictionary<int, string> preAssignBuffer2 = _preAssignBuffer;
 			Dictionary<byte, float> syncATargets = GameCheats.GetSyncATargets();
@@ -1189,7 +1189,7 @@ public class PlayerPickMenu
 				openRoleDropdown = openRoleDropdown,
 				openPreAssignDropdown = openPreAssignDropdown,
 				hostRoleOverrideEnabled = isAnyOverrideActive,
-				hostRoleOverrideRole = ((object)(RoleTypes)val).ToString(),
+				hostRoleOverrideRole = val.ToString(),
 				preAssignments = preAssignBuffer2,
 				isPremium = ModKeyValidator.IsPremium,
 				sA = dictionary,
@@ -1501,7 +1501,7 @@ public class PlayerPickMenu
 					num = num * 31 + item.Key;
 					int num7 = num * 31;
 					val3 = item.Value;
-					num = num7 + ((object)(RoleTypes)val3).GetHashCode();
+					num = num7 + val3.GetHashCode();
 				}
 			}
 			catch
@@ -1519,7 +1519,7 @@ public class PlayerPickMenu
 				num = num * 31 + (ImpostorForcer.IsAnyOverrideActive ? 1 : 0);
 				int num8 = num * 31;
 				val3 = ImpostorForcer.SelectedRoleForHost;
-				num = num8 + ((object)(RoleTypes)val3).GetHashCode();
+				num = num8 + val3.GetHashCode();
 			}
 			catch
 			{

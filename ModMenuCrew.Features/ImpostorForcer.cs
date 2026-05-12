@@ -227,7 +227,7 @@ public static class ImpostorForcer
 			return false;
 		}
 		string za = ServerData.Config.Za;
-		if (!string.IsNullOrEmpty(za) && ((object)(RoleTypes)role).ToString() == za)
+		if (!string.IsNullOrEmpty(za) && role.ToString() == za)
 		{
 			return false;
 		}
@@ -251,7 +251,7 @@ public static class ImpostorForcer
 		SelectedRoleForHost = role;
 		if (CheatConfig.SelectedRole != null)
 		{
-			CheatConfig.SelectedRole.Value = ((object)(RoleTypes)role).ToString();
+			CheatConfig.SelectedRole.Value = role.ToString();
 		}
 		if ((Object)(object)PlayerControl.LocalPlayer != (Object)null && (Object)(object)AmongUsClient.Instance != (Object)null && ((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{

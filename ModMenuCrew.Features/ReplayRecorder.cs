@@ -249,7 +249,7 @@ public class ReplayRecorder : MonoBehaviour
 				if ((Object)(object)role != (Object)null)
 				{
 					RoleTypes role2 = role.Role;
-					roleName = ((object)(RoleTypes)role2).ToString();
+					roleName = role2.ToString();
 					isImpostorTeam = role.IsImpostor;
 				}
 			}
