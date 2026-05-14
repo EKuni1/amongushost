@@ -17151,5 +17151,4 @@ namespace ModMenuCrew.Features
 		{
 		}
 	}
-	}
 }
