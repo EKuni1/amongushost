@@ -66,7 +66,7 @@ public static class AntiTamper
 
 	private static HashSet<string> _baselineAssemblies = null;
 
-	private static readonly Random _jitter = new Random();
+	private static readonly System.Random _jitter = new System.Random();
 
 	private static bool _lastILScanFailed = false;
 
