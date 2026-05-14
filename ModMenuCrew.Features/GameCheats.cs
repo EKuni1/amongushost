@@ -15860,12 +15860,12 @@ namespace ModMenuCrew.Features
 					num3 = (bounds2).size.x;
 					num4 = (bounds2).size.y;
 				}
-				Debug.Log("[RoomDump] // Hallway #{num2} — ({x2:F2}, {y2:F2}) size ({num3:F2} x {num4:F2}) {((num4 > num3) ? "VERT" : "HORIZ")}");
-				Debug.Log("[RoomDump] new RoomData({x2:F2}f, {y2:F2}f, {num3:F2}f, {num4:F2}f, false, true),");
+				Debug.Log($"[RoomDump] // Hallway #{num2} — ({x2:F2}, {y2:F2}) size ({num3:F2} x {num4:F2}) {((num4 > num3) ? "VERT" : "HORIZ")}");
+				Debug.Log($"[RoomDump] new RoomData({x2:F2}f, {y2:F2}f, {num3:F2}f, {num4:F2}f, false, true),");
 				num2++;
 			}
 		}
-		Debug.Log("[RoomDump] TOTAL: {num} rooms + {num2} hallways");
+		Debug.Log($"[RoomDump] TOTAL: {num} rooms + {num2} hallways");
 		Debug.Log("[RoomDump] ── RAW COLLIDER DATA ──");
 		for (int k = 0; k < ((Il2CppArrayBase<PlainShipRoom>)(object)allRooms).Length; k++)
 		{
@@ -16543,7 +16543,7 @@ namespace ModMenuCrew.Features
 				{
 					uint netId = ((InnerNetObject)PlayerControl.LocalPlayer).NetId;
 					uint netId2 = ((InnerNetObject)PlayerControl.LocalPlayer.MyPhysics).NetId;
-					Vector2 pos = ((Component)PlayerControl.LocalPlayer).transform.position);
+					Vector2 pos = ((Component)PlayerControl.LocalPlayer).transform.position;
 					if (time - _v7 >= _AR_PRIMER)
 					{
 						_v7 = time;
@@ -16692,7 +16692,7 @@ namespace ModMenuCrew.Features
 				{
 					uint netId = ((InnerNetObject)PlayerControl.LocalPlayer).NetId;
 					uint netId2 = ((InnerNetObject)PlayerControl.LocalPlayer.MyPhysics).NetId;
-					Vector2 pos = ((Component)PlayerControl.LocalPlayer).transform.position);
+					Vector2 pos = ((Component)PlayerControl.LocalPlayer).transform.position;
 					int num3 = 0;
 					Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 					while (enumerator.MoveNext())
