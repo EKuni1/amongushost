@@ -537,17 +537,17 @@ public class ModMenuCrewPlugin : BasePlugin
 					_003C_003E8__1 = new _003C_003Ec__DisplayClass238_0();
 					if (DiscordAuthManager.IsAvatarLoaded)
 					{
-						Debug.Log(Object.op_Implicit("[ModMenuCrew] Avatar already loaded, skipping coroutine download"));
+						Debug.Log("[ModMenuCrew] Avatar already loaded, skipping coroutine download");
 						return false;
 					}
 					string avatarUrl = DiscordAuthManager.GetAvatarUrl();
 					if (string.IsNullOrEmpty(avatarUrl))
 					{
-						Debug.LogWarning(Object.op_Implicit("[ModMenuCrew] Avatar URL is null — id:" + (DiscordAuthManager.DiscordId ?? "null") + " avatar:" + (DiscordAuthManager.DiscordAvatar ?? "null")));
+						Debug.LogWarning("[ModMenuCrew] Avatar URL is null — id:" + (DiscordAuthManager.DiscordId ?? "null") + " avatar:" + (DiscordAuthManager.DiscordAvatar ?? "null"));
 						debuggerComponent._avatarLoadRequested = false;
 						return false;
 					}
-					Debug.Log(Object.op_Implicit("[ModMenuCrew] Avatar download starting: " + avatarUrl));
+					Debug.Log("[ModMenuCrew] Avatar download starting: " + avatarUrl);
 					_003C_003E8__1.imageData = null;
 					_003C_003E8__1.downloadState = 0;
 					_003C_003E8__1.downloadError = null;
@@ -594,17 +594,17 @@ public class ModMenuCrewPlugin : BasePlugin
 				}
 				if (_003C_003E8__1.downloadState == 0)
 				{
-					Debug.LogWarning(Object.op_Implicit("[ModMenuCrew] Avatar download timed out (30s)"));
+					Debug.LogWarning("[ModMenuCrew] Avatar download timed out (30s)");
 					debuggerComponent._avatarLoadRequested = false;
 					return false;
 				}
 				if (_003C_003E8__1.downloadState != 1 || _003C_003E8__1.imageData == null || _003C_003E8__1.imageData.Length < 100)
 				{
-					Debug.LogWarning(Object.op_Implicit("[ModMenuCrew] Avatar download failed: " + (_003C_003E8__1.downloadError ?? "unknown error")));
+					Debug.LogWarning("[ModMenuCrew] Avatar download failed: " + (_003C_003E8__1.downloadError ?? "unknown error"));
 					debuggerComponent._avatarLoadRequested = false;
 					return false;
 				}
-				Debug.Log(Object.op_Implicit($"[ModMenuCrew] Avatar downloaded ({_003C_003E8__1.imageData.Length} bytes), decoding PNG..."));
+				Debug.Log($"[ModMenuCrew] Avatar downloaded ({_003C_003E8__1.imageData.Length} bytes), decoding PNG...");
 				Texture2D val = null;
 				try
 				{
@@ -1870,7 +1870,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				}
 				if (manifestResourceStream == null)
 				{
-					Debug.LogWarning(Object.op_Implicit("[ActivationUI] Embedded missing: " + fileName));
+					Debug.LogWarning("[ActivationUI] Embedded missing: " + fileName);
 					return null;
 				}
 				using (manifestResourceStream)
@@ -1917,7 +1917,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception ex)
 			{
-				Debug.LogError(Object.op_Implicit("[ActivationUI] Load " + fileName + ": " + ex.Message));
+				Debug.LogError("[ActivationUI] Load " + fileName + ": " + ex.Message);
 				if ((Object)(object)val != (Object)null)
 				{
 					try
@@ -2230,7 +2230,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error resource cleanup: {value}"));
+				Debug.LogError($"[ModMenuCrew] Error resource cleanup: {value}");
 			}
 		}
 
@@ -2270,7 +2270,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				{
 					currentActivationStatusMessage = "Enter your activation key or get a new one.";
 					SetupActivationUI_TMP();
-					Debug.Log(Object.op_Implicit($"[ModMenuCrew] Avatar check: HasProfile={DiscordAuthManager.HasDiscordProfile}, LoadRequested={_avatarLoadRequested}, ID={DiscordAuthManager.DiscordId ?? "null"}"));
+					Debug.Log($"[ModMenuCrew] Avatar check: HasProfile={DiscordAuthManager.HasDiscordProfile}, LoadRequested={_avatarLoadRequested}, ID={DiscordAuthManager.DiscordId ?? "null"}");
 					if (DiscordAuthManager.HasDiscordProfile && !_avatarLoadRequested)
 					{
 						if (TryLoadAvatarFromCache())
@@ -2401,7 +2401,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Critical error DebuggerComponent.Awake: {value}"));
+				Debug.LogError($"[ModMenuCrew] Critical error DebuggerComponent.Awake: {value}");
 			}
 		}
 
@@ -2749,17 +2749,17 @@ public class ModMenuCrewPlugin : BasePlugin
 			if (!DiscordAuthManager.IsAvatarLoaded && !_avatarLazyLoadAttempted)
 			{
 				_avatarLazyLoadAttempted = true;
-				Debug.Log(Object.op_Implicit("[ModMenuCrew] Avatar lazy-load triggered from dashboard render"));
+				Debug.Log("[ModMenuCrew] Avatar lazy-load triggered from dashboard render");
 				if (TryLoadAvatarFromCache())
 				{
 					_avatarLoadRequested = true;
-					Debug.Log(Object.op_Implicit("[ModMenuCrew] Avatar lazy-loaded from cache OK"));
+					Debug.Log("[ModMenuCrew] Avatar lazy-loaded from cache OK");
 				}
 				else if (!_avatarLoadRequested && DiscordAuthManager.HasDiscordProfile)
 				{
 					_avatarLoadRequested = true;
 					((MonoBehaviour)this).StartCoroutine(CollectionExtensions.WrapToIl2Cpp(LoadDiscordAvatarCoroutine()));
-					Debug.Log(Object.op_Implicit("[ModMenuCrew] Avatar lazy-load: started CDN download"));
+					Debug.Log("[ModMenuCrew] Avatar lazy-load: started CDN download");
 				}
 			}
 			if (DiscordAuthManager.IsAvatarLoaded && !_discordAnimPlayed)
@@ -2860,7 +2860,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			GUI.color = new Color(1f, 1f, 1f, num13);
 			GUILayout.Label("<color=#5865F2><b>DISCORD</b></color>", GuiStyles.SubHeaderStyle, (Il2CppReferenceArray<GUILayoutOption>)null);
 			string discordUsernameSafe = DiscordAuthManager.DiscordUsernameSafe;
-			if (_cachedUsernameLabel == null || !Object.ReferenceEquals(Object.op_Implicit(_cachedUsernameSource), Object.op_Implicit(discordUsernameSafe)))
+			if (_cachedUsernameLabel == null || !Object.ReferenceEquals((Object)(object)_cachedUsernameSource, (Object)(object)discordUsernameSafe))
 			{
 				_cachedUsernameSource = discordUsernameSafe;
 				_cachedUsernameLabel = "<size=16><b>" + discordUsernameSafe + "</b></size>";
@@ -3199,7 +3199,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				GuiStyles.DrawSeparator();
 				GUILayout.Label("<color=#00E664><b>● Playing</b></color>  <color=#6B7280>(" + text + ")</color>", GuiStyles.LabelStyle, (Il2CppReferenceArray<GUILayoutOption>)null);
 				GUILayout.Label($"<color=#E6EAEF>{value4}</color>  <color=#6B7280>·</color>  <color=#00D9FF>{value2}/{value3}</color>  <color=#6B7280>·</color>  {(flag3 ? "<color=#FFD700>HOST</color>" : "<color=#949EAD>Client</color>")}", GuiStyles.LabelStyle, (Il2CppReferenceArray<GUILayoutOption>)null);
-				if (!Object.ReferenceEquals(Object.op_Implicit(_dashCache_lastRoleName), Object.op_Implicit(text3)) || _dashCache_roleLine == null)
+				if (!Object.ReferenceEquals((Object)(object)_dashCache_lastRoleName, (Object)(object)text3) || _dashCache_roleLine == null)
 				{
 					_dashCache_roleLine = "Role: <color=#E6EAEF><b>" + text3 + "</b></color>";
 					_dashCache_lastRoleName = text3;
@@ -3783,7 +3783,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				}
 				else
 				{
-					if (Object.op_Implicit((Object)(object)AmongUsClient.Instance) && ((InnerNetClient)AmongUsClient.Instance).IsGameStarted)
+					if ((Object)(object)AmongUsClient.Instance) && ((InnerNetClient)AmongUsClient.Instance).IsGameStarted
 					{
 						GUILayout.Label("RECORDER READY", GuiStyles.SubHeaderStyle, (Il2CppReferenceArray<GUILayoutOption>)null);
 						if (GUILayout.Button("START RECORDING", GuiStyles.ButtonStyle, Array.Empty<GUILayoutOption>()))
@@ -3898,7 +3898,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error creating Discord icon: {value}"));
+				Debug.LogError($"[ModMenuCrew] Error creating Discord icon: {value}");
 				return null;
 			}
 		}
@@ -4696,7 +4696,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					}
 				}), new Vector2(485f, 0f), new Vector2(50f, 50f));
 				Image component8 = ((Component)val13).GetComponent<Image>();
-				if (Object.op_Implicit((Object)(object)component8))
+				if ((Object)(object)component8)
 				{
 					((Graphic)component8).color = new Color(0.1f, 0.1f, 0.14f, 0.85f);
 				}
@@ -4730,7 +4730,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					}
 				}), new Vector2(540f, 0f), new Vector2(50f, 50f));
 				Image component10 = ((Component)val15).GetComponent<Image>();
-				if (Object.op_Implicit((Object)(object)component10))
+				if ((Object)(object)component10)
 				{
 					((Graphic)component10).color = new Color(0.1f, 0.1f, 0.14f, 0.85f);
 				}
@@ -4986,11 +4986,11 @@ public class ModMenuCrewPlugin : BasePlugin
 							}
 							currentActivationStatusMessage = "Logged out from Discord.";
 							ManageActivationUIVisibility();
-							if (Object.op_Implicit((Object)(object)_discordLoginTextTMP))
+							if ((Object)(object)_discordLoginTextTMP)
 							{
 								((TMP_Text)_discordLoginTextTMP).text = "CONTINUE WITH DISCORD";
 							}
-							if (Object.op_Implicit((Object)(object)_discordLoginSubTextTMP))
+							if ((Object)(object)_discordLoginSubTextTMP)
 							{
 								((TMP_Text)_discordLoginSubTextTMP).text = "Click to login with Discord";
 							}
@@ -5013,7 +5013,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					}
 				}), new Vector2(180f, 30f), new Vector2(420f, 90f)));
 				Image component15 = ((Component)val26).GetComponent<Image>();
-				if (Object.op_Implicit((Object)(object)component15))
+				if ((Object)(object)component15)
 				{
 					((Graphic)component15).color = new Color(GuiStyles.Theme.Blurple.r, GuiStyles.Theme.Blurple.g, GuiStyles.Theme.Blurple.b, 0.9f);
 				}
@@ -5173,7 +5173,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					((TMP_Text)_copyLinkTextTMP).fontSize = 11f;
 				}
 				Image component25 = ((Component)_copyLinkBtnTMP).GetComponent<Image>();
-				if (Object.op_Implicit((Object)(object)component25))
+				if ((Object)(object)component25)
 				{
 					((Graphic)component25).color = new Color(0.25f, 0.25f, 0.3f, 0.9f);
 				}
@@ -5336,7 +5336,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					}
 				}), new Vector2(0f, -125f), new Vector2(490f, 32f));
 				Image component34 = ((Component)obj34).GetComponent<Image>();
-				if (Object.op_Implicit((Object)(object)component34))
+				if ((Object)(object)component34)
 				{
 					((Graphic)component34).color = new Color(0.1f, 0.1f, 0.14f, 0.85f);
 				}
@@ -5474,7 +5474,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				}
 				RectTransform component40 = ((Component)getKeyButtonTMP).GetComponent<RectTransform>();
 				Image component41 = ((Component)getKeyButtonTMP).GetComponent<Image>();
-				if (Object.op_Implicit((Object)(object)component41))
+				if ((Object)(object)component41)
 				{
 					((Graphic)component41).color = new Color(0.18f, 0.18f, 0.22f, 0.95f);
 				}
@@ -5518,7 +5518,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				}
 				RectTransform component44 = ((Component)validateButtonTMP).GetComponent<RectTransform>();
 				_validateBtnImage = ((Component)validateButtonTMP).GetComponent<Image>();
-				if (Object.op_Implicit((Object)(object)_validateBtnImage))
+				if ((Object)(object)_validateBtnImage)
 				{
 					((Graphic)_validateBtnImage).color = stepActiveColor;
 				}
@@ -5709,7 +5709,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					((Component)componentInChildren7).gameObject.SetActive(false);
 				}
 				Image component49 = ((Component)val78).GetComponent<Image>();
-				if (Object.op_Implicit((Object)(object)component49))
+				if ((Object)(object)component49)
 				{
 					((Graphic)component49).color = new Color(0.05f, 0.05f, 0.08f, 0.9f);
 				}
@@ -5793,7 +5793,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error SetupActivationUI_TMP: {value}"));
+				Debug.LogError($"[ModMenuCrew] Error SetupActivationUI_TMP: {value}");
 			}
 		}
 
@@ -6183,7 +6183,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			_revealComplete = false;
 			_panelScaleCurrent = 0.92f;
 			_currentAlpha = 0f;
-			if (Object.op_Implicit((Object)(object)_panelCanvasGroup))
+			if ((Object)(object)_panelCanvasGroup)
 			{
 				_panelCanvasGroup.alpha = 0f;
 			}
@@ -6318,7 +6318,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				FinishBootSequence();
 				break;
 			}
-			if (!_bootSequenceComplete && (Object)(object)_bootConsoleText != (Object)null && _bootLineIndex < _bootLines.Length && (!Object.ReferenceEquals(Object.op_Implicit(_lastBootCursor), Object.op_Implicit(text)) || !Object.ReferenceEquals(Object.op_Implicit(_lastBootDisplayedText), Object.op_Implicit(_bootDisplayedText))))
+			if (!_bootSequenceComplete && (Object)(object)_bootConsoleText != (Object)null && _bootLineIndex < _bootLines.Length && (!Object.ReferenceEquals((Object)(object)_lastBootCursor, (Object)(object)text) || !Object.ReferenceEquals((Object)(object)_lastBootDisplayedText, (Object)(object)_bootDisplayedText)))
 			{
 				((TMP_Text)_bootConsoleText).text = _bootDisplayedText + text;
 				_lastBootCursor = text;
@@ -8157,7 +8157,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value2)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error showing popup: {value2}"));
+				Debug.LogError($"[ModMenuCrew] Error showing popup: {value2}");
 			}
 		}
 
@@ -8523,7 +8523,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				if (!string.Equals(currentActivationStatusMessage, b, StringComparison.Ordinal))
 				{
 					currentActivationStatusMessage = b;
-					if (Object.op_Implicit((Object)(object)statusMessageTextTMP))
+					if ((Object)(object)statusMessageTextTMP)
 					{
 						((TMP_Text)statusMessageTextTMP).text = currentActivationStatusMessage;
 					}
@@ -8566,7 +8566,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception ex)
 			{
-				Debug.LogWarning(Object.op_Implicit("[YourKeys] OnCopyClicked error: " + ex.Message));
+				Debug.LogWarning("[YourKeys] OnCopyClicked error: " + ex.Message);
 			}
 		}
 
@@ -8597,7 +8597,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception ex)
 			{
-				Debug.LogWarning(Object.op_Implicit("[YourKeys] OnRowClicked error: " + ex.Message));
+				Debug.LogWarning("[YourKeys] OnRowClicked error: " + ex.Message);
 			}
 		}
 
@@ -8921,7 +8921,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error CleanupActivationUI: {value}"));
+				Debug.LogError($"[ModMenuCrew] Error CleanupActivationUI: {value}");
 			}
 		}
 
@@ -9040,7 +9040,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					}
 					catch (Exception value)
 					{
-						Debug.LogError(Object.op_Implicit($"[ModMenuCrew] CRASH in ShowActivationSuccessPopup: {value}"));
+						Debug.LogError($"[ModMenuCrew] CRASH in ShowActivationSuccessPopup: {value}");
 						return;
 					}
 				}
@@ -9093,7 +9093,7 @@ public class ModMenuCrewPlugin : BasePlugin
 						_panelScaleCurrent = 0.92f;
 						_revealStartTime = Time.realtimeSinceStartup;
 						_revealComplete = false;
-						if (Object.op_Implicit((Object)(object)_panelCanvasGroup))
+						if ((Object)(object)_panelCanvasGroup)
 						{
 							_panelCanvasGroup.alpha = 0f;
 						}
@@ -9116,7 +9116,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value2)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error HandleValidationComplete: {value2}"));
+				Debug.LogError($"[ModMenuCrew] Error HandleValidationComplete: {value2}");
 			}
 			finally
 			{
@@ -9170,7 +9170,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				GUILayout.Label("Menu Error: " + ex.Message, (Il2CppReferenceArray<GUILayoutOption>)null);
 				if (Time.frameCount % 300 == 0)
 				{
-					Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Draw Error: {ex}"));
+					Debug.LogError($"[ModMenuCrew] Draw Error: {ex}");
 				}
 			}
 		}
@@ -10565,7 +10565,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error in DrawMovementTabIMGUI: {value}"));
+				Debug.LogError($"[ModMenuCrew] Error in DrawMovementTabIMGUI: {value}");
 				try
 				{
 					GUILayout.EndVertical();
@@ -10826,7 +10826,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error in DrawImpostorTabIMGUI: {value}"));
+				Debug.LogError($"[ModMenuCrew] Error in DrawImpostorTabIMGUI: {value}");
 				GUILayout.Label("Error loading impostor tab.", GuiStyles.ErrorStyle, (Il2CppReferenceArray<GUILayoutOption>)null);
 				try
 				{
@@ -10887,7 +10887,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error in UpdateGameState: {value}"));
+				Debug.LogError($"[ModMenuCrew] Error in UpdateGameState: {value}");
 			}
 		}
 
@@ -11124,7 +11124,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					string text3 = Interlocked.Exchange(ref ModKeyValidator._debugHeartbeatMsg, null);
 					if (text3 != null)
 					{
-						Debug.Log(Object.op_Implicit(text3));
+						Debug.Log(text3);
 					}
 				}
 				catch
@@ -11247,7 +11247,7 @@ public class ModMenuCrewPlugin : BasePlugin
 							_panelScaleCurrent = 0.92f;
 							_revealStartTime = Time.realtimeSinceStartup;
 							_revealComplete = false;
-							if (Object.op_Implicit((Object)(object)_panelCanvasGroup))
+							if ((Object)(object)_panelCanvasGroup)
 							{
 								_panelCanvasGroup.alpha = 0f;
 							}
@@ -11272,13 +11272,13 @@ public class ModMenuCrewPlugin : BasePlugin
 						}
 						catch (Exception ex)
 						{
-							Debug.LogError(Object.op_Implicit("[ModMenuCrew] UpdateValidationState error (non-fatal): " + ex.Message));
+							Debug.LogError("[ModMenuCrew] UpdateValidationState error (non-fatal): " + ex.Message);
 						}
 						HandleValidationComplete();
 					}
 					catch (Exception value)
 					{
-						Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error processing validation in Update: {value}"));
+						Debug.LogError($"[ModMenuCrew] Error processing validation in Update: {value}");
 					}
 					finally
 					{
@@ -11344,7 +11344,7 @@ public class ModMenuCrewPlugin : BasePlugin
 					{
 						if (Time.frameCount % 300 == 0)
 						{
-							Debug.LogWarning(Object.op_Implicit("[ModMenuCrew] Toggle key is a mouse button - ignored! Edit config to use a keyboard key."));
+							Debug.LogWarning("[ModMenuCrew] Toggle key is a mouse button - ignored! Edit config to use a keyboard key.");
 						}
 						return;
 					}
@@ -11384,7 +11384,7 @@ public class ModMenuCrewPlugin : BasePlugin
 									_panelScaleCurrent = 0.92f;
 									_revealStartTime = Time.realtimeSinceStartup;
 									_revealComplete = false;
-									if (Object.op_Implicit((Object)(object)_panelCanvasGroup))
+									if ((Object)(object)_panelCanvasGroup)
 									{
 										_panelCanvasGroup.alpha = 0f;
 									}
@@ -11431,7 +11431,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value2)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error DebuggerComponent.Update: {value2}"));
+				Debug.LogError($"[ModMenuCrew] Error DebuggerComponent.Update: {value2}");
 			}
 		}
 
@@ -11638,7 +11638,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error in HandleKeybindToggles: {value}"));
+				Debug.LogError($"[ModMenuCrew] Error in HandleKeybindToggles: {value}");
 			}
 		}
 
@@ -12012,7 +12012,7 @@ public class ModMenuCrewPlugin : BasePlugin
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error during plugin unload: {value}"));
+			Debug.LogError($"[ModMenuCrew] Error during plugin unload: {value}");
 		}
 		return ((BasePlugin)this).Unload();
 	}
@@ -12034,7 +12034,7 @@ public class ModMenuCrewPlugin : BasePlugin
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[ModMenuCrew] Error clearing PlayerPrefs: {value}"));
+			Debug.LogError($"[ModMenuCrew] Error clearing PlayerPrefs: {value}");
 		}
 	}
 
