@@ -13,6 +13,7 @@ using ModMenuCrew.UI;
 using ModMenuCrew.UI.Menus;
 using ModMenuCrew.UI.Styles;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace ModMenuCrew;
 
