@@ -54,6 +54,10 @@
     // Image world bounds (map background positioning)
     const IMAGE_BOUNDS = {
         Ship: { minX: -23.56, maxX: 19.56, minY: -17.34, maxY: 7.34 },
+        Hq: { minX: -13.1, maxX: 30.9, minY: -5.3, maxY: 27.2 },
+        Pb: { minX: -1.4, maxX: 42.7, minY: -28.0, maxY: 3.7 },
+        Airship: { minX: -26.7, maxX: 41.4, minY: -19.5, maxY: 19.1 },
+        Fungle: { minX: -25.5, maxX: 28.0, minY: -14.5, maxY: 18.0 },
     };
 
     // ── STATE ───────────────────────────────────────────────────────
