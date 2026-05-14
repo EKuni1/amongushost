@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using AmongUs.Data;
 using AmongUs.GameOptions;
 using HarmonyLib;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
 using InnerNet;
 using UnityEngine;
 

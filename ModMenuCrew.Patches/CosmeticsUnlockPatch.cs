@@ -7,7 +7,6 @@ using AmongUs.Data.Player;
 using BepInEx.Configuration;
 using HarmonyLib;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
-using Il2CppSystem;
 using ModMenuCrew.Features;
 using UnityEngine;
 

@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Il2CppSystem;
 using ModMenuCrew.Features;
 using ModMenuCrew.Networking;
 using UnityEngine;

@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP.Utils.Collections;
-using Il2CppSystem;
 using InnerNet;
 using ModMenuCrew.Features;
 using ModMenuCrew.UI.Menus;
