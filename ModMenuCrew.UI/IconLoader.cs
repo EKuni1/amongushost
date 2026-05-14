@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
-using Il2CppSystem;
 using UnityEngine;
 
 namespace ModMenuCrew.UI;
