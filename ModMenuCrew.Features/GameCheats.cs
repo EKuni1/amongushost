@@ -13517,7 +13517,7 @@ namespace ModMenuCrew.Features
 		{
 		}
 	}
-
+	
 	private static string GetMapName(int mapType)
 	{
 		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
@@ -17154,5 +17154,4 @@ namespace ModMenuCrew.Features
 		{
 		}
 	}
-}
 }
