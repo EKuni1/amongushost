@@ -8,6 +8,7 @@ using ModMenuCrew.UI.Menus;
 using ModMenuCrew.UI.Styles;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using Debug = UnityEngine.Debug;
 
 namespace ModMenuCrew.UI.Managers;
 
@@ -1977,12 +1978,12 @@ public class CheatManager
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"Error updating continuous role cheats: {value}"));
+				Debug.LogError($"Error updating continuous role cheats: {value}");
 			}
 		}
 		catch (Exception value2)
 		{
-			Debug.LogError(Object.op_Implicit($"[CheatManager.Update] Error: {value2}"));
+			Debug.LogError($"[CheatManager.Update] Error: {value2}");
 		}
 	}
 

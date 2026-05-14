@@ -184,7 +184,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception ex)
 			{
-				Debug.LogWarning(Object.op_Implicit("[LAB] AutoClearLabOnStartGame prefix threw: " + ex.Message));
+				Debug.LogWarning("[LAB] AutoClearLabOnStartGame prefix threw: " + ex.Message));
 			}
 		}
 	}
@@ -315,7 +315,7 @@ namespace ModMenuCrew.Features
 					{
 					}
 				}
-				Debug.Log(Object.op_Implicit($"[Cheat] MapSwapInit: Begin={amHost} CacheTransfer={_savedCosmeticsCache == null} map={__instance.Type}"));
+				Debug.Log("[Cheat] MapSwapInit: Begin={amHost} CacheTransfer={_savedCosmeticsCache == null} map={__instance.Type}"));
 			}
 			catch
 			{
@@ -504,12 +504,12 @@ namespace ModMenuCrew.Features
 		{
 			if ((Object)(object)PlayerControl.LocalPlayer == (Object)null)
 			{
-				Debug.LogWarning(Object.op_Implicit("Local player not found."));
+				Debug.LogWarning("Local player not found."));
 				return;
 			}
 			if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 			{
-				Debug.LogWarning(Object.op_Implicit("You must be host to use this cheat."));
+				Debug.LogWarning("You must be host to use this cheat."));
 				return;
 			}
 			try
@@ -523,7 +523,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"Error in RequestImpostorRole: {value}"));
+				Debug.LogError("Error in RequestImpostorRole: {value}"));
 			}
 		}
 	}
@@ -583,7 +583,7 @@ namespace ModMenuCrew.Features
 				}
 				if (((InnerNetObject)__state).AmOwner && (Object)(object)DestroyableSingleton<HudManager>.Instance != (Object)null)
 				{
-					if (Object.op_Implicit((Object)(object)Minigame.Instance))
+					if ((Minigame.Instance))
 					{
 						try
 						{
@@ -601,12 +601,12 @@ namespace ModMenuCrew.Features
 					{
 					}
 				}
-				Debug.Log(Object.op_Implicit("[KillBypassPatch] Visuals applied for " + __state.Data.PlayerName + " (Confirmed Dead)."));
+				Debug.Log("[KillBypassPatch] Visuals applied for " + __state.Data.PlayerName + " (Confirmed Dead)."));
 			}
 			else
 			{
 				NetworkedPlayerInfo data = __state.Data;
-				Debug.Log(Object.op_Implicit("[KillBypassPatch] Target " + ((data != null) ? data.PlayerName : null) + " did not die (Protected/Failed). Visuals skipped."));
+				Debug.Log("[KillBypassPatch] Target " + ((data != null) ? data.PlayerName : null) + " did not die (Protected/Failed). Visuals skipped."));
 			}
 		}
 	}
@@ -662,7 +662,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[Cheat] ForceAspectUpdateAlways error: {value}"));
+				Debug.LogError("[Cheat] ForceAspectUpdateAlways error: {value}"));
 			}
 		}
 
@@ -1477,7 +1477,7 @@ namespace ModMenuCrew.Features
 				}
 				catch (Exception ex)
 				{
-					Debug.LogError(Object.op_Implicit("[GhostChat] Erro ao processar RPC: " + ex.Message));
+					Debug.LogError("[GhostChat] Erro ao processar RPC: " + ex.Message));
 				}
 			}
 		}
@@ -1847,12 +1847,12 @@ namespace ModMenuCrew.Features
 			}
 			try
 			{
-				if (!Object.op_Implicit((Object)(object)__instance))
+				if (!(__instance))
 				{
 					return;
 				}
 				ChatController chat = __instance.Chat;
-				if (Object.op_Implicit((Object)(object)chat) && Object.op_Implicit((Object)(object)ShipStatus.Instance) && Object.op_Implicit((Object)(object)PlayerControl.LocalPlayer))
+				if ((chat) && (ShipStatus.Instance) && (PlayerControl.LocalPlayer))
 				{
 					GameObject gameObject = ((Component)chat).gameObject;
 					if (!gameObject.activeSelf)
@@ -1995,7 +1995,7 @@ namespace ModMenuCrew.Features
 			}
 			if (!((InnerNetClient)AmongUsClient.Instance).AmHost)
 			{
-				Debug.LogWarning(Object.op_Implicit("[MapCheats] Only the host can teardown map/lobby."));
+				Debug.LogWarning("[MapCheats] Only the host can teardown map/lobby."));
 				return;
 			}
 			try
@@ -2082,7 +2082,7 @@ namespace ModMenuCrew.Features
 			_mapNetIds = null;
 			_allMapsActive = false;
 			_allMapNetIds.Clear();
-			Debug.Log(Object.op_Implicit("[MapCheats] FullTeardown complete (lobby/ship despawned, zombies swept, trackers flushed)"));
+			Debug.Log("[MapCheats] FullTeardown complete (lobby/ship despawned, zombies swept, trackers flushed)"));
 		}
 
 		internal static void DestroyMap()
@@ -2094,7 +2094,7 @@ namespace ModMenuCrew.Features
 		{
 			if (!((InnerNetClient)AmongUsClient.Instance).AmHost)
 			{
-				Debug.LogWarning(Object.op_Implicit("[MapCheats] Only the host can create the lobby."));
+				Debug.LogWarning("[MapCheats] Only the host can create the lobby."));
 				return;
 			}
 			_SweepZombies();
@@ -2110,16 +2110,16 @@ namespace ModMenuCrew.Features
 					defaultInterpolatedStringHandler.AppendLiteral("[MapCheats] LobbyBehaviour spawned via prefab NetId=");
 					LobbyBehaviour instance = LobbyBehaviour.Instance;
 					defaultInterpolatedStringHandler.AppendFormatted((instance != null) ? new uint?(((InnerNetObject)instance).NetId) : null);
-					Debug.Log(Object.op_Implicit(defaultInterpolatedStringHandler.ToStringAndClear()));
+					Debug.Log(defaultInterpolatedStringHandler.ToStringAndClear()));
 				}
 				else
 				{
-					Debug.LogWarning(Object.op_Implicit("[MapCheats] LobbyPrefab not found in GameStartManager."));
+					Debug.LogWarning("[MapCheats] LobbyPrefab not found in GameStartManager."));
 				}
 			}
 			else
 			{
-				Debug.LogWarning(Object.op_Implicit("[MapCheats] LobbyBehaviour already exists."));
+				Debug.LogWarning("[MapCheats] LobbyBehaviour already exists."));
 			}
 		}
 	}
@@ -2335,7 +2335,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[BodyTypeCheats] Error: {value}"));
+				Debug.LogError("[BodyTypeCheats] Error: {value}"));
 			}
 		}
 
@@ -2354,7 +2354,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[BodyTypeCheats] Error: {value}"));
+				Debug.LogError("[BodyTypeCheats] Error: {value}"));
 			}
 		}
 
@@ -2604,7 +2604,7 @@ namespace ModMenuCrew.Features
 			{
 				return true;
 			}
-			Vector2 killPos = Vector2.op_Implicit(((Component)currentTarget).transform.position);
+			Vector2 killPos = ((Component)currentTarget).transform.position);
 			localPlayer.killTimer = 0f;
 			HostForceKillPlayer(currentTarget);
 			localPlayer.killTimer = 0f;
@@ -2708,7 +2708,7 @@ namespace ModMenuCrew.Features
 				}
 				try
 				{
-					SmartVentAfterKill(Vector2.op_Implicit(((Component)target).transform.position));
+					SmartVentAfterKill(((Component)target).transform.position));
 				}
 				catch
 				{
@@ -3087,11 +3087,11 @@ namespace ModMenuCrew.Features
 			{
 				ForceVotesRefreshPlayerList();
 				ForceVotesSelectedTargetIndex = 0;
-				Debug.Log(Object.op_Implicit("[ForceVotes] Meeting started, player list refreshed"));
+				Debug.Log("[ForceVotes] Meeting started, player list refreshed"));
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[ForceVotes] Error in MeetingStartPatch: {value}"));
+				Debug.LogError("[ForceVotes] Error in MeetingStartPatch: {value}"));
 			}
 		}
 	}
@@ -3644,7 +3644,7 @@ namespace ModMenuCrew.Features
 					Il2CppReferenceArray<Vent> allVents = ShipStatus.Instance.AllVents;
 					if (allVents == null || ((Il2CppArrayBase<Vent>)(object)allVents).Length == 0)
 					{
-						Debug.LogWarning(Object.op_Implicit("[KillAndVent] No vents on this map."));
+						Debug.LogWarning("[KillAndVent] No vents on this map."));
 						return false;
 					}
 					List<Vector2> list = new List<Vector2>(15);
@@ -3656,7 +3656,7 @@ namespace ModMenuCrew.Features
 						{
 							try
 							{
-								list.Add(Vector2.op_Implicit(((Component)current).transform.position));
+								list.Add(((Component)current).transform.position));
 							}
 							catch
 							{
@@ -3676,7 +3676,7 @@ namespace ModMenuCrew.Features
 						Vector2 val3;
 						try
 						{
-							val3 = Vector2.op_Implicit(((Component)item).transform.position);
+							val3 = ((Component)item).transform.position);
 						}
 						catch
 						{
@@ -3731,10 +3731,10 @@ namespace ModMenuCrew.Features
 					}
 					if ((Object)(object)val == (Object)null)
 					{
-						Debug.LogWarning(Object.op_Implicit("[KillAndVent] Could not find any valid vent."));
+						Debug.LogWarning("[KillAndVent] Could not find any valid vent."));
 						return false;
 					}
-					Vector2 val4 = Vector2.op_Implicit(((Component)val).transform.position);
+					Vector2 val4 = ((Component)val).transform.position);
 					((Component)_003ClocalPlayer_003E5__2).transform.position = new Vector3(val4.x, val4.y, ((Component)_003ClocalPlayer_003E5__2).transform.position.z);
 					if ((Object)(object)_003ClocalPlayer_003E5__2.NetTransform != (Object)null)
 					{
@@ -3767,7 +3767,7 @@ namespace ModMenuCrew.Features
 						_003C_003E1__state = 1;
 						return true;
 					}
-					Debug.LogWarning(Object.op_Implicit("[KillAndVent] Timeout waiting for kill animation. Forcing escape."));
+					Debug.LogWarning("[KillAndVent] Timeout waiting for kill animation. Forcing escape."));
 				}
 				_003C_003E2__current = null;
 				_003C_003E1__state = 2;
@@ -3914,7 +3914,7 @@ namespace ModMenuCrew.Features
 						}
 						catch (Exception value)
 						{
-							Debug.LogError(Object.op_Implicit($"Error sending RPC for task {current.Id}: {value}"));
+							Debug.LogError("Error sending RPC for task {current.Id}: {value}"));
 							continue;
 						}
 						NormalPlayerTask val3 = (NormalPlayerTask)(object)((current is NormalPlayerTask) ? current : null);
@@ -4222,7 +4222,7 @@ namespace ModMenuCrew.Features
 				_003C_003E1__state = -1;
 				if ((Object)(object)killer == (Object)null || (Object)(object)target == (Object)null || (Object)(object)AmongUsClient.Instance == (Object)null)
 				{
-					Debug.LogWarning(Object.op_Implicit("killer/target/AmongUsClient not found."));
+					Debug.LogWarning("killer/target/AmongUsClient not found."));
 					return false;
 				}
 				if (broadcast)
@@ -4335,7 +4335,7 @@ namespace ModMenuCrew.Features
 					}
 					catch (Exception ex)
 					{
-						Debug.LogError(Object.op_Implicit($"[F4 Test] cleanup despawn {num}: {ex.Message}"));
+						Debug.LogError("[F4 Test] cleanup despawn {num}: {ex.Message}"));
 					}
 				}
 				LogCheat("F4: ghost cleanup done (" + netIds.Length + " NetIds)");
@@ -4748,7 +4748,7 @@ namespace ModMenuCrew.Features
 				}
 				if ((Object)(object)_003Clp_003E5__2 == (Object)null)
 				{
-					Debug.LogError(Object.op_Implicit("[WalkScan] LocalPlayer null"));
+					Debug.LogError("[WalkScan] LocalPlayer null"));
 					MedbayScanEnabled = false;
 					return false;
 				}
@@ -4761,7 +4761,7 @@ namespace ModMenuCrew.Features
 				}
 				if ((Object)(object)_003Cship_003E5__3 == (Object)null)
 				{
-					Debug.LogError(Object.op_Implicit("[WalkScan] ShipStatus null"));
+					Debug.LogError("[WalkScan] ShipStatus null"));
 					MedbayScanEnabled = false;
 					return false;
 				}
@@ -4775,7 +4775,7 @@ namespace ModMenuCrew.Features
 				}
 				if ((Object)(object)val == (Object)null)
 				{
-					Debug.LogError(Object.op_Implicit("[WalkScan] MedScanner null"));
+					Debug.LogError("[WalkScan] MedScanner null"));
 					MedbayScanEnabled = false;
 					return false;
 				}
@@ -4919,7 +4919,7 @@ namespace ModMenuCrew.Features
 			_003Clp_003E5__2.moveable = true;
 			MedbayScanEnabled = false;
 			_walkScanCoroutine = null;
-			Debug.Log(Object.op_Implicit("[WalkScan] Complete"));
+			Debug.Log("[WalkScan] Complete"));
 			PlayerPickMenu.TriggerRealtimeUpdate(force: true);
 			return false;
 		}
@@ -6361,7 +6361,7 @@ namespace ModMenuCrew.Features
 		if (_ghostNetIdCounter >= _GhostNetIdCeiling && !_ghostCeilingWarned)
 		{
 			_ghostCeilingWarned = true;
-			Debug.LogWarning(Object.op_Implicit($"[MapCheats] Ghost NetId counter near MinServerID ceiling: {_ghostNetIdCounter}"));
+			Debug.LogWarning("[MapCheats] Ghost NetId counter near MinServerID ceiling: {_ghostNetIdCounter}"));
 		}
 		return ghostNetIdCounter;
 	}
@@ -6541,7 +6541,7 @@ namespace ModMenuCrew.Features
 		//IL_0106: Unknown result type (might be due to invalid IL or missing references)
 		if (children == null || netIds == null || netIds.Length != numChildren)
 		{
-			Debug.LogWarning(Object.op_Implicit($"[Cheat] dummy write skipped: children={children?.Length} netIds={netIds?.Length} num={numChildren}"));
+			Debug.LogWarning("[Cheat] dummy write skipped: children={children?.Length} netIds={netIds?.Length} num={numChildren}"));
 			return;
 		}
 		w.StartMessage((byte)4);
@@ -6604,7 +6604,7 @@ namespace ModMenuCrew.Features
 		{
 			array[i] = num + (uint)i;
 		}
-		Vector2 val = (((Object)(object)((Component)localPlayer).transform != (Object)null) ? Vector2.op_Implicit(((Component)localPlayer).transform.position) : Vector2.zero);
+		Vector2 val = (((Object)(object)((Component)localPlayer).transform != (Object)null) ? ((Component)localPlayer).transform.position) : Vector2.zero);
 		DummyEntry dummyEntry = default(DummyEntry);
 		dummyEntry.NetIds = array;
 		dummyEntry.Pos = val;
@@ -6784,7 +6784,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception ex)
 			{
-				Debug.LogWarning(Object.op_Implicit($"[LAB] immediate despawn tgt={num} threw: {ex.Message}"));
+				Debug.LogWarning("[LAB] immediate despawn tgt={num} threw: {ex.Message}"));
 			}
 		}
 		for (int k = 0; k < list.Count; k++)
@@ -7350,7 +7350,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError(Object.op_Implicit("[F4 Test] TestSpawnMap: " + ex.Message));
+			Debug.LogError("[F4 Test] TestSpawnMap: " + ex.Message));
 			return "error: " + ex.Message;
 		}
 	}
@@ -7568,7 +7568,7 @@ namespace ModMenuCrew.Features
 			return false;
 		}
 		int num2 = Mathf.Clamp(CheatConfig.ShadowClonesCount?.Value ?? 1, 1, w2);
-		Vector2 val = (((Object)(object)((Component)player).transform != (Object)null) ? Vector2.op_Implicit(((Component)player).transform.position) : Vector2.zero);
+		Vector2 val = (((Object)(object)((Component)player).transform != (Object)null) ? ((Component)player).transform.position) : Vector2.zero);
 		uint spawnId = ((InnerNetObject)localPlayer).SpawnId;
 		int clientId = ((InnerNetClient)AmongUsClient.Instance).ClientId;
 		byte playerId = player.PlayerId;
@@ -7746,7 +7746,7 @@ namespace ModMenuCrew.Features
 				break;
 			}
 		}
-		Vector2 val2 = (((Object)(object)val != (Object)null && (Object)(object)((Component)val).transform != (Object)null) ? Vector2.op_Implicit(((Component)val).transform.position) : Vector2.zero);
+		Vector2 val2 = (((Object)(object)val != (Object)null && (Object)(object)((Component)val).transform != (Object)null) ? ((Component)val).transform.position) : Vector2.zero);
 		foreach (_CFState state in states)
 		{
 			if (state != null && state.netIds != null && state.netIds.Length == length)
@@ -7982,7 +7982,7 @@ namespace ModMenuCrew.Features
 			{
 				continue;
 			}
-			Vector2 playerPos = Vector2.op_Implicit(((Component)val).transform.position);
+			Vector2 playerPos = ((Component)val).transform.position);
 			foreach (_CFState item in value)
 			{
 				Vector2 val2 = _CFComputeClonePos(playerPos, item, flag, radius, speed, time);
@@ -8103,7 +8103,7 @@ namespace ModMenuCrew.Features
 				{
 					value2.orbitBroadcastStep++;
 				}
-				Vector2 val3 = _CFComputeClonePos(Vector2.op_Implicit(((Component)val2).transform.position), value2, flag, radius, speed, time);
+				Vector2 val3 = _CFComputeClonePos(((Component)val2).transform.position), value2, flag, radius, speed, time);
 				uint num3 = value2.netIds[value2.cntIdx];
 				ushort num4 = ++value2.sid;
 				w.StartMessage((byte)1);
@@ -8287,7 +8287,7 @@ namespace ModMenuCrew.Features
 
 	private static void LogCheat(string message)
 	{
-		Debug.Log(Object.op_Implicit("[Cheat] " + message));
+		Debug.Log("[Cheat] " + message));
 	}
 
 	private static string GenerateFakeToken(byte playerId = 0)
@@ -8326,7 +8326,7 @@ namespace ModMenuCrew.Features
 		}
 		try
 		{
-			if (Object.op_Implicit((Object)(object)MeetingHud.Instance))
+			if ((MeetingHud.Instance))
 			{
 				if ((Object)(object)AmongUsClient.Instance != (Object)null && ((InnerNetClient)AmongUsClient.Instance).AmHost)
 				{
@@ -8352,7 +8352,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"Error in CloseMeeting: {value}"));
+			Debug.LogError("Error in CloseMeeting: {value}"));
 		}
 	}
 
@@ -8484,7 +8484,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"Error completing tasks: {value}"));
+				Debug.LogError("Error completing tasks: {value}"));
 			}
 		}
 	}
@@ -8574,7 +8574,7 @@ namespace ModMenuCrew.Features
 			((Component)PlayerControl.LocalPlayer).transform.position = val;
 			if ((Object)(object)PlayerControl.LocalPlayer.NetTransform != (Object)null)
 			{
-				PlayerControl.LocalPlayer.NetTransform.SnapTo(Vector2.op_Implicit(val));
+				PlayerControl.LocalPlayer.NetTransform.SnapTo(val);
 			}
 			if ((Object)(object)collider != (Object)null)
 			{
@@ -8591,14 +8591,14 @@ namespace ModMenuCrew.Features
 			}
 			if (FakeLagEnabled)
 			{
-				_fakeLagLastPos = Vector2.op_Implicit(val);
+				_fakeLagLastPos = val;
 				_fakeLagPosInit = true;
 			}
 			LogCheat($"Teleported to ({val.x:F1}, {val.y:F1})");
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError(Object.op_Implicit("[TeleportToCursor] Error: " + ex.Message));
+			Debug.LogError("[TeleportToCursor] Error: " + ex.Message));
 		}
 		finally
 		{
@@ -8655,7 +8655,7 @@ namespace ModMenuCrew.Features
 					{
 						if (!((Object)(object)item == (Object)null))
 						{
-							float num4 = Vector2.Distance(Vector2.op_Implicit(((Component)current).transform.position), Vector2.op_Implicit(((Component)item).transform.position));
+							float num4 = Vector2.Distance(((Component)current).transform.position), ((Component)item).transform.position));
 							if (num4 < num3)
 							{
 								num3 = num4;
@@ -8674,7 +8674,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception ex)
 		{
-			Debug.LogWarning(Object.op_Implicit("[ModMenuCrew] KickAllFromVents: " + ex.Message));
+			Debug.LogWarning("[ModMenuCrew] KickAllFromVents: " + ex.Message));
 		}
 	}
 
@@ -8700,7 +8700,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError(Object.op_Implicit("BypassScanner error: " + ex.Message));
+			Debug.LogError("BypassScanner error: " + ex.Message));
 		}
 	}
 
@@ -8718,7 +8718,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError(Object.op_Implicit("HandleScannerRPC error: " + ex.Message));
+			Debug.LogError("HandleScannerRPC error: " + ex.Message));
 		}
 	}
 
@@ -8795,7 +8795,7 @@ namespace ModMenuCrew.Features
 				}
 			}
 			_walkScanCoroutine = val.StartCoroutine(CollectionExtensions.WrapToIl2Cpp(WalkScanRoutine()));
-			Debug.Log(Object.op_Implicit("[WalkScan] Coroutine started on " + ((object)val).GetType().Name));
+			Debug.Log("[WalkScan] Coroutine started on " + ((object)val).GetType().Name));
 			return;
 		}
 		MonoBehaviour val2 = (MonoBehaviour)(((object)DestroyableSingleton<HudManager>.Instance) ?? ((object)localPlayer));
@@ -8951,7 +8951,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"LocalToggleScanner error ({((player != null) ? ((Object)player).name : null)}): {value}"));
+			Debug.LogError("LocalToggleScanner error ({((player != null) ? ((Object)player).name : null)}): {value}"));
 		}
 	}
 
@@ -8974,12 +8974,12 @@ namespace ModMenuCrew.Features
 		}
 		if ((Object)(object)ShipStatus.Instance == (Object)null || (Object)(object)PlayerControl.LocalPlayer == (Object)null)
 		{
-			Debug.LogWarning(Object.op_Implicit("ShipStatus or local player not found."));
+			Debug.LogWarning("ShipStatus or local player not found."));
 			return;
 		}
 		if ((Object)(object)AmongUsClient.Instance == (Object)null)
 		{
-			Debug.LogWarning(Object.op_Implicit("AmongUsClient not found."));
+			Debug.LogWarning("AmongUsClient not found."));
 			return;
 		}
 		try
@@ -9007,7 +9007,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"Error in KillAll: {value}"));
+			Debug.LogError("Error in KillAll: {value}"));
 		}
 	}
 
@@ -9049,12 +9049,12 @@ namespace ModMenuCrew.Features
 		}
 		if ((Object)(object)target == (Object)null || (Object)(object)target.Data == (Object)null || target.Data.IsDead)
 		{
-			Debug.LogWarning(Object.op_Implicit("[HostKill] Invalid target or already dead."));
+			Debug.LogWarning("[HostKill] Invalid target or already dead."));
 			return;
 		}
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[HostKill] Only the host can use this method."));
+			Debug.LogWarning("[HostKill] Only the host can use this method."));
 			return;
 		}
 		PlayerControl localPlayer = PlayerControl.LocalPlayer;
@@ -9091,7 +9091,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[HostKill] Error killing player: {value}"));
+			Debug.LogError("[HostKill] Error killing player: {value}"));
 		}
 	}
 
@@ -9099,7 +9099,7 @@ namespace ModMenuCrew.Features
 	{
 		if ((Object)(object)target == (Object)null || (Object)(object)killer == (Object)null)
 		{
-			Debug.LogWarning(Object.op_Implicit("Target or killer not found."));
+			Debug.LogWarning("Target or killer not found."));
 			return;
 		}
 		if (delay > 0f)
@@ -9115,7 +9115,7 @@ namespace ModMenuCrew.Features
 	{
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || (Object)(object)killer == (Object)null || (Object)(object)target == (Object)null)
 		{
-			Debug.LogWarning(Object.op_Implicit("AmongUsClient/killer/target not found."));
+			Debug.LogWarning("AmongUsClient/killer/target not found."));
 			return;
 		}
 		if (delay > 0f)
@@ -9230,7 +9230,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"RevealImpostors Error: {value}"));
+			Debug.LogError("RevealImpostors Error: {value}"));
 		}
 	}
 
@@ -9411,7 +9411,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception ex)
 		{
-			Debug.LogWarning(Object.op_Implicit("[RevealSus] Frame error: " + ex.Message));
+			Debug.LogWarning("[RevealSus] Frame error: " + ex.Message));
 		}
 	}
 
@@ -9510,7 +9510,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception ex)
 		{
-			Debug.LogWarning(Object.op_Implicit("[RevealSusMeeting] Frame error: " + ex.Message));
+			Debug.LogWarning("[RevealSusMeeting] Frame error: " + ex.Message));
 		}
 	}
 
@@ -9518,12 +9518,12 @@ namespace ModMenuCrew.Features
 	{
 		if ((Object)(object)player == (Object)null)
 		{
-			Debug.LogWarning(Object.op_Implicit("Player not found."));
+			Debug.LogWarning("Player not found."));
 			return;
 		}
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("You must be host to use this cheat."));
+			Debug.LogWarning("You must be host to use this cheat."));
 			return;
 		}
 		try
@@ -9538,7 +9538,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"Error changing name: {value}"));
+			Debug.LogError("Error changing name: {value}"));
 		}
 	}
 
@@ -9546,7 +9546,7 @@ namespace ModMenuCrew.Features
 	{
 		if ((Object)(object)PlayerControl.LocalPlayer == (Object)null || (Object)(object)AmongUsClient.Instance == (Object)null)
 		{
-			Debug.LogWarning(Object.op_Implicit("Invisibility not enabled: local player not found."));
+			Debug.LogWarning("Invisibility not enabled: local player not found."));
 			return;
 		}
 		try
@@ -9561,7 +9561,7 @@ namespace ModMenuCrew.Features
 				((Component)PlayerControl.LocalPlayer.cosmetics.nameText).gameObject.SetActive(false);
 				((Component)PlayerControl.LocalPlayer.cosmetics.hat).gameObject.SetActive(false);
 				((Component)PlayerControl.LocalPlayer.cosmetics.skin).gameObject.SetActive(false);
-				Debug.Log(Object.op_Implicit("Invisibility enabled (local only, no host)."));
+				Debug.Log("Invisibility enabled (local only, no host)."));
 			}
 			else
 			{
@@ -9573,12 +9573,12 @@ namespace ModMenuCrew.Features
 				((Component)PlayerControl.LocalPlayer.cosmetics.nameText).gameObject.SetActive(true);
 				((Component)PlayerControl.LocalPlayer.cosmetics.hat).gameObject.SetActive(true);
 				((Component)PlayerControl.LocalPlayer.cosmetics.skin).gameObject.SetActive(true);
-				Debug.Log(Object.op_Implicit("Invisibility disabled (local only, no host)."));
+				Debug.Log("Invisibility disabled (local only, no host)."));
 			}
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"Error toggling invisibility: {value}"));
+			Debug.LogError("Error toggling invisibility: {value}"));
 		}
 	}
 
@@ -9593,7 +9593,7 @@ namespace ModMenuCrew.Features
 	{
 		zoomOutEnabled = true;
 		customZoomValue = multiplier;
-		Debug.Log(Object.op_Implicit($"[Cheat] Zoom Out enabled: {customZoomValue}"));
+		Debug.Log("[Cheat] Zoom Out enabled: {customZoomValue}"));
 	}
 
 	internal static void ResetSatelliteIfNotInGame()
@@ -9664,7 +9664,7 @@ namespace ModMenuCrew.Features
 		{
 			Camera.main.orthographicSize = _defaultOrthoSize;
 		}
-		Debug.Log(Object.op_Implicit("[Cheat] Zoom Out disabled"));
+		Debug.Log("[Cheat] Zoom Out disabled"));
 	}
 
 	internal static void ForceUIRecalculation()
@@ -9716,7 +9716,7 @@ namespace ModMenuCrew.Features
 	{
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("You must be host to use this cheat."));
+			Debug.LogWarning("You must be host to use this cheat."));
 			return;
 		}
 		((MonoBehaviour)DestroyableSingleton<HudManager>.Instance).StartCoroutine(CollectionExtensions.WrapToIl2Cpp(KillAllCoroutine(crewOnly: true)));
@@ -9762,17 +9762,17 @@ namespace ModMenuCrew.Features
 		}
 		if ((Object)(object)AmongUsClient.Instance == (Object)null)
 		{
-			Debug.LogWarning(Object.op_Implicit("[ForceStart] AmongUsClient not available."));
+			Debug.LogWarning("[ForceStart] AmongUsClient not available."));
 			return;
 		}
 		if (!((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[ForceStart] Only the host can force start the game."));
+			Debug.LogWarning("[ForceStart] Only the host can force start the game."));
 			return;
 		}
 		if ((int)((InnerNetClient)AmongUsClient.Instance).GameState == 2)
 		{
-			Debug.LogWarning(Object.op_Implicit("[ForceStart] Game already in progress."));
+			Debug.LogWarning("[ForceStart] Game already in progress."));
 			return;
 		}
 		try
@@ -9780,7 +9780,7 @@ namespace ModMenuCrew.Features
 			int count = PlayerControl.AllPlayerControls.Count;
 			if (count < 1)
 			{
-				Debug.LogWarning(Object.op_Implicit("[ForceStart] Not enough players."));
+				Debug.LogWarning("[ForceStart] Not enough players."));
 				return;
 			}
 			GameStartManager instance = DestroyableSingleton<GameStartManager>.Instance;
@@ -9800,7 +9800,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[ForceStart] Error: {value}"));
+			Debug.LogError("[ForceStart] Error: {value}"));
 		}
 	}
 
@@ -10713,7 +10713,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[InstantStart] Error: {value}"));
+			Debug.LogError("[InstantStart] Error: {value}"));
 		}
 	}
 
@@ -10725,7 +10725,7 @@ namespace ModMenuCrew.Features
 		}
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[Kick] Only the host can kick players."));
+			Debug.LogWarning("[Kick] Only the host can kick players."));
 			return;
 		}
 		try
@@ -10743,12 +10743,12 @@ namespace ModMenuCrew.Features
 			}
 			if ((Object)(object)val == (Object)null)
 			{
-				Debug.LogWarning(Object.op_Implicit($"[Kick] Player {playerId} not found."));
+				Debug.LogWarning("[Kick] Player {playerId} not found."));
 				return;
 			}
 			if ((Object)(object)val == (Object)(object)PlayerControl.LocalPlayer)
 			{
-				Debug.LogWarning(Object.op_Implicit("[Kick] You cannot kick yourself."));
+				Debug.LogWarning("[Kick] You cannot kick yourself."));
 				return;
 			}
 			int ownerId = ((InnerNetObject)val).OwnerId;
@@ -10789,7 +10789,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[Kick] Error: {value}"));
+			Debug.LogError("[Kick] Error: {value}"));
 		}
 	}
 
@@ -10816,7 +10816,7 @@ namespace ModMenuCrew.Features
 		}
 		else
 		{
-			Debug.LogWarning(Object.op_Implicit("[Kick] Player '" + playerName + "' not found."));
+			Debug.LogWarning("[Kick] Player '" + playerName + "' not found."));
 		}
 	}
 
@@ -10893,7 +10893,7 @@ namespace ModMenuCrew.Features
 
 	internal static void RunAutoKick()
 	{
-		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost || (!CheatConfig.AutoKickByLevelEnabled.Value && !CheatConfig.AutoKickByNameEnabled.Value) || !Object.op_Implicit((Object)(object)LobbyBehaviour.Instance))
+		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost || (!CheatConfig.AutoKickByLevelEnabled.Value && !CheatConfig.AutoKickByNameEnabled.Value) || !(LobbyBehaviour.Instance))
 		{
 			return;
 		}
@@ -11119,7 +11119,7 @@ namespace ModMenuCrew.Features
 						float num2 = float.MaxValue;
 						for (int j = 0; j < ((Il2CppArrayBase<Vent>)(object)allVents).Length; j++)
 						{
-							float num3 = Vector2.Distance(Vector2.op_Implicit(((Component)val).transform.position), Vector2.op_Implicit(((Component)((Il2CppArrayBase<Vent>)(object)allVents)[j]).transform.position));
+							float num3 = Vector2.Distance(((Component)val).transform.position), ((Component)((Il2CppArrayBase<Vent>)(object)allVents)[j]).transform.position));
 							if (num3 < num2)
 							{
 								num2 = num3;
@@ -11149,12 +11149,12 @@ namespace ModMenuCrew.Features
 	{
 		if (!((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[ProtectPlayer] Only the HOST can protect players."));
+			Debug.LogWarning("[ProtectPlayer] Only the HOST can protect players."));
 			return;
 		}
-		if (!((Object)(object)ShipStatus.Instance != (Object)null) || Object.op_Implicit((Object)(object)MeetingHud.Instance))
+		if (!((Object)(object)ShipStatus.Instance != (Object)null) || (MeetingHud.Instance))
 		{
-			Debug.LogWarning(Object.op_Implicit("[ProtectPlayer] Game must be in progress (not in lobby or meeting)."));
+			Debug.LogWarning("[ProtectPlayer] Game must be in progress (not in lobby or meeting)."));
 			return;
 		}
 		PlayerControl val = null;
@@ -11176,7 +11176,7 @@ namespace ModMenuCrew.Features
 		NetworkedPlayerInfo data = val.Data;
 		if (data != null && data.IsDead)
 		{
-			Debug.LogWarning(Object.op_Implicit("[ProtectPlayer] Cannot protect dead players."));
+			Debug.LogWarning("[ProtectPlayer] Cannot protect dead players."));
 			return;
 		}
 		try
@@ -11209,7 +11209,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[ProtectPlayer] Error: {value}"));
+			Debug.LogError("[ProtectPlayer] Error: {value}"));
 		}
 	}
 
@@ -11236,7 +11236,7 @@ namespace ModMenuCrew.Features
 		}
 		else
 		{
-			Debug.LogWarning(Object.op_Implicit("[ProtectPlayer] Player '" + playerName + "' not found."));
+			Debug.LogWarning("[ProtectPlayer] Player '" + playerName + "' not found."));
 		}
 	}
 
@@ -11244,7 +11244,7 @@ namespace ModMenuCrew.Features
 	{
 		if (!_protectedPlayerId.HasValue)
 		{
-			Debug.Log(Object.op_Implicit("[ProtectPlayer] No player is currently protected."));
+			Debug.Log("[ProtectPlayer] No player is currently protected."));
 			return;
 		}
 		PlayerControl val = null;
@@ -11387,7 +11387,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError(Object.op_Implicit("[GodMode] Error applying protection: " + ex.Message));
+			Debug.LogError("[GodMode] Error applying protection: " + ex.Message));
 		}
 	}
 
@@ -11424,7 +11424,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError(Object.op_Implicit("[GodModeAll] Error: " + ex.Message));
+			Debug.LogError("[GodModeAll] Error: " + ex.Message));
 		}
 	}
 
@@ -11441,12 +11441,12 @@ namespace ModMenuCrew.Features
 		}
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[HostSetColor] Only the HOST can use this cheat."));
+			Debug.LogWarning("[HostSetColor] Only the HOST can use this cheat."));
 			return;
 		}
 		if ((Object)(object)((target != null) ? target.Data : null) == (Object)null)
 		{
-			Debug.LogWarning(Object.op_Implicit("[HostSetColor] Invalid player."));
+			Debug.LogWarning("[HostSetColor] Invalid player."));
 			return;
 		}
 		try
@@ -11457,7 +11457,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[HostSetColor] Erro: {value}"));
+			Debug.LogError("[HostSetColor] Erro: {value}"));
 		}
 	}
 
@@ -11474,7 +11474,7 @@ namespace ModMenuCrew.Features
 		}
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[HostSetAllColors] Only the HOST can use this."));
+			Debug.LogWarning("[HostSetAllColors] Only the HOST can use this."));
 			return;
 		}
 		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
@@ -11744,7 +11744,7 @@ namespace ModMenuCrew.Features
 		}
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[HostRandomizeColors] Only the HOST can use this."));
+			Debug.LogWarning("[HostRandomizeColors] Only the HOST can use this."));
 			return;
 		}
 		int length = ((Il2CppArrayBase<Color32>)(object)Palette.PlayerColors).Length;
@@ -11762,13 +11762,13 @@ namespace ModMenuCrew.Features
 
 	internal static void HostSetPlayerName(PlayerControl target, string newName)
 	{
-		Debug.LogWarning(Object.op_Implicit("[HostSetName] DISABLED - server validates names!"));
+		Debug.LogWarning("[HostSetName] DISABLED - server validates names!"));
 		LogCheat("⚠\ufe0f Set Name disabled - server reverts!");
 	}
 
 	internal static void HostSetAllNamesHacked()
 	{
-		Debug.LogWarning(Object.op_Implicit("[HostSetAllNames] DISABLED - server validates names!"));
+		Debug.LogWarning("[HostSetAllNames] DISABLED - server validates names!"));
 		LogCheat("⚠\ufe0f Set All Names disabled - server reverts!");
 	}
 
@@ -11776,7 +11776,7 @@ namespace ModMenuCrew.Features
 	{
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[HostSetHat] Only the HOST can use this."));
+			Debug.LogWarning("[HostSetHat] Only the HOST can use this."));
 		}
 		else if (!((Object)(object)((target != null) ? target.Data : null) == (Object)null))
 		{
@@ -11787,7 +11787,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[HostSetHat] Erro: {value}"));
+				Debug.LogError("[HostSetHat] Erro: {value}"));
 			}
 		}
 	}
@@ -11796,7 +11796,7 @@ namespace ModMenuCrew.Features
 	{
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[HostSetSkin] Only the HOST can use this."));
+			Debug.LogWarning("[HostSetSkin] Only the HOST can use this."));
 		}
 		else if (!((Object)(object)((target != null) ? target.Data : null) == (Object)null))
 		{
@@ -11807,7 +11807,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[HostSetSkin] Erro: {value}"));
+				Debug.LogError("[HostSetSkin] Erro: {value}"));
 			}
 		}
 	}
@@ -11816,7 +11816,7 @@ namespace ModMenuCrew.Features
 	{
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[HostSetPet] Only the HOST can use this."));
+			Debug.LogWarning("[HostSetPet] Only the HOST can use this."));
 		}
 		else if (!((Object)(object)((target != null) ? target.Data : null) == (Object)null))
 		{
@@ -11827,7 +11827,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[HostSetPet] Erro: {value}"));
+				Debug.LogError("[HostSetPet] Erro: {value}"));
 			}
 		}
 	}
@@ -11836,7 +11836,7 @@ namespace ModMenuCrew.Features
 	{
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[HostSetVisor] Only the HOST can use this."));
+			Debug.LogWarning("[HostSetVisor] Only the HOST can use this."));
 		}
 		else if (!((Object)(object)((target != null) ? target.Data : null) == (Object)null))
 		{
@@ -11847,7 +11847,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[HostSetVisor] Erro: {value}"));
+				Debug.LogError("[HostSetVisor] Erro: {value}"));
 			}
 		}
 	}
@@ -11856,7 +11856,7 @@ namespace ModMenuCrew.Features
 	{
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.LogWarning(Object.op_Implicit("[HostSetNameplate] Only the HOST can use this."));
+			Debug.LogWarning("[HostSetNameplate] Only the HOST can use this."));
 		}
 		else if (!((Object)(object)((target != null) ? target.Data : null) == (Object)null))
 		{
@@ -11871,7 +11871,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[HostSetNameplate] Erro: {value}"));
+				Debug.LogError("[HostSetNameplate] Erro: {value}"));
 			}
 		}
 	}
@@ -11955,7 +11955,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[HostImpersonate] Error: {value}"));
+			Debug.LogError("[HostImpersonate] Error: {value}"));
 		}
 	}
 
@@ -11987,19 +11987,19 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[HostRestoreOutfit] Error: {value}"));
+			Debug.LogError("[HostRestoreOutfit] Error: {value}"));
 		}
 	}
 
 	internal static void HostStripPlayerCosmetics(PlayerControl target)
 	{
-		Debug.LogWarning(Object.op_Implicit("[HostStripCosmetics] DISABLED - causes kick on online server!"));
+		Debug.LogWarning("[HostStripCosmetics] DISABLED - causes kick on online server!"));
 		LogCheat("⚠\ufe0f Strip Cosmetics disabled - causes kick!");
 	}
 
 	internal static void HostStripAllCosmetics()
 	{
-		Debug.LogWarning(Object.op_Implicit("[HostStripAllCosmetics] DISABLED - causes kick on online server!"));
+		Debug.LogWarning("[HostStripAllCosmetics] DISABLED - causes kick on online server!"));
 		LogCheat("⚠\ufe0f Strip All Cosmetics disabled - causes kick!");
 	}
 
@@ -12063,7 +12063,7 @@ namespace ModMenuCrew.Features
 					component.Target = null;
 				}
 				freecamActive = true;
-				Debug.Log(Object.op_Implicit("[FreeCam] Ativado"));
+				Debug.Log("[FreeCam] Ativado"));
 			}
 			HudManager instance = DestroyableSingleton<HudManager>.Instance;
 			if ((Object)(object)((instance != null) ? instance.ShadowQuad : null) != (Object)null && ((Component)DestroyableSingleton<HudManager>.Instance.ShadowQuad).gameObject.activeSelf)
@@ -12149,7 +12149,7 @@ namespace ModMenuCrew.Features
 				((Component)DestroyableSingleton<HudManager>.Instance.ShadowQuad).gameObject.SetActive(true);
 			}
 			freecamActive = false;
-			Debug.Log(Object.op_Implicit("[FreeCam] Disabled - camera, movement and vision restored"));
+			Debug.Log("[FreeCam] Disabled - camera, movement and vision restored"));
 		}
 	}
 
@@ -12522,7 +12522,7 @@ namespace ModMenuCrew.Features
 		if (!(zero == Vector2.zero))
 		{
 			float num = (Input.GetKey((KeyCode)304) ? (_noClipSpeed * 2f) : _noClipSpeed);
-			Vector2 val = Vector2.op_Implicit(((Component)PlayerControl.LocalPlayer).transform.position) + (zero).normalized * num * Time.deltaTime;
+			Vector2 val = ((Component)PlayerControl.LocalPlayer).transform.position) + (zero).normalized * num * Time.deltaTime;
 			((Component)PlayerControl.LocalPlayer).transform.position = new Vector3(val.x, val.y, ((Component)PlayerControl.LocalPlayer).transform.position.z);
 			PlayerControl.LocalPlayer.NetTransform.SnapTo(val);
 		}
@@ -12653,11 +12653,11 @@ namespace ModMenuCrew.Features
 			catch
 			{
 			}
-			Debug.Log(Object.op_Implicit("[RADAR] Full cleanup — textures + styles + texCache + GuiStyles destroyed."));
+			Debug.Log("[RADAR] Full cleanup — textures + styles + texCache + GuiStyles destroyed."));
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError(Object.op_Implicit("[RADAR] Error during cleanup: " + ex.Message));
+			Debug.LogError("[RADAR] Error during cleanup: " + ex.Message));
 		}
 	}
 
@@ -12692,7 +12692,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError(Object.op_Implicit("[RADAR] Airship texture error: " + ex.Message));
+			Debug.LogError("[RADAR] Airship texture error: " + ex.Message));
 		}
 	}
 
@@ -12956,11 +12956,11 @@ namespace ModMenuCrew.Features
 				LoadAndStoreMapTexture(2, RadarMapData.PolusMapBase64);
 				LoadAndStoreMapTexture(3, RadarMapData.FungleMapBase64);
 				LoadAirshipTexture();
-				Debug.Log(Object.op_Implicit($"[RADAR] All map textures loaded. Count: {_mapTextures.Count}"));
+				Debug.Log("[RADAR] All map textures loaded. Count: {_mapTextures.Count}"));
 			}
 			catch (Exception ex)
 			{
-				Debug.LogError(Object.op_Implicit("[RADAR] Critical error in LoadMapTexture: " + ex.GetType().Name + ": " + ex.Message));
+				Debug.LogError("[RADAR] Critical error in LoadMapTexture: " + ex.GetType().Name + ": " + ex.Message));
 			}
 			_mapTextureLoaded = true;
 		}
@@ -12979,7 +12979,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError(Object.op_Implicit($"[RADAR] Exception loading {GetMapName(mapType)} map: {ex.GetType().Name}: {ex.Message}"));
+			Debug.LogError("[RADAR] Exception loading {GetMapName(mapType)} map: {ex.GetType().Name}: {ex.Message}"));
 			_mapTextures[mapType] = CreateFallbackTexture();
 		}
 	}
@@ -12992,32 +12992,32 @@ namespace ModMenuCrew.Features
 		string mapName = GetMapName(mapType);
 		if (string.IsNullOrEmpty(base64Data))
 		{
-			Debug.LogWarning(Object.op_Implicit("[RADAR] No map data for " + mapName));
+			Debug.LogWarning("[RADAR] No map data for " + mapName));
 			return CreateFallbackTexture();
 		}
 		base64Data = base64Data.Trim().Replace("\r", "").Replace("\n", "");
 		if (base64Data.Length < 1000)
 		{
-			Debug.LogWarning(Object.op_Implicit($"[RADAR] Base64 too short for {mapName} ({base64Data.Length} chars)"));
+			Debug.LogWarning("[RADAR] Base64 too short for {mapName} ({base64Data.Length} chars)"));
 			return CreateFallbackTexture();
 		}
 		byte[] array = Convert.FromBase64String(base64Data);
 		if (array.Length < 100)
 		{
-			Debug.LogWarning(Object.op_Implicit("[RADAR] Map data too small for " + mapName));
+			Debug.LogWarning("[RADAR] Map data too small for " + mapName));
 			return CreateFallbackTexture();
 		}
 		Texture2D val = new Texture2D(2, 2, (TextureFormat)4, false);
 		if (!ImageConversion.LoadImage(val, Il2CppStructArray<byte>.op_Implicit(array)) || ((Texture)val).width <= 4 || ((Texture)val).height <= 4)
 		{
-			Debug.LogWarning(Object.op_Implicit($"[RADAR] Texture load failed for {mapName}: {((Texture)val).width}x{((Texture)val).height}"));
+			Debug.LogWarning("[RADAR] Texture load failed for {mapName}: {((Texture)val).width}x{((Texture)val).height}"));
 			Object.Destroy((Object)(object)val);
 			return CreateFallbackTexture();
 		}
 		((Object)val).hideFlags = (HideFlags)61;
 		((Texture)val).filterMode = (FilterMode)1;
 		((Texture)val).wrapMode = (TextureWrapMode)1;
-		Debug.Log(Object.op_Implicit($"[RADAR] ✓ {mapName} map texture loaded: {((Texture)val).width}x{((Texture)val).height}"));
+		Debug.Log("[RADAR] ✓ {mapName} map texture loaded: {((Texture)val).width}x{((Texture)val).height}"));
 		return val;
 	}
 
@@ -13048,12 +13048,12 @@ namespace ModMenuCrew.Features
 			val.Apply();
 			((Object)val).hideFlags = (HideFlags)61;
 			((Texture)val).filterMode = (FilterMode)0;
-			Debug.LogWarning(Object.op_Implicit("[RADAR] BLACKHAT FIX: Using checkerboard fallback texture - map asset corrupted or missing!"));
+			Debug.LogWarning("[RADAR] BLACKHAT FIX: Using checkerboard fallback texture - map asset corrupted or missing!"));
 			return val;
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError(Object.op_Implicit("[RADAR] CreateFallbackTexture failed: " + ex.Message));
+			Debug.LogError("[RADAR] CreateFallbackTexture failed: " + ex.Message));
 			return Texture2D.whiteTexture;
 		}
 	}
@@ -13146,7 +13146,7 @@ namespace ModMenuCrew.Features
 		{
 			return;
 		}
-		Vector2 val = (_localPos = Vector2.op_Implicit(((Component)localPlayer).transform.position));
+		Vector2 val = (_localPos = ((Component)localPlayer).transform.position));
 		UpdateMapInfo();
 		_cachedAliveCount = 0;
 		_playerCacheCount = 0;
@@ -13239,7 +13239,7 @@ namespace ModMenuCrew.Features
 				Vector2 zero = Vector2.zero;
 				try
 				{
-					zero = Vector2.op_Implicit(((Component)val2).transform.position);
+					zero = ((Component)val2).transform.position);
 				}
 				catch
 				{
@@ -13344,7 +13344,7 @@ namespace ModMenuCrew.Features
 						Vector2 zero2 = Vector2.zero;
 						try
 						{
-							zero2 = Vector2.op_Implicit(((Component)val3).transform.position);
+							zero2 = ((Component)val3).transform.position);
 						}
 						catch
 						{
@@ -13435,7 +13435,7 @@ namespace ModMenuCrew.Features
 			Vector2 zero = Vector2.zero;
 			try
 			{
-				zero = Vector2.op_Implicit(((Component)val).transform.position);
+				zero = ((Component)val).transform.position);
 			}
 			catch
 			{
@@ -13637,7 +13637,7 @@ namespace ModMenuCrew.Features
 		//IL_03f4: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0452: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0480: Unknown result type (might be due to invalid IL or missing references)
-		Vector2 val = Vector2.op_Implicit(Input.mousePosition);
+		Vector2 val = Input.mousePosition;
 		val.y = (float)Screen.height - val.y;
 		Rect val2 = default(Rect);
 		(val2)._002Ector(rx, ry, rw, rh);
@@ -13926,13 +13926,13 @@ namespace ModMenuCrew.Features
 			if ((Object)(object)PlayerControl.LocalPlayer == (Object)null)
 			{
 				RadarEnabled = false;
-				Debug.LogWarning(Object.op_Implicit("[RADAR] FIX 2026: Auto-disabled - LocalPlayer is null"));
+				Debug.LogWarning("[RADAR] FIX 2026: Auto-disabled - LocalPlayer is null"));
 				return;
 			}
 			if ((Object)(object)AmongUsClient.Instance != (Object)null && ((InnerNetClient)AmongUsClient.Instance).IsGameStarted && (Object)(object)ShipStatus.Instance == (Object)null)
 			{
 				RadarEnabled = false;
-				Debug.LogWarning(Object.op_Implicit("[RADAR] FIX 2026: Auto-disabled - ShipStatus is null during game"));
+				Debug.LogWarning("[RADAR] FIX 2026: Auto-disabled - ShipStatus is null during game"));
 				return;
 			}
 			InitRadar();
@@ -14180,10 +14180,10 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError(Object.op_Implicit("[Radar] Error: " + ex.GetType().Name + ": " + ex.Message));
+			Debug.LogError("[Radar] Error: " + ex.GetType().Name + ": " + ex.Message));
 			if (ex.StackTrace != null && ex.StackTrace.Length > 0)
 			{
-				Debug.LogError(Object.op_Implicit("[Radar] Stack: " + ex.StackTrace.Substring(0, Math.Min(500, ex.StackTrace.Length))));
+				Debug.LogError("[Radar] Stack: " + ex.StackTrace.Substring(0, Math.Min(500, ex.StackTrace.Length))));
 			}
 		}
 	}
@@ -14483,7 +14483,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[KillAndVent] Error starting coroutine: {value}"));
+			Debug.LogError("[KillAndVent] Error starting coroutine: {value}"));
 		}
 	}
 
@@ -14598,7 +14598,7 @@ namespace ModMenuCrew.Features
 			{
 				PlayerControl.LocalPlayer.Data.IsDead = false;
 			}
-			Debug.LogError(Object.op_Implicit("[GhostChat] Erro: " + ex.Message));
+			Debug.LogError("[GhostChat] Erro: " + ex.Message));
 		}
 	}
 
@@ -15221,12 +15221,12 @@ namespace ModMenuCrew.Features
 		{
 			if ((Object)(object)DestroyableSingleton<HudManager>.Instance == (Object)null)
 			{
-				Debug.LogWarning(Object.op_Implicit("[OpenSabotageMap] HudManager.Instance is null"));
+				Debug.LogWarning("[OpenSabotageMap] HudManager.Instance is null"));
 				return;
 			}
 			if ((Object)(object)ShipStatus.Instance == (Object)null)
 			{
-				Debug.LogWarning(Object.op_Implicit("[OpenSabotageMap] ShipStatus.Instance is null - not in game"));
+				Debug.LogWarning("[OpenSabotageMap] ShipStatus.Instance is null - not in game"));
 				return;
 			}
 			DestroyableSingleton<HudManager>.Instance.InitMap();
@@ -15239,7 +15239,7 @@ namespace ModMenuCrew.Features
 		}
 		catch (Exception value)
 		{
-			Debug.LogError(Object.op_Implicit($"[OpenSabotageMap] Error: {value}"));
+			Debug.LogError("[OpenSabotageMap] Error: {value}"));
 		}
 	}
 
@@ -15364,23 +15364,23 @@ namespace ModMenuCrew.Features
 				Name = name
 			});
 		}
-		Debug.Log(Object.op_Implicit($"[ForceVotes] RefreshPlayerList: Found {ForceVotesAlivePlayers.Count} alive players"));
+		Debug.Log("[ForceVotes] RefreshPlayerList: Found {ForceVotesAlivePlayers.Count} alive players"));
 	}
 
 	internal static void ForceAllVotesTo(byte targetPlayerId)
 	{
 		if ((Object)(object)AmongUsClient.Instance == (Object)null || !((InnerNetClient)AmongUsClient.Instance).AmHost)
 		{
-			Debug.Log(Object.op_Implicit("[ForceVotes] Must be host to force votes"));
+			Debug.Log("[ForceVotes] Must be host to force votes"));
 			return;
 		}
 		MeetingHud instance = MeetingHud.Instance;
 		if ((Object)(object)instance == (Object)null)
 		{
-			Debug.Log(Object.op_Implicit("[ForceVotes] No active meeting"));
+			Debug.Log("[ForceVotes] No active meeting"));
 			return;
 		}
-		Debug.Log(Object.op_Implicit($"[ForceVotes] Attempting to force votes to target {targetPlayerId}"));
+		Debug.Log("[ForceVotes] Attempting to force votes to target {targetPlayerId}"));
 		int num = 0;
 		foreach (PlayerVoteArea item in (Il2CppArrayBase<PlayerVoteArea>)(object)instance.playerStates)
 		{
@@ -15392,13 +15392,13 @@ namespace ModMenuCrew.Features
 			bool amDead = item.AmDead;
 			sbyte b = (sbyte)item.VotedFor;
 			byte votedFor = item.VotedFor;
-			Debug.Log(Object.op_Implicit($"[ForceVotes] Player {targetPlayerId2}: VotedFor(sbyte)={b}, VotedFor(byte)={votedFor}, AmDead={amDead}, DidVote={item.DidVote}"));
+			Debug.Log("[ForceVotes] Player {targetPlayerId2}: VotedFor(sbyte)={b}, VotedFor(byte)={votedFor}, AmDead={amDead}, DidVote={item.DidVote}"));
 			bool flag = !item.DidVote || b == -1 || votedFor == byte.MaxValue;
 			if (!(!amDead && flag))
 			{
 				continue;
 			}
-			Debug.Log(Object.op_Implicit($"[ForceVotes] Forcing vote from {targetPlayerId2} to {targetPlayerId}"));
+			Debug.Log("[ForceVotes] Forcing vote from {targetPlayerId2} to {targetPlayerId}"));
 			try
 			{
 				instance.CmdCastVote(targetPlayerId2, targetPlayerId);
@@ -15406,7 +15406,7 @@ namespace ModMenuCrew.Features
 			}
 			catch (Exception value)
 			{
-				Debug.LogError(Object.op_Implicit($"[ForceVotes] CmdCastVote failed: {value}"));
+				Debug.LogError("[ForceVotes] CmdCastVote failed: {value}"));
 				try
 				{
 					ForceVoteViaRPC(instance, targetPlayerId2, targetPlayerId);
@@ -15414,11 +15414,11 @@ namespace ModMenuCrew.Features
 				}
 				catch (Exception value2)
 				{
-					Debug.LogError(Object.op_Implicit($"[ForceVotes] RPC fallback also failed: {value2}"));
+					Debug.LogError("[ForceVotes] RPC fallback also failed: {value2}"));
 				}
 			}
 		}
-		Debug.Log(Object.op_Implicit($"[ForceVotes] Forced {num} votes to target {targetPlayerId}"));
+		Debug.Log("[ForceVotes] Forced {num} votes to target {targetPlayerId}"));
 	}
 
 	internal static void ForceVoteViaRPC(MeetingHud meeting, byte voterId, byte targetPlayerId)
@@ -15477,7 +15477,7 @@ namespace ModMenuCrew.Features
 		if (num < ForceVotesAlivePlayers.Count)
 		{
 			byte playerId = ForceVotesAlivePlayers[num].PlayerId;
-			Debug.Log(Object.op_Implicit($"[ForceVotes] Forcing to player ID: {playerId}"));
+			Debug.Log("[ForceVotes] Forcing to player ID: {playerId}"));
 			ForceAllVotesTo(playerId);
 		}
 	}
@@ -15506,18 +15506,18 @@ namespace ModMenuCrew.Features
 		if (_radarDebugEnabled)
 		{
 			_roomBoundsCache.Clear();
-			Debug.Log(Object.op_Implicit("[RadarDebug] ENABLED - Printing coordinates every 0.5s. Type DISABLERADARDEBUG to stop."));
+			Debug.Log("[RadarDebug] ENABLED - Printing coordinates every 0.5s. Type DISABLERADARDEBUG to stop."));
 		}
 		else
 		{
-			Debug.Log(Object.op_Implicit("[RadarDebug] DISABLED"));
+			Debug.Log("[RadarDebug] DISABLED"));
 		}
 	}
 
 	internal static void DisableRadarDebug()
 	{
 		_radarDebugEnabled = false;
-		Debug.Log(Object.op_Implicit("[RadarDebug] DISABLED"));
+		Debug.Log("[RadarDebug] DISABLED"));
 	}
 
 	internal static void UpdateRadarDebug()
@@ -15545,7 +15545,7 @@ namespace ModMenuCrew.Features
 			string playerRoomName = GetPlayerRoomName(position);
 			string currentMapName = GetCurrentMapName();
 			MapBounds currentMapBounds = GetCurrentMapBounds();
-			Debug.Log(Object.op_Implicit($"[RadarDebug] {currentMapName} | X: {value:F2} Y: {value2:F2} | ROOM: {playerRoomName} | BOUNDS: minX={currentMapBounds.minX:F1} maxX={currentMapBounds.maxX:F1} minY={currentMapBounds.minY:F1} maxY={currentMapBounds.maxY:F1}"));
+			Debug.Log("[RadarDebug] {currentMapName} | X: {value:F2} Y: {value2:F2} | ROOM: {playerRoomName} | BOUNDS: minX={currentMapBounds.minX:F1} maxX={currentMapBounds.maxX:F1} minY={currentMapBounds.minY:F1} maxY={currentMapBounds.maxY:F1}"));
 		}
 	}
 
@@ -15586,10 +15586,10 @@ namespace ModMenuCrew.Features
 				if ((Object)(object)item.roomArea != (Object)null)
 				{
 					Bounds bounds = item.roomArea.bounds;
-					val = Vector2.op_Implicit((bounds).size);
+					val = (bounds).size;
 				}
 				_roomBoundsCache[item.RoomId] = (position, val);
-				Debug.Log(Object.op_Implicit($"[RadarDebug] Room cached: {item.RoomId} at ({position.x:F2}, {position.y:F2}) size ({val.x:F2}, {val.y:F2})"));
+				Debug.Log("[RadarDebug] Room cached: {item.RoomId} at ({position.x:F2}, {position.y:F2}) size ({val.x:F2}, {val.y:F2})"));
 			}
 		}
 	}
@@ -15624,7 +15624,7 @@ namespace ModMenuCrew.Features
 		SystemTypes val;
 		foreach (PlainShipRoom item3 in (Il2CppArrayBase<PlainShipRoom>)(object)ShipStatus.Instance.AllRooms)
 		{
-			if ((Object)(object)item3 != (Object)null && (Object)(object)item3.roomArea != (Object)null && item3.roomArea.OverlapPoint(Vector2.op_Implicit(playerPos)))
+			if ((Object)(object)item3 != (Object)null && (Object)(object)item3.roomArea != (Object)null && item3.roomArea.OverlapPoint(playerPos))
 			{
 				val = item3.RoomId;
 				return val.ToString();
@@ -15799,21 +15799,21 @@ namespace ModMenuCrew.Features
 		//IL_072d: Unknown result type (might be due to invalid IL or missing references)
 		if ((Object)(object)ShipStatus.Instance == (Object)null)
 		{
-			Debug.Log(Object.op_Implicit("[RoomDump] ERROR: Not in a game (ShipStatus is null)"));
+			Debug.Log("[RoomDump] ERROR: Not in a game (ShipStatus is null)"));
 			return;
 		}
 		Il2CppReferenceArray<PlainShipRoom> allRooms = ShipStatus.Instance.AllRooms;
 		if (allRooms == null || ((Il2CppArrayBase<PlainShipRoom>)(object)allRooms).Length == 0)
 		{
-			Debug.Log(Object.op_Implicit("[RoomDump] ERROR: No rooms found"));
+			Debug.Log("[RoomDump] ERROR: No rooms found"));
 			return;
 		}
 		string currentMapName = GetCurrentMapName();
-		Debug.Log(Object.op_Implicit("[RoomDump] ═══════════════════════════════════════════════════════════"));
-		Debug.Log(Object.op_Implicit($"[RoomDump] MAP: {currentMapName} — {((Il2CppArrayBase<PlainShipRoom>)(object)allRooms).Length} rooms found"));
-		Debug.Log(Object.op_Implicit("[RoomDump] Format: new RoomData(centerX, centerY, width, height, SHAPE)"));
-		Debug.Log(Object.op_Implicit("[RoomDump] ═══════════════════════════════════════════════════════════"));
-		Debug.Log(Object.op_Implicit("[RoomDump] // ===== " + currentMapName + " — Auto-dumped from game engine ====="));
+		Debug.Log("[RoomDump] ═══════════════════════════════════════════════════════════"));
+		Debug.Log("[RoomDump] MAP: {currentMapName} — {((Il2CppArrayBase<PlainShipRoom>)(object)allRooms).Length} rooms found"));
+		Debug.Log("[RoomDump] Format: new RoomData(centerX, centerY, width, height, SHAPE)"));
+		Debug.Log("[RoomDump] ═══════════════════════════════════════════════════════════"));
+		Debug.Log("[RoomDump] // ===== " + currentMapName + " — Auto-dumped from game engine ====="));
 		int num = 0;
 		int num2 = 0;
 		SystemTypes roomId;
@@ -15837,8 +15837,8 @@ namespace ModMenuCrew.Features
 					value2 = (bounds).size.x;
 					value3 = (bounds).size.y;
 				}
-				Debug.Log(Object.op_Implicit($"[RoomDump] // {value} — center ({x:F2}, {y:F2}) size ({value2:F2} x {value3:F2})"));
-				Debug.Log(Object.op_Implicit($"[RoomDump] new RoomData({x:F2}f, {y:F2}f, {value2:F2}f, {value3:F2}f, SHAPE_RECT),"));
+				Debug.Log("[RoomDump] // {value} — center ({x:F2}, {y:F2}) size ({value2:F2} x {value3:F2})"));
+				Debug.Log("[RoomDump] new RoomData({x:F2}f, {y:F2}f, {value2:F2}f, {value3:F2}f, SHAPE_RECT),"));
 				num++;
 			}
 		}
@@ -15860,13 +15860,13 @@ namespace ModMenuCrew.Features
 					num3 = (bounds2).size.x;
 					num4 = (bounds2).size.y;
 				}
-				Debug.Log(Object.op_Implicit($"[RoomDump] // Hallway #{num2} — ({x2:F2}, {y2:F2}) size ({num3:F2} x {num4:F2}) {((num4 > num3) ? "VERT" : "HORIZ")}"));
-				Debug.Log(Object.op_Implicit($"[RoomDump] new RoomData({x2:F2}f, {y2:F2}f, {num3:F2}f, {num4:F2}f, false, true),"));
+				Debug.Log("[RoomDump] // Hallway #{num2} — ({x2:F2}, {y2:F2}) size ({num3:F2} x {num4:F2}) {((num4 > num3) ? "VERT" : "HORIZ")}"));
+				Debug.Log("[RoomDump] new RoomData({x2:F2}f, {y2:F2}f, {num3:F2}f, {num4:F2}f, false, true),"));
 				num2++;
 			}
 		}
-		Debug.Log(Object.op_Implicit($"[RoomDump] TOTAL: {num} rooms + {num2} hallways"));
-		Debug.Log(Object.op_Implicit("[RoomDump] ── RAW COLLIDER DATA ──"));
+		Debug.Log("[RoomDump] TOTAL: {num} rooms + {num2} hallways"));
+		Debug.Log("[RoomDump] ── RAW COLLIDER DATA ──"));
 		for (int k = 0; k < ((Il2CppArrayBase<PlainShipRoom>)(object)allRooms).Length; k++)
 		{
 			PlainShipRoom val3 = ((Il2CppArrayBase<PlainShipRoom>)(object)allRooms)[k];
@@ -15878,15 +15878,15 @@ namespace ModMenuCrew.Features
 				if ((Object)(object)val3.roomArea != (Object)null)
 				{
 					Bounds bounds3 = val3.roomArea.bounds;
-					Debug.Log(Object.op_Implicit($"[RoomDump] {value4,-20} pos=({position3.x:F3},{position3.y:F3}) center=({(bounds3).center.x:F3},{(bounds3).center.y:F3}) min=({(bounds3).min.x:F3},{(bounds3).min.y:F3}) max=({(bounds3).max.x:F3},{(bounds3).max.y:F3}) size=({(bounds3).size.x:F3},{(bounds3).size.y:F3})"));
+					Debug.Log("[RoomDump] {value4,-20} pos=({position3.x:F3},{position3.y:F3}) center=({(bounds3).center.x:F3},{(bounds3).center.y:F3}) min=({(bounds3).min.x:F3},{(bounds3).min.y:F3}) max=({(bounds3).max.x:F3},{(bounds3).max.y:F3}) size=({(bounds3).size.x:F3},{(bounds3).size.y:F3})"));
 				}
 				else
 				{
-					Debug.Log(Object.op_Implicit($"[RoomDump] {value4,-20} pos=({position3.x:F3},{position3.y:F3}) NO_COLLIDER"));
+					Debug.Log("[RoomDump] {value4,-20} pos=({position3.x:F3},{position3.y:F3}) NO_COLLIDER"));
 				}
 			}
 		}
-		Debug.Log(Object.op_Implicit("[RoomDump] ═══════════════════════════════════════════════════════════"));
+		Debug.Log("[RoomDump] ═══════════════════════════════════════════════════════════"));
 	}
 
 	private static void CheckLobbyChange()
@@ -16543,7 +16543,7 @@ namespace ModMenuCrew.Features
 				{
 					uint netId = ((InnerNetObject)PlayerControl.LocalPlayer).NetId;
 					uint netId2 = ((InnerNetObject)PlayerControl.LocalPlayer.MyPhysics).NetId;
-					Vector2 pos = Vector2.op_Implicit(((Component)PlayerControl.LocalPlayer).transform.position);
+					Vector2 pos = ((Component)PlayerControl.LocalPlayer).transform.position);
 					if (time - _v7 >= _AR_PRIMER)
 					{
 						_v7 = time;
@@ -16692,7 +16692,7 @@ namespace ModMenuCrew.Features
 				{
 					uint netId = ((InnerNetObject)PlayerControl.LocalPlayer).NetId;
 					uint netId2 = ((InnerNetObject)PlayerControl.LocalPlayer.MyPhysics).NetId;
-					Vector2 pos = Vector2.op_Implicit(((Component)PlayerControl.LocalPlayer).transform.position);
+					Vector2 pos = ((Component)PlayerControl.LocalPlayer).transform.position);
 					int num3 = 0;
 					Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 					while (enumerator.MoveNext())
