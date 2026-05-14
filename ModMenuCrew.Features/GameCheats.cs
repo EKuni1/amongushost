@@ -32,14 +32,12 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
-using IEnumeratorGeneric = System.Collections.Generic.IEnumerator<object>;
-using IDisposableType = System.IDisposable;
-using TypeAlias = System.Type;
 
-namespace ModMenuCrew.Features;
-
-public static class GameCheats
+namespace ModMenuCrew.Features
 {
+    public static class GameCheats
+    {
+
 	[HarmonyPatch(typeof(CustomNetworkTransform), "FixedUpdate")]
 	public static class FakeLagPatch
 	{
@@ -17154,4 +17152,5 @@ public static class GameCheats
 		{
 		}
 	}
+}
 }
