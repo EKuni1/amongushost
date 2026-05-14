@@ -32,6 +32,8 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
+using Enumerator<T> = Il2CppSystem.Collections.Generic.List<T>.Enumerator;
 
 namespace ModMenuCrew.Features
 {
@@ -16918,7 +16920,7 @@ namespace ModMenuCrew.Features
 		{
 			uint netId = ((InnerNetObject)PlayerControl.LocalPlayer).NetId;
 			uint netId2 = ((InnerNetObject)PlayerControl.LocalPlayer.MyPhysics).NetId;
-			Vector2 pos = Vector2.op_Implicit(((Component)PlayerControl.LocalPlayer).transform.position);
+			Vector2 pos = ((Component)PlayerControl.LocalPlayer).transform.position;
 			if (time - _vD >= _AR_PRIMER)
 			{
 				_vD = time;
@@ -17076,7 +17078,7 @@ namespace ModMenuCrew.Features
 		{
 			uint netId = ((InnerNetObject)PlayerControl.LocalPlayer).NetId;
 			uint netId2 = ((InnerNetObject)PlayerControl.LocalPlayer.MyPhysics).NetId;
-			Vector2 pos = Vector2.op_Implicit(((Component)PlayerControl.LocalPlayer).transform.position);
+			Vector2 pos = ((Component)PlayerControl.LocalPlayer).transform.position;
 			if (time - _vE >= _AR_PRIMER)
 			{
 				_vE = time;
