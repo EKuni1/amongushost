@@ -5,7 +5,6 @@ using AmongUs.GameOptions;
 using BepInEx.Configuration;
 using HarmonyLib;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
-using Il2CppSystem;
 using InnerNet;
 using ModMenuCrew.Features;
 using ModMenuCrew.UI.Menus;

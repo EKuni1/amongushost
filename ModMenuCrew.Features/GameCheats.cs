@@ -9,6 +9,8 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using AmongUs.GameOptions;
+using AmongUs.GameTasks;
+using AmongUs.ShipStatus;
 using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Core.Logging.Interpolation;
@@ -3464,7 +3466,7 @@ public static class GameCheats
 	{
 		public PlayerTask task;
 
-		internal bool _003CCompleteAllTasksWithDelay_003Eb__0(Il2CppAmongUs.GameTasks.TaskInfo t)
+		internal bool _003CCompleteAllTasksWithDelay_003Eb__0(TaskInfo t)
 		{
 			return t.Id == task.Id;
 		}
@@ -4104,7 +4106,7 @@ public static class GameCheats
 					CS_0024_003C_003E8__locals0.task.Complete();
 					try
 					{
-						Il2CppAmongUs.GameTasks.TaskInfo val4 = ((IEnumerable<Il2CppAmongUs.GameTasks.TaskInfo>)PlayerControl.LocalPlayer.Data.Tasks.ToArray()).FirstOrDefault((Func<Il2CppAmongUs.GameTasks.TaskInfo, bool>)((Il2CppAmongUs.GameTasks.TaskInfo t) => t.Id == CS_0024_003C_003E8__locals0.task.Id));
+						TaskInfo val4 = ((IEnumerable<TaskInfo>)PlayerControl.LocalPlayer.Data.Tasks.ToArray()).FirstOrDefault((Func<TaskInfo, bool>)((TaskInfo t) => t.Id == CS_0024_003C_003E8__locals0.task.Id));
 						if (val4 != null)
 						{
 							val4.Complete = true;
@@ -5395,7 +5397,7 @@ public static class GameCheats
 
 	private const float RADAR_MAP_ZOOM_MAX = 3f;
 
-	private static Dictionary<Il2CppAmongUs.ShipStatus.MapTypes, Texture2D> _mapTextures = new Dictionary<Il2CppAmongUs.ShipStatus.MapTypes, Texture2D>();
+	private static Dictionary<MapTypes, Texture2D> _mapTextures = new Dictionary<MapTypes, Texture2D>();
 
 	private static bool _mapTextureLoaded = false;
 
@@ -5413,26 +5415,26 @@ public static class GameCheats
 
 	private static Vector2 _localPos;
 
-	private static Il2CppAmongUs.ShipStatus.MapTypes _currentMapType;
+	private static MapTypes _currentMapType;
 
 	private static bool _isAirship = false;
 
-	private static readonly Dictionary<Il2CppAmongUs.ShipStatus.MapTypes, MapInfo> MapInfos = new Dictionary<Il2CppAmongUs.ShipStatus.MapTypes, MapInfo>
+	private static readonly Dictionary<MapTypes, MapInfo> MapInfos = new Dictionary<MapTypes, MapInfo>
 	{
 		{
-			(Il2CppAmongUs.ShipStatus.MapTypes)0,
+			(MapTypes)0,
 			new MapInfo(0f, 0f, 4.4f, -25.5f, 21.3f, -19.4f, 8.7f, -23.56f, 19.56f, -17.34f, 7.34f)
 		},
 		{
-			(Il2CppAmongUs.ShipStatus.MapTypes)1,
+			(MapTypes)1,
 			new MapInfo(0f, 0f, 4.4f, -13.1f, 30.9f, -5.3f, 27.2f)
 		},
 		{
-			(Il2CppAmongUs.ShipStatus.MapTypes)2,
+			(MapTypes)2,
 			new MapInfo(0f, 0f, 4.4f, -1.4f, 42.7f, -28f, 3.7f)
 		},
 		{
-			(Il2CppAmongUs.ShipStatus.MapTypes)3,
+			(MapTypes)3,
 			new MapInfo(0f, 0f, 4.4f, -25f, 27.5f, -13.5f, 16f)
 		}
 	};
@@ -12549,7 +12551,7 @@ public static class GameCheats
 			_radarInitialized = false;
 			_mapTextureLoaded = false;
 			_sonarInitialized = false;
-			foreach (Il2CppAmongUs.ShipStatus.MapTypes item in new List<Il2CppAmongUs.ShipStatus.MapTypes>(_mapTextures.Keys))
+			foreach (MapTypes item in new List<MapTypes>(_mapTextures.Keys))
 			{
 				Texture2D tex = _mapTextures[item];
 				DestroyTex(ref tex);
@@ -12951,10 +12953,10 @@ public static class GameCheats
 		{
 			try
 			{
-				LoadAndStoreMapTexture((Il2CppAmongUs.ShipStatus.MapTypes)0, RadarMapData.SkeldMapBase64);
-				LoadAndStoreMapTexture((Il2CppAmongUs.ShipStatus.MapTypes)1, RadarMapData.MiraHqMapBase64);
-				LoadAndStoreMapTexture((Il2CppAmongUs.ShipStatus.MapTypes)2, RadarMapData.PolusMapBase64);
-				LoadAndStoreMapTexture((Il2CppAmongUs.ShipStatus.MapTypes)3, RadarMapData.FungleMapBase64);
+				LoadAndStoreMapTexture((MapTypes)0, RadarMapData.SkeldMapBase64);
+				LoadAndStoreMapTexture((MapTypes)1, RadarMapData.MiraHqMapBase64);
+				LoadAndStoreMapTexture((MapTypes)2, RadarMapData.PolusMapBase64);
+				LoadAndStoreMapTexture((MapTypes)3, RadarMapData.FungleMapBase64);
 				LoadAirshipTexture();
 				Debug.Log(Object.op_Implicit($"[RADAR] All map textures loaded. Count: {_mapTextures.Count}"));
 			}
@@ -12966,7 +12968,7 @@ public static class GameCheats
 		}
 	}
 
-	private static void LoadAndStoreMapTexture(Il2CppAmongUs.ShipStatus.MapTypes mapType, string base64Data)
+	private static void LoadAndStoreMapTexture(MapTypes mapType, string base64Data)
 	{
 		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
 		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
@@ -12984,7 +12986,7 @@ public static class GameCheats
 		}
 	}
 
-	private static Texture2D LoadSingleMapTexture(Il2CppAmongUs.ShipStatus.MapTypes mapType, string base64Data)
+	private static Texture2D LoadSingleMapTexture(MapTypes mapType, string base64Data)
 	{
 		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00e4: Unknown result type (might be due to invalid IL or missing references)
@@ -13505,7 +13507,7 @@ public static class GameCheats
 			GameOptionsManager instance = GameOptionsManager.Instance;
 			if (((instance != null) ? instance.CurrentGameOptions : null) != null)
 			{
-				_currentMapType = (Il2CppAmongUs.ShipStatus.MapTypes)GameOptionsManager.Instance.CurrentGameOptions.MapId;
+				_currentMapType = (MapTypes)GameOptionsManager.Instance.CurrentGameOptions.MapId;
 				_cachedMapName = GetMapName(_currentMapType);
 			}
 			else if ((Object)(object)LobbyBehaviour.Instance != (Object)null)
@@ -13518,7 +13520,7 @@ public static class GameCheats
 		}
 	}
 
-	private static string GetMapName(Il2CppAmongUs.ShipStatus.MapTypes mapType)
+	private static string GetMapName(MapTypes mapType)
 	{
 		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
@@ -13550,7 +13552,7 @@ public static class GameCheats
 		return "UNKNOWN";
 	}
 
-	private static string GetWebRadarMapKey(Il2CppAmongUs.ShipStatus.MapTypes mapType)
+	private static string GetWebRadarMapKey(MapTypes mapType)
 	{
 		//IL_000d: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0016: Unknown result type (might be due to invalid IL or missing references)
@@ -15689,7 +15691,7 @@ public static class GameCheats
 		{
 			return "UNKNOWN";
 		}
-		Il2CppAmongUs.ShipStatus.MapTypes type = ShipStatus.Instance.Type;
+		MapTypes type = ShipStatus.Instance.Type;
 		if ((int)type == 0)
 		{
 			return "SKELD";
