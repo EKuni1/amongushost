@@ -13285,9 +13285,6 @@ namespace ModMenuCrew.Features
 			{
 			}
 		}
-		catch
-		{
-		}
 		_deadBodyCacheCount = 0;
 		if (RadarShowDeadBodies)
 		{
