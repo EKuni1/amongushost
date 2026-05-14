@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using AmongUs.GameOptions;
-using Il2CppSystem;
 using UnityEngine;
 
 namespace ModMenuCrew.Features;

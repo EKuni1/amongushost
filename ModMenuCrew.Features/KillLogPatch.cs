@@ -1,8 +1,6 @@
 using System;
 using BepInEx.Configuration;
 using HarmonyLib;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
 using UnityEngine;
 
 namespace ModMenuCrew.Features;

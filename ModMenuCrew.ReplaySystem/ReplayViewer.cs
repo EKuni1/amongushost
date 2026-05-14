@@ -11,9 +11,6 @@ using BepInEx.Unity.IL2CPP.Utils.Collections;
 using Il2CppInterop.Runtime.Attributes;
 using Il2CppInterop.Runtime.InteropTypes;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
-using Il2CppSystem.Reflection;
 using Innersloth.Assets;
 using ModMenuCrew.Features;
 using PowerTools;
@@ -26,7 +23,7 @@ namespace ModMenuCrew.ReplaySystem;
 public class ReplayViewer : MonoBehaviour
 {
 	[CompilerGenerated]
-	private sealed class _003CCoLoadCosmeticsFromAssets_003Ed__69 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCoLoadCosmeticsFromAssets_003Ed__69 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -52,7 +49,7 @@ public class ReplayViewer : MonoBehaviour
 
 		private VisorViewData _003CvisorView_003E5__7;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -61,7 +58,7 @@ public class ReplayViewer : MonoBehaviour
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -77,7 +74,7 @@ public class ReplayViewer : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003ChatAsset_003E5__2 = null;
 			_003ChatView_003E5__3 = null;
@@ -470,14 +467,14 @@ public class ReplayViewer : MonoBehaviour
 			return false;
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}

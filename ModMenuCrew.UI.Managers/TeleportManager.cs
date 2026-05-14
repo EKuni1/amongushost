@@ -4,8 +4,6 @@ using System.Linq;
 using System.Security.Cryptography;
 using Hazel;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
 using InnerNet;
 using UnityEngine;
 

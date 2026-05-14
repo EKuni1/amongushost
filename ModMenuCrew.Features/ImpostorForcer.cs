@@ -9,8 +9,6 @@ using AmongUs.GameOptions;
 using HarmonyLib;
 using Hazel;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
 using InnerNet;
 using ModMenuCrew.UI.Menus;
 using UnityEngine;

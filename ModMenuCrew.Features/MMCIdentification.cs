@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using BepInEx.Configuration;
 using Hazel;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
 using InnerNet;
 using ModMenuCrew.Messages;
 using TMPro;
