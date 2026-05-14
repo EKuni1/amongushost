@@ -1,6 +1,5 @@
 using AmongUs.Data;
 using HarmonyLib;
-using Il2CppSystem;
 using UnityEngine;
 
 namespace ModMenuCrew.Features;

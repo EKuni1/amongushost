@@ -1,7 +1,6 @@
 using System;
 using System.Runtime.CompilerServices;
 using AmongUs.GameOptions;
-using Il2CppSystem;
 using InnerNet;
 using UnityEngine;
 

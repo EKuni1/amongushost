@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using BepInEx;
-using Il2CppSystem;
 using UnityEngine;
 
 namespace ModMenuCrew.Features;

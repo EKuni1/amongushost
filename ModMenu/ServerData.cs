@@ -4,7 +4,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Threading;
-using Il2CppSystem;
 using ModMenuCrew.Features;
 using ModMenuCrew.Networking;
 using UnityEngine;

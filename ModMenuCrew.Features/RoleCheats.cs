@@ -1,7 +1,5 @@
 using System;
 using HarmonyLib;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
 using ModMenuCrew.UI.Managers;
 using UnityEngine;
 

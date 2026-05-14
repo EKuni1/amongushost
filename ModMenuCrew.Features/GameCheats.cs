@@ -3472,7 +3472,7 @@ public static class GameCheats
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CBypassScannerWithTimeout_003Ed__200 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CBypassScannerWithTimeout_003Ed__200 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3480,7 +3480,7 @@ public static class GameCheats
 
 		public float duration;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -3489,7 +3489,7 @@ public static class GameCheats
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -3505,7 +3505,7 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -3531,21 +3531,21 @@ public static class GameCheats
 			}
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CCoSmartVentAfterKill_003Ed__576 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCoSmartVentAfterKill_003Ed__576 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3557,7 +3557,7 @@ public static class GameCheats
 
 		private float _003Ctimeout_003E5__3;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -3566,7 +3566,7 @@ public static class GameCheats
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -3582,7 +3582,7 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003ClocalPlayer_003E5__2 = null;
 			_003C_003E1__state = -2;
@@ -3776,21 +3776,21 @@ public static class GameCheats
 			}
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CCompleteAllTasksOptimized_003Ed__191 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCompleteAllTasksOptimized_003Ed__191 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3808,7 +3808,7 @@ public static class GameCheats
 
 		private IEnumerator<PlayerTask> _003C_003E7__wrap5;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -3817,7 +3817,7 @@ public static class GameCheats
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -3833,7 +3833,7 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			int num = _003C_003E1__state;
 			if (num == -3 || (uint)(num - 1) <= 2u)
@@ -3976,7 +3976,7 @@ public static class GameCheats
 			return result;
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
@@ -3992,14 +3992,14 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CCompleteAllTasksWithDelay_003Ed__192 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCompleteAllTasksWithDelay_003Ed__192 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4011,7 +4011,7 @@ public static class GameCheats
 
 		private IEnumerator<PlayerTask> _003C_003E7__wrap2;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4020,7 +4020,7 @@ public static class GameCheats
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4036,7 +4036,7 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			int num = _003C_003E1__state;
 			if (num == -3 || (uint)(num - 1) <= 1u)
@@ -4139,7 +4139,7 @@ public static class GameCheats
 			}
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
@@ -4155,14 +4155,14 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CDelayedKillBypass_003Ed__220 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CDelayedKillBypass_003Ed__220 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4176,7 +4176,7 @@ public static class GameCheats
 
 		public bool broadcast;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4185,7 +4185,7 @@ public static class GameCheats
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4201,7 +4201,7 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -4239,21 +4239,21 @@ public static class GameCheats
 			}
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CGhostCleanupCoroutine_003Ed__104 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CGhostCleanupCoroutine_003Ed__104 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4265,7 +4265,7 @@ public static class GameCheats
 
 		public int selfClientId;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4274,7 +4274,7 @@ public static class GameCheats
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4290,7 +4290,7 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -4345,21 +4345,21 @@ public static class GameCheats
 			}
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CKillAllCoroutine_003Ed__251 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CKillAllCoroutine_003Ed__251 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4375,7 +4375,7 @@ public static class GameCheats
 
 		private PlayerControl _003Ctarget_003E5__4;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4384,7 +4384,7 @@ public static class GameCheats
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4400,7 +4400,7 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			int num = _003C_003E1__state;
 			if (num == -3 || num == 1)
@@ -4476,7 +4476,7 @@ public static class GameCheats
 			}
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
@@ -4489,14 +4489,14 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CLocalDisableScansAfterDelay_003Ed__214 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CLocalDisableScansAfterDelay_003Ed__214 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4504,7 +4504,7 @@ public static class GameCheats
 
 		public float delay;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4513,7 +4513,7 @@ public static class GameCheats
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4529,7 +4529,7 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -4560,27 +4560,27 @@ public static class GameCheats
 			}
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSendFakePositionCoroutine_003Ed__233 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSendFakePositionCoroutine_003Ed__233 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
 		private object _003C_003E2__current;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4589,7 +4589,7 @@ public static class GameCheats
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4605,7 +4605,7 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -4636,21 +4636,21 @@ public static class GameCheats
 			return true;
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CWalkScanRoutine_003Ed__210 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CWalkScanRoutine_003Ed__210 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4674,7 +4674,7 @@ public static class GameCheats
 
 		private float _003Ctimer_003E5__10;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4683,7 +4683,7 @@ public static class GameCheats
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4699,7 +4699,7 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Clp_003E5__2 = null;
 			_003Cship_003E5__3 = null;
@@ -4925,21 +4925,21 @@ public static class GameCheats
 			return false;
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}
 	}
 
 	[CompilerGenerated]
-	private sealed class _003C_StaggeredDespawnCoroutine_003Ed__671 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003C_StaggeredDespawnCoroutine_003Ed__671 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4951,7 +4951,7 @@ public static class GameCheats
 
 		private int _003Ci_003E5__3;
 
-		object IEnumerator<object>.Current
+		object System.Collections.Generic.IEnumerator<object>.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4960,7 +4960,7 @@ public static class GameCheats
 			}
 		}
 
-		object IEnumerator.Current
+		object System.Collections.IEnumerator.Current
 		{
 			[DebuggerHidden]
 			get
@@ -4976,7 +4976,7 @@ public static class GameCheats
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -5039,14 +5039,14 @@ public static class GameCheats
 			return false;
 		}
 
-		bool IEnumerator.MoveNext()
+		bool System.Collections.IEnumerator.MoveNext()
 		{
 			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 			return this.MoveNext();
 		}
 
 		[DebuggerHidden]
-		void IEnumerator.Reset()
+		void System.Collections.IEnumerator.Reset()
 		{
 			throw new NotSupportedException();
 		}

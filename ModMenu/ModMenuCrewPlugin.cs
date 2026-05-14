@@ -27,8 +27,6 @@ using Il2CppInterop.Runtime.Attributes;
 using Il2CppInterop.Runtime.Injection;
 using Il2CppInterop.Runtime.InteropTypes;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
 using InnerNet;
 using Microsoft.Win32;
 using ModMenuCrew.Easing;
@@ -293,7 +291,7 @@ public class ModMenuCrewPlugin : BasePlugin
 		}
 
 		[CompilerGenerated]
-		private sealed class _003CAnimatePopupContent_003Ed__315 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CAnimatePopupContent_003Ed__315 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 		{
 			private int _003C_003E1__state;
 
@@ -309,7 +307,7 @@ public class ModMenuCrewPlugin : BasePlugin
 
 			private float _003Celapsed_003E5__3;
 
-			object IEnumerator<object>.Current
+			object System.Collections.Generic.IEnumerator<object>.Current
 			{
 				[DebuggerHidden]
 				get
@@ -318,7 +316,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				}
 			}
 
-			object IEnumerator.Current
+			object System.Collections.IEnumerator.Current
 			{
 				[DebuggerHidden]
 				get
@@ -334,7 +332,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 
 			[DebuggerHidden]
-			void IDisposable.Dispose()
+			void System.IDisposable.Dispose()
 			{
 				_003C_003E1__state = -2;
 			}
@@ -465,21 +463,21 @@ public class ModMenuCrewPlugin : BasePlugin
 				return false;
 			}
 
-			bool IEnumerator.MoveNext()
+			bool System.Collections.IEnumerator.MoveNext()
 			{
 				//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 				return this.MoveNext();
 			}
 
 			[DebuggerHidden]
-			void IEnumerator.Reset()
+			void System.Collections.IEnumerator.Reset()
 			{
 				throw new NotSupportedException();
 			}
 		}
 
 		[CompilerGenerated]
-		private sealed class _003CLoadDiscordAvatarCoroutine_003Ed__238 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CLoadDiscordAvatarCoroutine_003Ed__238 : System.Collections.Generic.IEnumerator<object>, System.Collections.IEnumerator, System.IDisposable
 		{
 			private int _003C_003E1__state;
 
@@ -491,7 +489,7 @@ public class ModMenuCrewPlugin : BasePlugin
 
 			private float _003Ctimeout_003E5__2;
 
-			object IEnumerator<object>.Current
+			object System.Collections.Generic.IEnumerator<object>.Current
 			{
 				[DebuggerHidden]
 				get
@@ -500,7 +498,7 @@ public class ModMenuCrewPlugin : BasePlugin
 				}
 			}
 
-			object IEnumerator.Current
+			object System.Collections.IEnumerator.Current
 			{
 				[DebuggerHidden]
 				get
@@ -516,7 +514,7 @@ public class ModMenuCrewPlugin : BasePlugin
 			}
 
 			[DebuggerHidden]
-			void IDisposable.Dispose()
+			void System.IDisposable.Dispose()
 			{
 				_003C_003E8__1 = null;
 				_003C_003E1__state = -2;
@@ -681,14 +679,14 @@ public class ModMenuCrewPlugin : BasePlugin
 				return false;
 			}
 
-			bool IEnumerator.MoveNext()
+			bool System.Collections.IEnumerator.MoveNext()
 			{
 				//ILSpy generated this explicit interface implementation from .override directive in MoveNext
 				return this.MoveNext();
 			}
 
 			[DebuggerHidden]
-			void IEnumerator.Reset()
+			void System.Collections.IEnumerator.Reset()
 			{
 				throw new NotSupportedException();
 			}

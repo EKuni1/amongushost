@@ -1,5 +1,4 @@
 using BepInEx.Configuration;
-using Il2CppSystem.Collections.Generic;
 using InnerNet;
 using TMPro;
 using UnityEngine;
