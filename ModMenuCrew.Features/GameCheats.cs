@@ -11119,7 +11119,7 @@ namespace ModMenuCrew.Features
 						float num2 = float.MaxValue;
 						for (int j = 0; j < ((Il2CppArrayBase<Vent>)(object)allVents).Length; j++)
 						{
-							float num3 = Vector2.Distance(((Component)val).transform.position), ((Component)((Il2CppArrayBase<Vent>)(object)allVents)[j]).transform.position));
+							float num3 = Vector2.Distance(((Component)val).transform.position, ((Component)((Il2CppArrayBase<Vent>)(object)allVents)[j]).transform.position);
 							if (num3 < num2)
 							{
 								num2 = num3;
