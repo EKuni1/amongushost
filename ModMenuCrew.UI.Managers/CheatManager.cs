@@ -7,6 +7,7 @@ using ModMenuCrew.Features;
 using ModMenuCrew.UI.Menus;
 using ModMenuCrew.UI.Styles;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace ModMenuCrew.UI.Managers;
 

@@ -33,7 +33,7 @@ using UnityEngine.Events;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
-using Enumerator<T> = Il2CppSystem.Collections.Generic.List<T>.Enumerator;
+using Debug = UnityEngine.Debug;
 
 namespace ModMenuCrew.Features
 {
@@ -480,7 +480,7 @@ namespace ModMenuCrew.Features
 				return;
 			}
 			PlayerControl val = null;
-			Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
 				PlayerControl current = enumerator.Current;
@@ -544,7 +544,7 @@ namespace ModMenuCrew.Features
 				try
 				{
 					uint num = reader.ReadPackedUInt32();
-					Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+					Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 					while (enumerator.MoveNext())
 					{
 						PlayerControl current = enumerator.Current;
@@ -1374,7 +1374,7 @@ namespace ModMenuCrew.Features
 				Vector2 truePosition = localPlayer.GetTruePosition();
 				PlayerControl val = null;
 				float num = float.MaxValue;
-				Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+				Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					PlayerControl current = enumerator.Current;
@@ -1780,7 +1780,7 @@ namespace ModMenuCrew.Features
 			}
 			try
 			{
-				Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+				Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					PlayerControl current = enumerator.Current;
@@ -2322,7 +2322,7 @@ namespace ModMenuCrew.Features
 			//IL_002e: Unknown result type (might be due to invalid IL or missing references)
 			try
 			{
-				Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+				Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					PlayerControl current = enumerator.Current;
@@ -2422,7 +2422,7 @@ namespace ModMenuCrew.Features
 				{
 					return;
 				}
-				Enumerator<SpriteRenderer> enumerator2;
+				Il2CppSystem.Collections.Generic.List<SpriteRenderer>.Enumerator enumerator2;
 				foreach (PlayerVoteArea item in (Il2CppArrayBase<PlayerVoteArea>)(object)__instance.playerStates)
 				{
 					if ((Object)(object)item == (Object)null)
@@ -2519,7 +2519,7 @@ namespace ModMenuCrew.Features
 					}
 					NetworkedPlayerInfo val = null;
 					int voterColorId = 0;
-					Enumerator<PlayerControl> enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
+					Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
 					while (enumerator2.MoveNext())
 					{
 						PlayerControl current2 = enumerator2.Current;
@@ -2751,7 +2751,7 @@ namespace ModMenuCrew.Features
 		public static void Postfix()
 		{
 			float @float = GameOptionsManager.Instance.CurrentGameOptions.GetFloat((FloatOptionNames)1);
-			Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
 				PlayerControl current = enumerator.Current;
@@ -2776,7 +2776,7 @@ namespace ModMenuCrew.Features
 			{
 				killTimer = GameOptionsManager.Instance.CurrentGameOptions.GetFloat((FloatOptionNames)1);
 			}
-			Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
 				PlayerControl current = enumerator.Current;
@@ -3466,7 +3466,7 @@ namespace ModMenuCrew.Features
 
 		internal bool _003CCompleteAllTasksWithDelay_003Eb__0(PlayerTask t)
 		{
-			return t.TaskId == task.Id;
+			return t.Id == task.Id;
 		}
 	}
 
@@ -3648,7 +3648,7 @@ namespace ModMenuCrew.Features
 						return false;
 					}
 					List<Vector2> list = new List<Vector2>(15);
-					Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+					Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 					while (enumerator.MoveNext())
 					{
 						PlayerControl current = enumerator.Current;
@@ -4104,10 +4104,10 @@ namespace ModMenuCrew.Features
 					CS_0024_003C_003E8__locals0.task.Complete();
 					try
 					{
-						PlayerTask val4 = PlayerControl.LocalPlayer.Data.Tasks.ToArray().FirstOrDefault((Func<PlayerTask, bool>)((PlayerTask t) => t.TaskId == CS_0024_003C_003E8__locals0.task.Id));
+						PlayerTask val4 = PlayerControl.LocalPlayer.Data.Tasks.ToArray().FirstOrDefault((Func<PlayerTask, bool>)((PlayerTask t) => t.Id == CS_0024_003C_003E8__locals0.task.Id));
 						if (val4 != null)
 						{
-							val4.Complete = true;
+							val4.CompleteTask();
 						}
 					}
 					catch
@@ -4549,7 +4549,7 @@ namespace ModMenuCrew.Features
 			case 1:
 			{
 				_003C_003E1__state = -1;
-				Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+				Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					LocalToggleScanner(enumerator.Current, on: false);
@@ -4628,7 +4628,7 @@ namespace ModMenuCrew.Features
 				_003C_003E1__state = -1;
 			}
 			Vector2 val = default(Vector2);
-			(val)._002Ector(1000f, 1000f);
+			new Vector2(1000f, 1000f);
 			PlayerControl.LocalPlayer.NetTransform.SnapTo(val);
 			_003C_003E2__current = (object)new WaitForSeconds(0.2f);
 			_003C_003E1__state = 1;
@@ -7630,7 +7630,7 @@ namespace ModMenuCrew.Features
 		{
 			return;
 		}
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -7699,7 +7699,7 @@ namespace ModMenuCrew.Features
 			return;
 		}
 		PlayerControl val = null;
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -7736,7 +7736,7 @@ namespace ModMenuCrew.Features
 			return;
 		}
 		PlayerControl val = null;
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -7818,7 +7818,7 @@ namespace ModMenuCrew.Features
 				}
 			}
 		}
-		Enumerator<PlayerControl> enumerator3 = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator3 = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator3.MoveNext())
 		{
 			PlayerControl current3 = enumerator3.Current;
@@ -7968,7 +7968,7 @@ namespace ModMenuCrew.Features
 			}
 			num2 += value.Count;
 			PlayerControl val = null;
-			Enumerator<PlayerControl> enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator2.MoveNext())
 			{
 				PlayerControl current2 = enumerator2.Current;
@@ -8087,7 +8087,7 @@ namespace ModMenuCrew.Features
 			byte key = keyValuePair.Key;
 			_CFState value2 = keyValuePair.Value;
 			PlayerControl val2 = null;
-			Enumerator<PlayerControl> enumerator3 = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator3 = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator3.MoveNext())
 			{
 				PlayerControl current3 = enumerator3.Current;
@@ -8639,7 +8639,7 @@ namespace ModMenuCrew.Features
 				return;
 			}
 			int num = 0;
-			Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
 				PlayerControl current = enumerator.Current;
@@ -8687,7 +8687,7 @@ namespace ModMenuCrew.Features
 				byte b = (byte)(PlayerControl.LocalPlayer.scannerCount + 1);
 				PlayerControl.LocalPlayer.scannerCount = b;
 				PlayerControl.LocalPlayer.SetScanner(value, b);
-				Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+				Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					PlayerControl current = enumerator.Current;
@@ -8870,7 +8870,7 @@ namespace ModMenuCrew.Features
 	{
 		byte b2 = (lp.scannerCount += 1);
 		lp.MyPhysics.Animations.PlayScanner(on, false, lp.cosmetics.FlipX);
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -8933,7 +8933,7 @@ namespace ModMenuCrew.Features
 	{
 		if (!((Object)(object)PlayerControl.LocalPlayer == (Object)null))
 		{
-			Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
 				LocalToggleScanner(enumerator.Current, on: true);
@@ -9070,7 +9070,7 @@ namespace ModMenuCrew.Features
 			{
 				target.Data.IsDead = true;
 			}
-			Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
 				PlayerControl current = enumerator.Current;
@@ -9123,7 +9123,7 @@ namespace ModMenuCrew.Features
 			((MonoBehaviour)DestroyableSingleton<HudManager>.Instance).StartCoroutine(CollectionExtensions.WrapToIl2Cpp(DelayedKillBypass(killer, target, delay, broadcast: true)));
 			return;
 		}
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -9174,7 +9174,7 @@ namespace ModMenuCrew.Features
 			LogCheat("Reveal Sus OFF!");
 			try
 			{
-				Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+				Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					PlayerControl current = enumerator.Current;
@@ -9329,7 +9329,7 @@ namespace ModMenuCrew.Features
 		}
 		try
 		{
-			Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
 				PlayerControl current = enumerator.Current;
@@ -9451,7 +9451,7 @@ namespace ModMenuCrew.Features
 				}
 				byte targetPlayerId = item.TargetPlayerId;
 				PlayerControl val = null;
-				Enumerator<PlayerControl> enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
+				Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
 				while (enumerator2.MoveNext())
 				{
 					PlayerControl current2 = enumerator2.Current;
@@ -10731,7 +10731,7 @@ namespace ModMenuCrew.Features
 		try
 		{
 			PlayerControl val = null;
-			Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
 				PlayerControl current = enumerator.Current;
@@ -10759,7 +10759,7 @@ namespace ModMenuCrew.Features
 			{
 				try
 				{
-					Enumerator<ClientData> enumerator2 = ((InnerNetClient)AmongUsClient.Instance).allClients.GetEnumerator();
+					Il2CppSystem.Collections.Generic.List<ClientData>.Enumerator enumerator2 = ((InnerNetClient)AmongUsClient.Instance).allClients.GetEnumerator();
 					while (enumerator2.MoveNext())
 					{
 						ClientData current2 = enumerator2.Current;
@@ -10796,7 +10796,7 @@ namespace ModMenuCrew.Features
 	internal static void KickPlayerByName(string playerName, bool ban = false)
 	{
 		PlayerControl val = null;
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -11158,7 +11158,7 @@ namespace ModMenuCrew.Features
 			return;
 		}
 		PlayerControl val = null;
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -11216,7 +11216,7 @@ namespace ModMenuCrew.Features
 	internal static void ProtectPlayerByName(string playerName, float duration = 10f)
 	{
 		PlayerControl val = null;
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -11248,7 +11248,7 @@ namespace ModMenuCrew.Features
 			return;
 		}
 		PlayerControl val = null;
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -11289,7 +11289,7 @@ namespace ModMenuCrew.Features
 		{
 			return null;
 		}
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -11304,7 +11304,7 @@ namespace ModMenuCrew.Features
 	internal static List<(byte PlayerId, string Name, bool IsImpostor)> GetAlivePlayersForProtection()
 	{
 		_alivePlayersBuffer.Clear();
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -11324,7 +11324,7 @@ namespace ModMenuCrew.Features
 	{
 		_allPlayersBuffer.Clear();
 		PlayerControl localPlayer = PlayerControl.LocalPlayer;
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -11477,7 +11477,7 @@ namespace ModMenuCrew.Features
 			Debug.LogWarning(Object.op_Implicit("[HostSetAllColors] Only the HOST can use this."));
 			return;
 		}
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -11531,7 +11531,7 @@ namespace ModMenuCrew.Features
 		_colorBurstLastSend = time;
 		KeyValuePair<byte, int> keyValuePair = _colorBurstQ.Dequeue();
 		PlayerControl val = null;
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -11634,7 +11634,7 @@ namespace ModMenuCrew.Features
 		foreach (byte item in new List<byte>(_playerRainbowPhases.Keys))
 		{
 			PlayerControl val = null;
-			Enumerator<PlayerControl> enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator2.MoveNext())
 			{
 				PlayerControl current2 = enumerator2.Current;
@@ -11703,7 +11703,7 @@ namespace ModMenuCrew.Features
 				return;
 			}
 			List<PlayerControl> list = new List<PlayerControl>(16);
-			Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
 				PlayerControl current = enumerator.Current;
@@ -11748,7 +11748,7 @@ namespace ModMenuCrew.Features
 			return;
 		}
 		int length = ((Il2CppArrayBase<Color32>)(object)Palette.PlayerColors).Length;
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -11911,7 +11911,7 @@ namespace ModMenuCrew.Features
 		{
 			return;
 		}
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -12086,7 +12086,7 @@ namespace ModMenuCrew.Features
 			if (!flag2)
 			{
 				Vector3 val = default(Vector3);
-				(val)._002Ector(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
+				new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
 				float num = freeCamSpeed;
 				if (Input.GetKey((KeyCode)304))
 				{
@@ -12366,7 +12366,7 @@ namespace ModMenuCrew.Features
 			Vector3 position = ((Component)PlayerControl.LocalPlayer).transform.position;
 			position.z = -2f;
 			_tracerActiveIdsBuffer.Clear();
-			Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
 				PlayerControl current = enumerator.Current;
@@ -12933,7 +12933,7 @@ namespace ModMenuCrew.Features
 			for (int k = 0; k < 64; k++)
 			{
 				float num = 1f - (float)k / 64f;
-				(val)._002Ector(0.2f, 1f, 0.4f, num * 0.6f);
+				new Vector2(0.2f, 1f, 0.4f, num * 0.6f);
 				_texSonarLine.SetPixel(0, k, val);
 				_texSonarLine.SetPixel(1, k, val);
 			}
@@ -14000,7 +14000,7 @@ namespace ModMenuCrew.Features
 				return;
 			}
 			Rect val = default(Rect);
-			(val)._002Ector(x + 4f, y + 24f + 2f, width - 8f, num - 24f - 18f - 4f);
+			new Vector2(x + 4f, y + 24f + 2f, width - 8f, num - 24f - 18f - 4f);
 			GUI.Box(val, GUIContent.none, _sMapBg);
 			bool flag = (_isAirship ? ((Object)(object)_airshipMapTexture != (Object)null) : (_mapTextures.ContainsKey(_currentMapType) && (Object)(object)_mapTextures[_currentMapType] != (Object)null));
 			if (RadarShowMapImage && flag)
@@ -14502,7 +14502,7 @@ namespace ModMenuCrew.Features
 	internal static void ToggleSeeGhosts(bool enable)
 	{
 		SeeGhostsEnabled = enable;
-		Enumerator<PlayerControl> enumerator;
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator;
 		if (enable)
 		{
 			enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
@@ -14741,7 +14741,7 @@ namespace ModMenuCrew.Features
 		}
 		PlayerControl localPlayer = PlayerControl.LocalPlayer;
 		byte b = ((localPlayer != null) ? localPlayer.PlayerId : byte.MaxValue);
-		Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+		Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 		while (enumerator.MoveNext())
 		{
 			PlayerControl current = enumerator.Current;
@@ -15124,7 +15124,7 @@ namespace ModMenuCrew.Features
 		Event current = Event.current;
 		Vector2 mousePosition = current.mousePosition;
 		Rect val = default(Rect);
-		(val)._002Ector((_eventLogRect).x, (_eventLogRect).y, (_eventLogRect).width - 70f, 28f);
+		new Vector2((_eventLogRect).x, (_eventLogRect).y, (_eventLogRect).width - 70f, 28f);
 		if ((int)current.type == 0 && (val).Contains(mousePosition))
 		{
 			_eventLogDragging = true;
@@ -15348,7 +15348,7 @@ namespace ModMenuCrew.Features
 				continue;
 			}
 			string name = "Player " + item.TargetPlayerId;
-			Enumerator<PlayerControl> enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator2.MoveNext())
 			{
 				PlayerControl current2 = enumerator2.Current;
@@ -16116,7 +16116,7 @@ namespace ModMenuCrew.Features
 			int num11 = 0;
 			try
 			{
-				Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+				Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					PlayerControl current = enumerator.Current;
@@ -16282,7 +16282,7 @@ namespace ModMenuCrew.Features
 		}
 		_GU();
 		Vector2 val = default(Vector2);
-		(val)._002Ector(pos.x + 0.5f, pos.y);
+		new Vector2(pos.x + 0.5f, pos.y);
 		float z = ServerData.Config.Z2;
 		float z2 = ServerData.Config.Z3;
 		int num3 = Math.Min(10, Math.Max(2, f1 + f2));
@@ -16622,7 +16622,7 @@ namespace ModMenuCrew.Features
 				return;
 			}
 			int num = 0;
-			Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+			Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
 				PlayerControl current = enumerator.Current;
@@ -16694,7 +16694,7 @@ namespace ModMenuCrew.Features
 					uint netId2 = ((InnerNetObject)PlayerControl.LocalPlayer.MyPhysics).NetId;
 					Vector2 pos = Vector2.op_Implicit(((Component)PlayerControl.LocalPlayer).transform.position);
 					int num3 = 0;
-					Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+					Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 					while (enumerator.MoveNext())
 					{
 						PlayerControl current = enumerator.Current;
@@ -16795,7 +16795,7 @@ namespace ModMenuCrew.Features
 				_aS[playerId] = 0;
 				_aP[playerId] = 0f;
 				PlayerControl val = null;
-				Enumerator<PlayerControl> enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
+				Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator = PlayerControl.AllPlayerControls.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					PlayerControl current = enumerator.Current;
@@ -16927,7 +16927,7 @@ namespace ModMenuCrew.Features
 				foreach (KeyValuePair<byte, float> item3 in _aT)
 				{
 					PlayerControl val = null;
-					Enumerator<PlayerControl> enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
+					Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
 					while (enumerator2.MoveNext())
 					{
 						PlayerControl current4 = enumerator2.Current;
@@ -16964,7 +16964,7 @@ namespace ModMenuCrew.Features
 			foreach (KeyValuePair<byte, float> item4 in _aT)
 			{
 				PlayerControl val3 = null;
-				Enumerator<PlayerControl> enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
+				Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
 				while (enumerator2.MoveNext())
 				{
 					PlayerControl current6 = enumerator2.Current;
@@ -17085,7 +17085,7 @@ namespace ModMenuCrew.Features
 				foreach (byte item in _bT)
 				{
 					PlayerControl val = null;
-					Enumerator<PlayerControl> enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
+					Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
 					while (enumerator2.MoveNext())
 					{
 						PlayerControl current2 = enumerator2.Current;
@@ -17127,7 +17127,7 @@ namespace ModMenuCrew.Features
 			foreach (byte item2 in _bT)
 			{
 				PlayerControl val3 = null;
-				Enumerator<PlayerControl> enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
+				Il2CppSystem.Collections.Generic.List<PlayerControl>.Enumerator enumerator2 = PlayerControl.AllPlayerControls.GetEnumerator();
 				while (enumerator2.MoveNext())
 				{
 					PlayerControl current4 = enumerator2.Current;
