@@ -258,8 +258,9 @@ public static class RealtimeConnection
 				pri = (priority ? 1 : 0)
 			});
 		}
-		catch (Exception)
+		catch (Exception ex)
 		{
+			Debug.Log($"[RealtimeConnection] SendAuthRequest error: {ex.Message}");
 		}
 	}
 

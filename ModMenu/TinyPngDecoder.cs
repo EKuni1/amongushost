@@ -96,8 +96,9 @@ public static class TinyPngDecoder
 			deflateStream.CopyTo(memoryStream);
 			return memoryStream.ToArray();
 		}
-		catch
+		catch (Exception ex)
 		{
+			Debug.Log($"[TinyPngDecoder] First decompression failed, trying fallback: {ex.Message}");
 			using MemoryStream stream2 = new MemoryStream(data, 2, data.Length - 2);
 			using MemoryStream memoryStream2 = new MemoryStream();
 			using DeflateStream deflateStream2 = new DeflateStream(stream2, CompressionMode.Decompress);
