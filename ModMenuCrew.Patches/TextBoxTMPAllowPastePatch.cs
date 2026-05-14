@@ -16,8 +16,9 @@ public static class TextBoxTMPAllowPastePatch
 				__instance.AllowPaste = true;
 			}
 		}
-		catch
+		catch (Exception ex)
 		{
+			Debug.LogError($"[TextBoxTMPAllowPastePatch] Error: {ex.Message}");
 		}
 	}
 }
