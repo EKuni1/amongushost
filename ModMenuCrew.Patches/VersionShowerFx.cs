@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using BepInEx.Unity.IL2CPP.Utils.Collections;
 using Il2CppInterop.Runtime.Attributes;
-using Il2CppSystem;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,7 +16,7 @@ namespace ModMenuCrew.Patches;
 public class VersionShowerFx : MonoBehaviour
 {
 	[CompilerGenerated]
-	private sealed class _003CAudioDistortion_003Ed__135 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CAudioDistortion_003Ed__135 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -53,7 +53,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -103,7 +103,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CBinaryHorror_003Ed__148 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CBinaryHorror_003Ed__148 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -140,7 +140,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E7__wrap1 = null;
 			_003C_003E1__state = -2;
@@ -211,7 +211,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CBloodDripEffect_003Ed__98 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CBloodDripEffect_003Ed__98 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -250,7 +250,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Ccurrent_003E5__2 = null;
 			_003C_003E1__state = -2;
@@ -312,7 +312,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CBurnInPulse_003Ed__126 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CBurnInPulse_003Ed__126 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -349,7 +349,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -395,7 +395,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CCRTCrosstalk_003Ed__119 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCRTCrosstalk_003Ed__119 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -432,7 +432,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -480,7 +480,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CCameraDisabled_003Ed__137 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCameraDisabled_003Ed__137 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -515,7 +515,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -583,7 +583,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CCameraLabelFlash_003Ed__125 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCameraLabelFlash_003Ed__125 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -622,7 +622,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -672,7 +672,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CCharacterSwapGlitch_003Ed__117 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCharacterSwapGlitch_003Ed__117 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -711,7 +711,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Cchars_003E5__3 = null;
 			_003C_003E1__state = -2;
@@ -767,7 +767,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CChromaticAberration_003Ed__110 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CChromaticAberration_003Ed__110 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -804,7 +804,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -854,7 +854,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CColorDrain_003Ed__115 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CColorDrain_003Ed__115 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -891,7 +891,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -940,7 +940,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CColorFlash_003Ed__130 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CColorFlash_003Ed__130 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -977,7 +977,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -1028,7 +1028,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CCommonTierEvent_003Ed__91 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCommonTierEvent_003Ed__91 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -1061,7 +1061,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -1141,7 +1141,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CCorpseReveal_003Ed__159 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCorpseReveal_003Ed__159 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -1176,7 +1176,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -1249,7 +1249,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CCountdownTerror_003Ed__145 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCountdownTerror_003Ed__145 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -1284,7 +1284,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -1352,7 +1352,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CCrewmateColorCycle_003Ed__105 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CCrewmateColorCycle_003Ed__105 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -1389,7 +1389,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -1442,7 +1442,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CDeepZalgo_003Ed__172 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CDeepZalgo_003Ed__172 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -1481,7 +1481,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003CcolorPrefix_003E5__3 = null;
 			_003C_003E1__state = -2;
@@ -1533,7 +1533,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CEndoskeletonExposed_003Ed__164 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CEndoskeletonExposed_003Ed__164 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -1572,7 +1572,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Clayers_003E5__2 = null;
 			_003ClayerColors_003E5__3 = null;
@@ -1675,7 +1675,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CEyesInDarkness_003Ed__154 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CEyesInDarkness_003Ed__154 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -1716,7 +1716,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003CrandomGrotesque_003E5__2 = null;
 			_003Ceyes_003E5__4 = null;
@@ -1809,7 +1809,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CFaceFlash_003Ed__134 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CFaceFlash_003Ed__134 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -1844,7 +1844,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Cface_003E5__2 = null;
 			_003C_003E1__state = -2;
@@ -1908,7 +1908,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CFleshReveal_003Ed__153 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CFleshReveal_003Ed__153 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -1949,7 +1949,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Ctext_003E5__2 = null;
 			_003C_003E1__state = -2;
@@ -2050,7 +2050,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CGlitchScheduler_003Ed__89 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CGlitchScheduler_003Ed__89 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -2083,7 +2083,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -2191,7 +2191,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CGreenPulse_003Ed__120 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CGreenPulse_003Ed__120 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -2228,7 +2228,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -2277,7 +2277,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CHallucination_003Ed__157 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CHallucination_003Ed__157 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -2312,7 +2312,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -2395,7 +2395,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CHeartbeatHorror_003Ed__97 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CHeartbeatHorror_003Ed__97 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -2430,7 +2430,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -2507,7 +2507,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CHorrorFaceFlash_003Ed__170 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CHorrorFaceFlash_003Ed__170 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -2544,7 +2544,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Ccolored_003E5__2 = null;
 			_003C_003E1__state = -2;
@@ -2616,7 +2616,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CIdleBreathing_003Ed__90 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CIdleBreathing_003Ed__90 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -2653,7 +2653,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -2748,7 +2748,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CImpostorFlash_003Ed__112 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CImpostorFlash_003Ed__112 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -2783,7 +2783,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -2832,7 +2832,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CIntensiveGlitchSequence_003Ed__131 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CIntensiveGlitchSequence_003Ed__131 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -2871,7 +2871,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Crt_003E5__3 = null;
 			_003C_003E1__state = -2;
@@ -2926,7 +2926,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CInvertedReality_003Ed__171 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CInvertedReality_003Ed__171 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -2963,7 +2963,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Crt_003E5__2 = null;
 			_003C_003E1__state = -2;
@@ -3022,7 +3022,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CJitter_003Ed__109 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CJitter_003Ed__109 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3065,7 +3065,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Crt_003E5__3 = null;
 			_003C_003E1__state = -2;
@@ -3118,7 +3118,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CMotionPing_003Ed__128 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CMotionPing_003Ed__128 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3155,7 +3155,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -3210,7 +3210,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CMythicTierEvent_003Ed__94 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CMythicTierEvent_003Ed__94 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3243,7 +3243,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -3462,7 +3462,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CNoiseFrame_003Ed__124 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CNoiseFrame_003Ed__124 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3499,7 +3499,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -3550,7 +3550,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CNoiseHalo_003Ed__123 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CNoiseHalo_003Ed__123 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3587,7 +3587,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -3635,7 +3635,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CNoiseRain_003Ed__122 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CNoiseRain_003Ed__122 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3672,7 +3672,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -3723,7 +3723,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CNoiseScroll_003Ed__121 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CNoiseScroll_003Ed__121 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3760,7 +3760,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -3808,7 +3808,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CPhantomAppearance_003Ed__104 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CPhantomAppearance_003Ed__104 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3851,7 +3851,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003CphantomText_003E5__2 = null;
 			_003C_003E1__state = -2;
@@ -3911,7 +3911,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CPhantomSignal_003Ed__129 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CPhantomSignal_003Ed__129 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -3948,7 +3948,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -3996,7 +3996,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CPhantomTierEvent_003Ed__95 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CPhantomTierEvent_003Ed__95 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4029,7 +4029,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -4212,7 +4212,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CPowerOutage_003Ed__147 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CPowerOutage_003Ed__147 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4247,7 +4247,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -4331,7 +4331,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CRareScreen_SpringBonnie_003Ed__162 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CRareScreen_SpringBonnie_003Ed__162 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4368,7 +4368,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Creveal_003E5__2 = null;
 			_003C_003E1__state = -2;
@@ -4453,7 +4453,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CRareTierEvent_003Ed__93 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CRareTierEvent_003Ed__93 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4486,7 +4486,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -4781,7 +4781,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CScanlineEffect_003Ed__144 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CScanlineEffect_003Ed__144 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4820,7 +4820,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -4879,7 +4879,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CScrambledMessage_003Ed__146 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CScrambledMessage_003Ed__146 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -4922,7 +4922,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Cdisplay_003E5__3 = null;
 			_003Crevealed_003E5__4 = null;
@@ -5013,7 +5013,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_6AM_003Ed__150 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_6AM_003Ed__150 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -5050,7 +5050,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -5148,7 +5148,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_AftonDecomposition_003Ed__155 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_AftonDecomposition_003Ed__155 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -5183,7 +5183,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -5274,7 +5274,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_BadEnding_003Ed__141 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_BadEnding_003Ed__141 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -5309,7 +5309,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -5388,7 +5388,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_CriticalBreach_003Ed__103 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_CriticalBreach_003Ed__103 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -5421,7 +5421,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -5480,7 +5480,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_Dismemberment_003Ed__161 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_Dismemberment_003Ed__161 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -5521,7 +5521,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Ctext_003E5__2 = null;
 			_003C_003E1__state = -2;
@@ -5608,7 +5608,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_EmergencyMeeting_003Ed__99 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_EmergencyMeeting_003Ed__99 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -5641,7 +5641,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -5701,7 +5701,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_FazbearsFright_003Ed__167 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_FazbearsFright_003Ed__167 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -5740,7 +5740,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Cheadline_003E5__2 = null;
 			_003Cburning_003E5__3 = null;
@@ -5868,7 +5868,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_GoldenFreddy_003Ed__151 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_GoldenFreddy_003Ed__151 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -5903,7 +5903,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -5988,7 +5988,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_ImpostorReveal_003Ed__100 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_ImpostorReveal_003Ed__100 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -6021,7 +6021,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -6081,7 +6081,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_NightmareFredbear_003Ed__160 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_NightmareFredbear_003Ed__160 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -6116,7 +6116,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -6233,7 +6233,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_NightmareMode_003Ed__140 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_NightmareMode_003Ed__140 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -6268,7 +6268,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -6334,7 +6334,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_PhantomFreddyWalkBy_003Ed__166 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_PhantomFreddyWalkBy_003Ed__166 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -6369,7 +6369,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -6459,7 +6459,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_PhantomJumpscare_003Ed__139 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_PhantomJumpscare_003Ed__139 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -6494,7 +6494,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -6601,7 +6601,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_PhantomMangle_003Ed__158 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_PhantomMangle_003Ed__158 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -6636,7 +6636,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -6722,7 +6722,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_PurpleGuy_003Ed__143 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_PurpleGuy_003Ed__143 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -6759,7 +6759,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -6840,7 +6840,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_SabotageCritical_003Ed__102 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_SabotageCritical_003Ed__102 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -6877,7 +6877,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -6930,7 +6930,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_SafeRoom_003Ed__168 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_SafeRoom_003Ed__168 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -6965,7 +6965,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -7117,7 +7117,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_SpringLockFailure_003Ed__152 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_SpringLockFailure_003Ed__152 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -7152,7 +7152,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -7266,7 +7266,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_SpringtrapApproach_003Ed__138 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_SpringtrapApproach_003Ed__138 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -7303,7 +7303,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -7400,7 +7400,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_SpringtrapStare_003Ed__142 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_SpringtrapStare_003Ed__142 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -7435,7 +7435,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -7509,7 +7509,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_SystemReboot_003Ed__101 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_SystemReboot_003Ed__101 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -7542,7 +7542,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -7603,7 +7603,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_TheStare_003Ed__96 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_TheStare_003Ed__96 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -7636,7 +7636,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -7705,7 +7705,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSequence_VentilationCascade_003Ed__165 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSequence_VentilationCascade_003Ed__165 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -7746,7 +7746,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003CphantomFace_003E5__2 = null;
 			_003C_003E7__wrap4 = null;
@@ -7907,7 +7907,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSlowCorruption_003Ed__149 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSlowCorruption_003Ed__149 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -7946,7 +7946,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Ctext_003E5__2 = null;
 			_003C_003E1__state = -2;
@@ -8015,7 +8015,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSoulCapture_003Ed__156 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSoulCapture_003Ed__156 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -8050,7 +8050,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -8131,7 +8131,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSpringtrapWarning_003Ed__136 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSpringtrapWarning_003Ed__136 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -8166,7 +8166,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -8246,7 +8246,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CStaticWall_003Ed__133 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CStaticWall_003Ed__133 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -8283,7 +8283,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -8337,7 +8337,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CSystemWarning_003Ed__113 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CSystemWarning_003Ed__113 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -8378,7 +8378,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -8429,7 +8429,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CTerrifyingSequence_003Ed__106 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CTerrifyingSequence_003Ed__106 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -8464,7 +8464,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -8543,7 +8543,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CTextCorruption_003Ed__108 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CTextCorruption_003Ed__108 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -8584,7 +8584,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -8629,7 +8629,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CTrackingNoise_003Ed__114 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CTrackingNoise_003Ed__114 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -8666,7 +8666,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -8713,7 +8713,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CTypewriterText_003Ed__116 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CTypewriterText_003Ed__116 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -8754,7 +8754,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Cwait_003E5__2 = null;
 			_003C_003E1__state = -2;
@@ -8806,7 +8806,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CUncannyText_003Ed__169 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CUncannyText_003Ed__169 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -8847,7 +8847,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Ccolored_003E5__3 = null;
 			_003C_003E1__state = -2;
@@ -8898,7 +8898,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CUncommonTierEvent_003Ed__92 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CUncommonTierEvent_003Ed__92 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -8931,7 +8931,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -9032,7 +9032,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CVHSStaticBurst_003Ed__118 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CVHSStaticBurst_003Ed__118 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -9069,7 +9069,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -9122,7 +9122,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CVentilationError_003Ed__132 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CVentilationError_003Ed__132 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -9159,7 +9159,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003C_003E1__state = -2;
 		}
@@ -9224,7 +9224,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CVerticalRoll_003Ed__111 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CVerticalRoll_003Ed__111 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -9267,7 +9267,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Crt_003E5__3 = null;
 			_003C_003E1__state = -2;
@@ -9316,7 +9316,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CVictimsCrying_003Ed__163 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CVictimsCrying_003Ed__163 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -9355,7 +9355,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Cvictim_003E5__3 = null;
 			_003C_003E1__state = -2;
@@ -9433,7 +9433,7 @@ public class VersionShowerFx : MonoBehaviour
 	}
 
 	[CompilerGenerated]
-	private sealed class _003CWobble_003Ed__127 : IEnumerator<object>, IEnumerator, IDisposable
+	private sealed class _003CWobble_003Ed__127 : IEnumerator<object>, IEnumerator, System.IDisposable
 	{
 		private int _003C_003E1__state;
 
@@ -9476,7 +9476,7 @@ public class VersionShowerFx : MonoBehaviour
 		}
 
 		[DebuggerHidden]
-		void IDisposable.Dispose()
+		void System.IDisposable.Dispose()
 		{
 			_003Crt_003E5__3 = null;
 			_003C_003E1__state = -2;

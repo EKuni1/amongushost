@@ -1,7 +1,7 @@
 using System;
 using Hazel;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
+
+using System.Collections.Generic;
 using InnerNet;
 using UnityEngine;
 
@@ -17,7 +17,7 @@ public class CustomMessage
 
 	public string Content { get; set; }
 
-	public DateTime Timestamp { get; set; }
+	public System.DateTime Timestamp { get; set; }
 
 	public MessageType Type { get; set; }
 
@@ -27,7 +27,7 @@ public class CustomMessage
 		SenderId = senderId;
 		SenderName = senderName;
 		Content = content;
-		Timestamp = DateTime.UtcNow;
+		Timestamp = System.DateTime.UtcNow;
 		Type = type;
 	}
 

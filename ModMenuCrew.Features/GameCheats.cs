@@ -97,7 +97,7 @@ public static class GameCheats
 		}
 	}
 
-	[HarmonyPatch(typeof(CustomNetworkTransform), "SnapTo", new Type[]
+	[HarmonyPatch(typeof(CustomNetworkTransform), "SnapTo", new System.Type[]
 	{
 		typeof(Vector2),
 		typeof(ushort)
@@ -876,7 +876,7 @@ public static class GameCheats
 		}
 	}
 
-	[HarmonyPatch(typeof(AspectPosition), "AdjustPosition", new Type[] { })]
+	[HarmonyPatch(typeof(AspectPosition), "AdjustPosition", new System.Type[] { })]
 	public static class AspectPositionParentFixPatch
 	{
 		private static void Prefix(AspectPosition __instance)
@@ -899,7 +899,7 @@ public static class GameCheats
 		}
 	}
 
-	[HarmonyPatch(typeof(AspectPosition), "AdjustPosition", new Type[] { typeof(float) })]
+	[HarmonyPatch(typeof(AspectPosition), "AdjustPosition", new System.Type[] { typeof(float) })]
 	public static class AspectPositionParentFixPatchAspect
 	{
 		private static void Prefix(AspectPosition __instance)
@@ -2791,7 +2791,7 @@ public static class GameCheats
 		}
 	}
 
-	[HarmonyPatch(typeof(InnerNetClient), "Spawn", new Type[]
+	[HarmonyPatch(typeof(InnerNetClient), "Spawn", new System.Type[]
 	{
 		typeof(InnerNetObject),
 		typeof(int),
@@ -2845,7 +2845,7 @@ public static class GameCheats
 		}
 	}
 
-	[HarmonyPatch(typeof(InnerNetClient), "Despawn", new Type[] { typeof(InnerNetObject) })]
+	[HarmonyPatch(typeof(InnerNetClient), "Despawn", new System.Type[] { typeof(InnerNetObject) })]
 	public static class TrackDespawnNetIdPatch
 	{
 		public static void Postfix(InnerNetObject objToDespawn)
