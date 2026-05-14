@@ -9,6 +9,7 @@ using ModMenuCrew.Networking;
 using ModMenuCrew.UI.Managers;
 using ModMenuCrew.UI.Styles;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace ModMenuCrew.UI.Menus;
 
@@ -1588,7 +1589,7 @@ public class PlayerPickMenu
 		_rndPool = new List<RoleTypes>(16);
 		_rndPlayers = new List<PlayerControl>(16);
 		_rndImpNames = new List<string>(4);
-		_rng = new Random();
+		_rng = new System.Random();
 		_finalizePreserveBuf = new Dictionary<byte, RoleTypes>(16);
 		_rndInvBuf = new Dictionary<RoleTypes, int>(16);
 		_playerDataBuffer = new List<object>(16);

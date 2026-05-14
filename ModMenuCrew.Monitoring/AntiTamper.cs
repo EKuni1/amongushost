@@ -821,26 +821,26 @@ public static class AntiTamper
 		}
 		if (_corruptionLevel <= 1)
 		{
-			ServerData.ScheduleDelayedDenial(60f + Random.Range(0f, 120f));
+			ServerData.ScheduleDelayedDenial(60f + UnityEngine.Random.Range(0f, 120f));
 		}
 		else if (_corruptionLevel == 2)
 		{
-			if (Random.Range(0f, 1f) < 0.3f)
+			if (UnityEngine.Random.Range(0f, 1f) < 0.3f)
 			{
 				ServerData.TriggerSilentDenial();
 			}
 			else
 			{
-				ServerData.ScheduleDelayedDenial(30f + Random.Range(0f, 90f));
+				ServerData.ScheduleDelayedDenial(30f + UnityEngine.Random.Range(0f, 90f));
 			}
 		}
-		else if (Random.Range(0f, 1f) < 0.6f)
+		else if (UnityEngine.Random.Range(0f, 1f) < 0.6f)
 		{
 			ServerData.TriggerSilentDenial();
 		}
 		else
 		{
-			ServerData.ScheduleDelayedDenial(10f + Random.Range(0f, 30f));
+			ServerData.ScheduleDelayedDenial(10f + UnityEngine.Random.Range(0f, 30f));
 		}
 	}
 }

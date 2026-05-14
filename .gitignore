@@ -1,56 +1,55 @@
-```gitignore
-# Build artifacts
+```
+# Compiled and build artifacts
 *.dll
 *.exe
 *.pdb
 *.so
 *.dylib
-*.obj
+*.class
 *.o
-*.a
-*.lib
+*.obj
 *.out
+build/
+dist/
+release/
+bin/
+obj/
 
 # Dependencies
 packages/
-lib/
 node_modules/
-bower_components/
+vendor/
+libs/
 
-# Logs
+# Logs and temp files
 *.log
 *.tmp
-
-# User-specific files
-.vs/
-.idea/
-*.userprefs
-*.suo
-*.user
-*.aps
-*.ncb
-*.ilk
-*.idb
-*.pidb
-*.meta
+*.temp
 *.cache
-*.dbmdl
 
-# Environment specific
+# Environment
 .env
 .env.local
 .env.*
-!env.example
-!env.sample
 
-# OS generated files
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
-desktop.ini
-Icon?
+
+# Testing and coverage
+coverage/
+htmlcov/
+.coverage
+*.coveragerc
+
+# Build systems
+target/
+.gradle/
+.nuget/
 ```
