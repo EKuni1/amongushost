@@ -5,7 +5,6 @@ using System.IO;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
-using Il2CppSystem;
 using ModMenuCrew.Monitoring;
 using ModMenuCrew.Networking;
 using ModMenuCrew.UI.Menus;

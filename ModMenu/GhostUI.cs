@@ -5,8 +5,6 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
 using InnerNet;
 using ModMenuCrew.Easing;
 using ModMenuCrew.Features;

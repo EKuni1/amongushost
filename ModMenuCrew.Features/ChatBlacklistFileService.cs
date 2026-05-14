@@ -4,7 +4,6 @@ using System.IO;
 using System.Text;
 using BepInEx;
 using BepInEx.Configuration;
-using Il2CppSystem;
 using UnityEngine;
 
 namespace ModMenuCrew.Features;

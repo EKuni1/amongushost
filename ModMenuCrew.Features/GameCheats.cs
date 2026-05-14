@@ -21,8 +21,6 @@ using Hazel;
 using Il2CppInterop.Runtime;
 using Il2CppInterop.Runtime.InteropTypes;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
 using InnerNet;
 using ModMenuCrew.UI.Managers;
 using ModMenuCrew.UI.Menus;
@@ -34,10 +32,10 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
-using IEnumeratorGeneric = Il2CppSystem.Collections.Generic.IEnumerator<object>;
-using IDisposableType = Il2CppSystem.IDisposable;
-using ListGeneric = Il2CppSystem.Collections.Generic.List<T>; // Achtung: Bei generischen Listen muss oft der konkrete Typ stehen bleiben oder man nutzt Il2CppSystem.Collections.Generic.List direkt
-using TypeAlias = Il2CppSystem.Type;
+using IEnumeratorGeneric = System.Collections.Generic.IEnumerator<object>;
+using IDisposableType = System.IDisposable;
+using ListGeneric = System.Collections.Generic.List<T>;
+using TypeAlias = System.Type;
 
 namespace ModMenuCrew.Features;
 
