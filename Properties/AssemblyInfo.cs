@@ -16,4 +16,3 @@ using System.Security.Permissions;
 [assembly: AssemblyTitle("ModMenuCrew Among Us Mod")]
 [assembly: NeutralResourcesLanguage("en-US")]
 [assembly: AssemblyVersion("6.1.4.0")]
-[module: RefSafetyRules(11)]

@@ -9,6 +9,8 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using AmongUs.GameOptions;
+using AmongUs.MapOptions;
+using AmongUs.Tasks;
 using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Core.Logging.Interpolation;
@@ -34,7 +36,7 @@ using UnityEngine.Rendering;
 using UnityEngine.UI;
 using IEnumeratorGeneric = System.Collections.Generic.IEnumerator<object>;
 using IDisposableType = System.IDisposable;
-using ListGeneric = System.Collections.Generic.List<T>;
+using ListGeneric<T> = System.Collections.Generic.List<T>;
 using TypeAlias = System.Type;
 
 namespace ModMenuCrew.Features;
@@ -5052,7 +5054,7 @@ public static class GameCheats
 		}
 	}
 
-	private static readonly Random random = new Random();
+	private static readonly System.Random random = new System.Random();
 
 	public static readonly byte[] HOST_COLOR_IDS = new byte[19]
 	{

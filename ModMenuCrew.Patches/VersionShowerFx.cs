@@ -9630,7 +9630,7 @@ public class VersionShowerFx : MonoBehaviour
 
 	private static readonly Color StaticGray = new Color(0.6f, 0.6f, 0.6f);
 
-	private static readonly Random sRandom = new Random();
+	private static readonly System.Random sRandom = new System.Random();
 
 	private static readonly string[] sSystemMessages = new string[56]
 	{

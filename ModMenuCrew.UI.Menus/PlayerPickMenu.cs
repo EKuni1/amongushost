@@ -46,7 +46,7 @@ public class PlayerPickMenu
 
 	private static readonly List<string> _rndImpNames;
 
-	private static readonly Random _rng;
+	private static readonly System.Random _rng;
 
 	private static readonly Dictionary<byte, RoleTypes> _finalizePreserveBuf;
 

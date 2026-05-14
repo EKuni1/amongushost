@@ -39,7 +39,7 @@ public static class SpoofingService
 
 	private static Platforms _cachedPlatformType = (Platforms)0;
 
-	private static readonly Random _rng = new Random();
+	private static readonly System.Random _rng = new System.Random();
 
 	private static string _originalName = "";
 

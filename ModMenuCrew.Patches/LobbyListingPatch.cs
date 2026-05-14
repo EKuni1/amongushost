@@ -177,7 +177,7 @@ public static class LobbyListingPatch
 
 	[HarmonyPatch(typeof(FindAGameManager), "HandleList")]
 	[HarmonyPrefix]
-	public static void HandleListPrefix(TotalGameData totalGames, FindGamesListFilteredResponse response)
+	public static void HandleListPrefix(object totalGames, object response)
 	{
 		if (!CaptureEnabled)
 		{

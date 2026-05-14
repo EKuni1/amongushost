@@ -142,7 +142,7 @@ public static class ImpostorForcer
 
 	private static readonly List<byte> _staleIdsBuf = new List<byte>(8);
 
-	private static readonly Random random = new Random();
+	private static readonly System.Random random = new System.Random();
 
 	private static readonly Dictionary<byte, DateTime> lastAttempts = new Dictionary<byte, DateTime>();
 
@@ -462,7 +462,7 @@ public static class ImpostorForcer
 		int num = 1;
 		num = ((GameOptionsManager.Instance == null || GameOptionsManager.Instance.CurrentGameOptions == null) ? Mathf.Clamp(2, 1, maxImpostorsForPlayerCount) : Mathf.Clamp(GameOptionsManager.Instance.CurrentGameOptions.NumImpostors, 1, maxImpostorsForPlayerCount));
 		List<PlayerControl> list2 = new List<PlayerControl> { targetImpostor };
-		Random rng = new Random();
+		System.Random rng = new System.Random();
 		list = list.OrderBy((PlayerControl x) => rng.Next()).ToList();
 		for (int j = 0; j < num - 1 && j < list.Count; j++)
 		{
@@ -548,7 +548,7 @@ public static class ImpostorForcer
 		{
 			list2.Add(host);
 		}
-		Random rng = new Random();
+		System.Random rng = new System.Random();
 		list = list.OrderBy((PlayerControl x) => rng.Next()).ToList();
 		for (int j = 0; j < num - list2.Count && j < list.Count; j++)
 		{
@@ -646,7 +646,7 @@ public static class ImpostorForcer
 		}
 		if (impostors.Count < num)
 		{
-			Random rng = new Random();
+			System.Random rng = new System.Random();
 			foreach (PlayerControl item in (from p in (IEnumerable<PlayerControl>)val
 				where (Object)(object)p != (Object)null && (Object)(object)p.Data != (Object)null && !impostors.Any((PlayerControl i) => i.PlayerId == p.PlayerId)
 				select p into _
