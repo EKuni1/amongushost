@@ -99,61 +99,79 @@
     
     <!-- References -->
     <Reference Include="UnityEngine.IMGUIModule">
-        <HintPath>lib\UnityEngine.IMGUIModule.dll</HintPath>
+        <HintPath>lib/UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-        <HintPath>lib\UnityEngine.CoreModule.dll</HintPath>
+        <HintPath>lib/UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="Il2Cppmscorlib">
-        <HintPath>lib\Il2Cppmscorlib.dll</HintPath>
+        <HintPath>lib/Il2Cppmscorlib.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-        <HintPath>lib\Assembly-CSharp.dll</HintPath>
+        <HintPath>lib/Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx.Core">
-        <HintPath>lib\BepInEx.Core.dll</HintPath>
+        <HintPath>lib/BepInEx.Core.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx.Unity.IL2CPP">
-        <HintPath>lib\BepInEx.Unity.IL2CPP.dll</HintPath>
+        <HintPath>lib/BepInEx.Unity.IL2CPP.dll</HintPath>
     </Reference>
     <Reference Include="0Harmony">
-        <HintPath>lib\0Harmony.dll</HintPath>
+        <HintPath>lib/0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-        <HintPath>lib\UnityEngine.UIModule.dll</HintPath>
+        <HintPath>lib/UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>lib\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>lib/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>lib\UnityEngine.UI.dll</HintPath>
+        <HintPath>lib/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppInterop.Runtime">
-        <HintPath>lib\Il2CppInterop.Runtime.dll</HintPath>
+        <HintPath>lib/Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Common">
+        <HintPath>lib/Il2CppInterop.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.HarmonySupport">
+        <HintPath>lib/Il2CppInterop.HarmonySupport.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-        <HintPath>lib\UnityEngine.AnimationModule.dll</HintPath>
+        <HintPath>lib/UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="Hazel">
-        <HintPath>lib\Hazel.dll</HintPath>
+        <HintPath>lib/Hazel.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-        <HintPath>lib\UnityEngine.AudioModule.dll</HintPath>
+        <HintPath>lib/UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Addressables">
-        <HintPath>lib\Unity.Addressables.dll</HintPath>
+        <HintPath>lib/Unity.Addressables.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Physics2DModule">
-        <HintPath>lib\UnityEngine.Physics2DModule.dll</HintPath>
+        <HintPath>lib/UnityEngine.Physics2DModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-        <HintPath>lib\UnityEngine.TextRenderingModule.dll</HintPath>
+        <HintPath>lib/UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-        <HintPath>lib\UnityEngine.InputLegacyModule.dll</HintPath>
+        <HintPath>lib/UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-        <HintPath>lib\UnityEngine.ImageConversionModule.dll</HintPath>
+        <HintPath>lib/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+        <HintPath>lib/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>lib/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+        <HintPath>lib/MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+        <HintPath>lib/MonoMod.Utils.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
