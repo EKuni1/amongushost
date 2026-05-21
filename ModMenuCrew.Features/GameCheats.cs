@@ -13432,7 +13432,7 @@ namespace ModMenuCrew.Features
 			Vector2 zero = Vector2.zero;
 			try
 			{
-				zero = ((Component)val).transform.position);
+				zero = ((Component)val).transform.position;
 			}
 			catch
 			{
@@ -14180,7 +14180,7 @@ namespace ModMenuCrew.Features
 			Debug.LogError("[Radar] Error: " + ex.GetType().Name + ": " + ex.Message);
 			if (ex.StackTrace != null && ex.StackTrace.Length > 0)
 			{
-				Debug.LogError("[Radar] Stack: " + ex.StackTrace.Substring(0, Math.Min(500, ex.StackTrace.Length));
+				Debug.LogError("[Radar] Stack: " + ex.StackTrace.Substring(0, Math.Min(500, ex.StackTrace.Length)));
 			}
 		}
 	}
